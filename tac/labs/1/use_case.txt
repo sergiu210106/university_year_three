@@ -1,0 +1,14 @@
+Recipe management bnf
+
+This BNF describes a programming language for managing recipes. With it the user can:
+    - clearly define what an ingredient should look like, including name and quantity
+        - name is letter-only
+        - number is positive starting with a non-zero digit
+        - quantity is lowercase-letter only
+    - build recipes using creation, add and remove operations, the recipes are identifiable
+        - create lists with List([<ingredient> ...])
+        - add with "+ <ingredient>", remove with "- <ingredient>"
+    - assignment operator, input/output, for-loop
+        - assignment uses "=" to match identifiables to recipes
+        - input with "read <x>", output with "puts <x>"
+        - for is a python-bash combination, using "for ... in ... done"

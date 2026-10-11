@@ -1,0 +1,4 @@
+# NLP
+spacy>=3.7,<4.0
+
+#   python -m spacy download en_core_web_sm

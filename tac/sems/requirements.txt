@@ -1,0 +1,6 @@
+attendance - 75% (10/14)
+seminar = 10% grade
+for 10: 2 seminar activities
+    7 activities => impreuna cu lab-ul 1p bonus la nota finala
+
+

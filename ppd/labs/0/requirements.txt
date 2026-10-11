@@ -1,0 +1,10 @@
+Problem: write a c++ program that adds to vectors A and B with n real elements (the result is vector C with n elements).Measure the execution time. 
+
+
+1. write the programs in c++ and java - sequential and parallel
+1.1. the programs read the input from a file and write the results to a file (the input files are randomly generated)
+1.2. the execution time is printed to stdout
+2. Write some scripts for automated testing (both programs).
+2.1. You must check correctness for 10 independent runs.
+3. collect the execution times and compute the avg time (for each test case)
+4. write the documentation.

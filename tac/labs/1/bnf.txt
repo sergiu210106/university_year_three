@@ -1,0 +1,39 @@
+<program> ::= <statement> <statements>
+<statements> ::= <statement> <statements> | epsilon
+<statement> ::= <recipe_expression> | <assignment> | <for_loop> | <input_operation> | <print_statement>
+
+<ingredient> ::= <string> <number> <measuring_unit>
+
+<string> ::= ""<string_characters>""
+<string_characters> ::= <string_character> <string_characters> | epsilon
+<string_character> ::= <letter>
+<letter> ::= "a" | ... | "z" | "A" | ... | "Z"
+<digit> ::= "0" | ... | "9"
+<non_zero_digit> ::= "1" | ... | "9"
+<number> ::= "0" | <non_zero_digit> <number_tail>
+<number_tail> ::= <digit> <number_tail> | epsilon
+<measuring_unit> ::= <lowercase_string>
+<lowercase_string> ::= <lowercase_letter> <lowercase_string> | epsilon
+
+
+<term> ::= <ingredient>
+<recipe_content> ::= <term> <tail_list>
+<tail_list> ::= <term> <tail_list> | epsilon
+
+<recipe_expression> ::= <recipe_creation> | <recipe_expression> <recipe_add> | <recipe_expression> <recipe_remove>
+<recipe_creation> ::= "List" "(" <record_list> ")"
+<record_list> ::= "[" <recipe_content> "]"
+<recipe_add> ::= "+" <term>
+<recipe_remove> ::= "-" <term>
+
+<assignment> ::= <identifier> "=" <recipe_expression>
+
+<for_loop> ::= "for" <identifier> "in" <recipe_expression> ":" <statements> "done"
+
+<identifier> ::= <letter> <identifier_tail>
+<identifier_tail> ::= <letter_or_digit_or_underscore> <identifier_tail> | epsilon
+<letter_or_digit_or_underscore> ::= <letter> | <digit> | "_"
+
+<input_operation> ::= "read" <identifier>
+<print_statement> ::= "puts" <recipe_expression>
+

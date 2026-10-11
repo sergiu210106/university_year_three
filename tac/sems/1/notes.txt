@@ -1,0 +1,119 @@
+A compiler is a program whose input is another program.
+
+In order to create a compiler, you need exact specifications.
+
+to describe a program, we use a metalanguage -> a language used to describe another language. 
+
+Metalanguages: 
+    - BNF (Backus-Naur Form)
+    - EBNF (Extended BNF)
+
+BNF:
+    - non-terminals = a name for something still to be explained. 
+
+        example: <non-terminal>
+    
+    - terminal = something that ends up in the program text
+
+    - connectors 
+        ::= is defined as
+        | or 
+
+    - <construct> ::= expr1 | expr2 | expr3 | .. | exprn
+        where expri is a sequence of terminal and non-terminal symbols
+
+    <even_digit> ::= 0 | 2 | 4 | 6 | 8
+
+    1. specify, using bnf, all non-empty sequences of letters
+        <letter_sequence> = <letter> <letter_sequence> | <letter>
+        <letter> = a | b | ... | z
+
+    2. specify, using bnf, both signed and unsigned integers.
+        rules: 0 does not have a sign, 
+        if there are at least 2 digits, the first one cannot be zero.
+    
+        <integer> ::= 0 | <unsigned_integer> | - <unsigned_integer> | + <unsigned_integer> 
+        <unsigned_integer> ::= <non_zero_digit> | <non_zero_digit> <digit_sequence>
+        <non_zero_digit> ::= 0|...|9
+        <digit_sequence> ::= <digit> <digit_sequence> | <digit>
+        <digit> ::= 0|1|2|...|9
+
+
+EBNF
+    Changes from BNF:
+        1. non-terminal: <var> becomes var 
+        2. terminal: a becomes "a"
+        3. {} - zero or multiple times 
+        4. [] - zero or once
+        5. () - grouping
+        6. (* *) - comments
+        7. ::= is = 
+        8. all rules end with .
+
+    1. specify integers, in EBNF
+        integer = "0" | unsigned_integer | "+" unsigned_integer | "-" unsigned_integer.
+        unsigned_integer = non_zero_digit | non_zero_digit digit_sequence.
+        non_zero_digit = "0" | ... | "9".
+        digit_sequence = digit | digit digit_sequence. 
+        digit = "0" | "1" | "2" | ... | "9".
+
+        another way:
+        integer = "0" | ["+" | "-"] non_zero_digit {digit}
+        non_zero_digit = "1" | ... | "9"
+        digit = non_zero_digit | "0"
+
+
+
+
+Minilanguages:
+    two parts: 
+        - lexic (how a word of the language looks like) 
+        - synthax (how words can be arranged into declaration, statements, and so on)
+
+    1. alphabet
+        A-Z
+        a-z
+        underscore
+        0-9
+
+    2. lexic 
+        - special tokens: 3 kinds
+            - operators: +, -, *, /, =, >=, >, <, <=
+            - separators: (, [, {, :, ;, space
+            - reserved words: array, char, int 
+        - identifiers:
+
+            exercise 4: find the mistakes
+            
+            identifier ::= letter | letter {letter} {digit}
+            letter ::= "A" | .. | "Z"
+            digit ::= "0" | ... | "9"
+
+            correction:
+            identifier = letter {letter | digit | "_"}.
+            letter = "A" | ... | "Z"
+            digit = "0" | ... | "9"
+
+        - integer constants:
+
+            exercise 5: find the mistakes
+
+            at the board
+
+        - character constants 
+
+            character = "'"(letter | digit | "_")"'"
+
+        - string constants
+            exercise 6: find the mistakes 
+            const_char = "'"string"'"
+            string = char {string}
+            char = letter | digit 
+
+            correct:
+            const_char = '"'{char}'"'
+            char = letter | digit | "_" | " "
+
+
+
+
