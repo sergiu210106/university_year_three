@@ -1,4 +1,6 @@
 # NLP
 spacy>=3.7,<4.0
+nltk>=3.8
 
 #   python -m spacy download en_core_web_sm
+#   python -m spacy download ro_core_news_sm
