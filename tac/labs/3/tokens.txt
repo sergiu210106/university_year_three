@@ -1,17 +1,15 @@
-identifier 0
-constant 1
-List 2
-for 3
-in 4
-done 5
-read 6
-puts 7
-= 8
-+ 9
-- 10
-( 11
-) 12
-[ 13
-] 14
-, 15
-: 16
+List
+for
+in
+done
+read
+puts
+=
++
+-
+(
+)
+[
+]
+,
+:

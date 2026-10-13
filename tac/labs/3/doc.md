@@ -4,7 +4,7 @@ The lexer reads a program written in the recipe language from Lab 1 (grammar in 
 
 Files:
 
-- `tokens.txt` - list of tokens and their codes
+- `tokens.txt` - list of tokens
 - `lexer.py` - the scanner, written in Python with regular expressions
 - `st.h`, `st.c` - the Symbol Table, a hash table written in C
 - `Makefile` - builds `libst.so`
@@ -28,15 +28,13 @@ A different token file can be given as the second argument.
 
 ## 2. Tokens
 
-| Token | Code |
-|-------|------|
-| identifier | 0 |
-| constant | 1 |
-| `List` `for` `in` `done` `read` `puts` | 2 - 7 |
-| `=` `+` `-` | 8 - 10 |
-| `(` `)` `[` `]` `,` `:` | 11 - 16 |
+`tokens.txt` contains the fixed tokens of the language, one per line:
 
-The lexer reads `tokens.txt` at start. `identifier` and `constant` are the two token classes stored in the ST. The entries that look like identifiers are reserved words. The rest are operators and separators, and the regular expression that matches them is built from this list.
+- reserved words: `List` `for` `in` `done` `read` `puts`
+- operators: `=` `+` `-`
+- separators: `(` `)` `[` `]` `,` `:`
+
+The lexer reads this file at start. Entries that look like identifiers are reserved words. The rest are operators and separators, and the regular expression that matches them is built from this list. Identifiers and constants are not in the list; they are recognized by their own patterns and stored in the ST.
 
 ## 3. Token detection
 
@@ -51,12 +49,12 @@ At each position the patterns are tried in this order and the first one that mat
 | bad number | `0[0-9]+` or `[0-9]+[A-Za-z_][A-Za-z0-9_]*` | error |
 | number constant | `0` or `[1-9][0-9]*` | constant, added to ST |
 | identifier | `[A-Za-z][A-Za-z0-9_]*` | reserved word or identifier |
-| operator / separator | built from `tokens.txt` | code from `tokens.txt` |
+| operator / separator | built from `tokens.txt` | written in the PIF |
 | anything else | `.` | error |
 
 ### Identifiers
 
-The grammar defines an identifier as a letter followed by letters, digits or `_`, which gives `[A-Za-z][A-Za-z0-9_]*`. Reserved words have the same form, so after a match the lexeme is checked against the reserved words from `tokens.txt`. If it is one, its code is written in the PIF; otherwise it is an identifier and is added to the ST.
+The grammar defines an identifier as a letter followed by letters, digits or `_`, which gives `[A-Za-z][A-Za-z0-9_]*`. Reserved words have the same form, so after a match the lexeme is checked against the reserved words from `tokens.txt`. If it is one, it is written in the PIF; otherwise it is an identifier and is added to the ST.
 
 The match is greedy, so `carbonara_non_italiana` is one identifier and `done_x` is an identifier, not `done` followed by `_x`.
 
@@ -130,7 +128,13 @@ Since `st_insert` returns the existing position for a lexeme already in the tabl
 
 ## 5. Program Internal Form
 
-The PIF lists the tokens in the order they appear, as pairs (code, ST position). Identifiers and constants have code 0 or 1 and their position in the ST. Reserved words, operators and separators have their own code and position -1. The lexeme is also printed to make the file easier to read.
+The PIF lists the tokens in the order they appear, as pairs (token, ST position):
+
+- identifiers: `id` and their position in the ST
+- constants: `const` and their position in the ST
+- reserved words, operators and separators: the token itself and position -1
+
+The lexeme of an identifier or constant is found by looking up its position in the ST.
 
 ## 6. Example: `programs/p2.txt`
 
@@ -145,27 +149,27 @@ read piure
 `PIF.out` (first lines):
 
 ```
-token                     code  st_pos
-supa                         0       0
-=                            8      -1
-List                         2      -1
-(                           11      -1
-[                           13      -1
-"apa"                        1       1
-1000                         1       2
-ml                           0       3
-,                           15      -1
-"oase"                       1       4
-200                          1       5
-g                            0       6
-,                           15      -1
-"taietei"                    1       7
-200                          1       5
-g                            0       6
-]                           14      -1
-)                           12      -1
-puts                         7      -1
-supa                         0       0
+token     st_pos
+id             0
+=             -1
+List          -1
+(             -1
+[             -1
+const          1
+const          2
+id             3
+,             -1
+const          4
+const          5
+id             6
+,             -1
+const          7
+const          5
+id             6
+]             -1
+)             -1
+puts          -1
+id             0
 ```
 
 `ST.out`:

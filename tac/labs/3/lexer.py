@@ -14,17 +14,11 @@ ERRORS = {
 
 
 def load_tokens(path):
-    codes = {}
     with open(path) as f:
-        for line in f:
-            if line.strip():
-                token, code = line.split()
-                codes[token] = int(code)
-    return codes
+        return [line.strip() for line in f if line.strip()]
 
 
-def build_regex(codes):
-    tokens = [t for t in codes if t not in ("identifier", "constant")]
+def build_regex(tokens):
     keywords = {t for t in tokens if re.fullmatch(IDENTIFIER, t)}
     operators = sorted(set(tokens) - keywords, key=len, reverse=True)
     patterns = [
@@ -56,8 +50,8 @@ def load_st():
     return lib
 
 
-def scan(source, codes, lib, st):
-    regex, keywords = build_regex(codes)
+def scan(source, tokens, lib, st):
+    regex, keywords = build_regex(tokens)
     pif, errors = [], []
     line, line_start = 1, 0
     for m in regex.finditer(source):
@@ -67,11 +61,11 @@ def scan(source, codes, lib, st):
         elif kind == "SPACE":
             pass
         elif kind in ("STRING", "NUMBER"):
-            pif.append((lexeme, codes["constant"], lib.st_insert(st, lexeme.encode())))
+            pif.append(("const", lib.st_insert(st, lexeme.encode())))
         elif kind == "IDENTIFIER" and lexeme not in keywords:
-            pif.append((lexeme, codes["identifier"], lib.st_insert(st, lexeme.encode())))
+            pif.append(("id", lib.st_insert(st, lexeme.encode())))
         elif kind in ("IDENTIFIER", "OPERATOR"):
-            pif.append((lexeme, codes[lexeme], -1))
+            pif.append((lexeme, -1))
         else:
             errors.append((line, m.start() - line_start + 1, lexeme, ERRORS[kind]))
     return pif, errors
@@ -81,18 +75,18 @@ def main():
     if len(sys.argv) < 2:
         sys.exit("usage: python3 lexer.py <program> [tokens.txt]")
     tokens_path = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "tokens.txt")
-    codes = load_tokens(tokens_path)
+    tokens = load_tokens(tokens_path)
     with open(sys.argv[1]) as f:
         source = f.read()
 
     lib = load_st()
     st = lib.st_create(101)
-    pif, errors = scan(source, codes, lib, st)
+    pif, errors = scan(source, tokens, lib, st)
 
     with open("PIF.out", "w") as f:
-        f.write(f"{'token':<24}{'code':>6}{'st_pos':>8}\n")
-        for token, code, pos in pif:
-            f.write(f"{token:<24}{code:>6}{pos:>8}\n")
+        f.write(f"{'token':<10}{'st_pos':>6}\n")
+        for token, pos in pif:
+            f.write(f"{token:<10}{pos:>6}\n")
 
     with open("ST.out", "w") as f:
         f.write(f"{'pos':>4}  lexeme\n")
