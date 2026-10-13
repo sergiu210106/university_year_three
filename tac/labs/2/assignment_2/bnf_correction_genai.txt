@@ -1,0 +1,116 @@
+Here is an analysis of your Backus-Naur Form (BNF) grammar, highlighting critical issues, syntax errors, and structural ambiguities, along with recommended fixes.
+
+---
+
+### Key Issues & Fixes
+
+#### 1. Circular / Left-Recursive Rules (`<recipe_expression>`)
+
+```bnf
+<recipe_expression> ::= <recipe_creation> | <recipe_expression> <recipe_add> | <recipe_expression> <recipe_remove>
+
+```
+
+* **Issue:** Direct left-recursion (`<recipe_expression> ::= <recipe_expression> ...`) causes infinite loops in top-down parsers (LL / recursive descent).
+* **Fix:** Restructure the rule to be right-recursive or iterative:
+```bnf
+<recipe_expression> ::= <recipe_creation> <recipe_ops>
+<recipe_ops>        ::= <recipe_add> <recipe_ops> | <recipe_remove> <recipe_ops> | epsilon
+
+```
+
+
+
+---
+
+#### 2. Endless String Loops via Optional/Epsilon Terminals
+
+```bnf
+<string> ::= ""<string_characters>""
+<measuring_unit> ::= <lowercase_string>
+<lowercase_string> ::= <lowercase_letter> <lowercase_string> | epsilon
+
+```
+
+* **Issue 1:** Extra double quotes `""` around string terminals mean literal double quotes in BNF notation.
+* **Issue 2:** `<lowercase_letter>` is never defined in your grammar.
+* **Issue 3:** If `<measuring_unit>` matches `epsilon` (empty string), `<ingredient>` can end silently without consuming space or units, leading to ambiguous parsing.
+* **Fix:** Define non-empty strings and explicit spaces between ingredient parts:
+```bnf
+<string>             ::= '"' <string_characters> '"'
+<string_characters>  ::= <letter> <string_characters> | epsilon
+<measuring_unit>     ::= <lowercase_letter> <measuring_unit_tail>
+<measuring_unit_tail>::= <lowercase_letter> <measuring_unit_tail> | epsilon
+<lowercase_letter>   ::= "a" | "b" | ... | "z"
+
+```
+
+
+
+---
+
+#### 3. Undefined Terminals & Whitespace
+
+* **Missing definitions:** `<lowercase_letter>` was missing completely.
+* **Lack of spacing rules:** Terminal tokens inside `<ingredient>` (`<string> <number> <measuring_unit>`) would match concatenated strings like `"flour"500grams` without explicit spaces defined in the grammar or a separate lexer step.
+
+---
+
+#### 4. Structure of `<recipe_content>`
+
+```bnf
+<term> ::= <ingredient>
+<recipe_content> ::= <term> <tail_list>
+<tail_list> ::= <term> <tail_list> | epsilon
+
+```
+
+* **Issue:** While structurally valid for non-empty lists, it lacks delimiter support (like commas `,`) which is common in list syntax (`List([ ... ])`). If ingredients are separated by whitespace, it works as-is.
+
+---
+
+### Revised & Corrected BNF Grammar
+
+```bnf
+<program> ::= <statements>
+<statements> ::= <statement> <statements> | epsilon
+<statement> ::= <recipe_expression> | <assignment> | <for_loop> | <input_operation> | <print_statement>
+
+<recipe_expression> ::= <recipe_creation> <recipe_ops>
+<recipe_ops>        ::= <recipe_add> <recipe_ops> | <recipe_remove> <recipe_ops> | epsilon
+<recipe_creation>   ::= "List" "(" <record_list> ")"
+<record_list>       ::= "[" <recipe_content> "]"
+<recipe_add>        ::= "+" <term>
+<recipe_remove>     ::= "-" <term>
+
+<recipe_content>    ::= <term> <tail_list> | epsilon
+<tail_list>         ::= "," <term> <tail_list> | epsilon
+<term>              ::= <ingredient>
+
+<ingredient>        ::= <string> <number> <measuring_unit>
+
+<assignment>        ::= <identifier> "=" <recipe_expression>
+<for_loop>          ::= "for" <identifier> "in" <recipe_expression> ":" <statements> "done"
+<input_operation>   ::= "read" <identifier>
+<print_statement>   ::= "puts" <recipe_expression>
+
+<identifier>        ::= <letter> <identifier_tail>
+<identifier_tail>   ::= <letter_or_digit_or_underscore> <identifier_tail> | epsilon
+<letter_or_digit_or_underscore> ::= <letter> | <digit> | "_"
+
+<string>            ::= '"' <string_characters> '"'
+<string_characters> ::= <letter> <string_characters> | epsilon
+
+<number>            ::= "0" | <non_zero_digit> <number_tail>
+<number_tail>       ::= <digit> <number_tail> | epsilon
+
+<measuring_unit>    ::= <lowercase_letter> <measuring_unit_tail>
+<measuring_unit_tail>::= <lowercase_letter> <measuring_unit_tail> | epsilon
+
+<letter>            ::= <lowercase_letter> | <uppercase_letter>
+<lowercase_letter>  ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
+<uppercase_letter>  ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z"
+<digit>             ::= "0" | <non_zero_digit>
+<non_zero_digit>    ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+```

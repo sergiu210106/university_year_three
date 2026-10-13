@@ -1,0 +1,17 @@
+Statement: For the domain specific programming language from Lab 1 
+
+- Requirement 1: write 2 programs 
+
+Note: The 2 programs must cover all types of statements provided by the language. At least one of the programs must be of medium size (namely at least 20 statements) 
+
+- Requirement 2: use GenAI to validate BNF – provide sequence of prompts, input/output  
+
+- Requirement 3: based on the recommendations given by genAI tool, update grammar if necessary 
+
+Delivery time: 1 week 
+
+Deliverables:  
+
+1 doc for each program 
+
+1 doc – use of GenAI 

@@ -1,0 +1,56 @@
+Based on the corrected grammar, here are the syntax issues present in both programs and their corrected versions.
+
+### Structural Issues Identified
+
+1. **String Quotes Missing (`<string>`):** In the grammar, ingredient names are strings and must be enclosed in double quotes (e.g., `"oua"` instead of `oua`).
+2. **Missing List Separators (`<tail_list>`):** Ingredients inside `List([ ... ])` must be comma-separated (e.g., `"oua" 10 buc, "lapte" 100 ml`).
+3. **Invalid Operations with Plain Identifiers:** In `omleta - ingredient` or operations adding/subtracting items, terms following `+` or `-` must be a valid `<term>` (which evaluates to an `<ingredient>`, e.g., `"ingredient" 1 buc` or an identifier representing a recipe expression, depending on intended language semantics).
+
+---
+
+### Corrected `p1.txt`
+
+```text
+omleta = List(["oua" 10 buc, "lapte" 100 ml])
+omleta = omleta + "piper" 2 g 
+omleta = omleta + "sare" 3 g 
+for ingredient in omleta:
+    puts omleta 
+    omleta = omleta - "ingredient" 1 buc
+done
+read carbonara
+carbonara_non_italiana = carbonara
+carbonara_non_italiana = carbonara_non_italiana - "oua" 2 buc 
+carbonara_non_italiana = carbonara_non_italiana + "smantana" 200 ml 
+puts carbonara
+prajitura = List(["prune" 500 g, "faina" 250 g, "oua" 3 buc])
+prajitura = prajitura + "zahar" 100000 mg 
+puts prajitura
+prajitura = prajitura + "kiwi" 2 buc
+prajitura = prajitura - "kiwi" 2 buc 
+puts prajitura
+ciorba = List(["pui" 600 g, "telina" 2 buc, "morcovi" 2 buc, "smantana" 300 ml])
+ciorba = ciorba + "piper" 5 g 
+ciorba = ciorba + "sare" 5 g 
+ciorba = ciorba + "maggi" 5 g
+puts ciorba
+
+```
+
+---
+
+### Corrected `p2.txt`
+
+```text
+supa = List(["apa" 1000 ml, "oase" 200 g, "taietei" 200 g])
+puts supa 
+supa = supa + "delicat" 10 g 
+read piure 
+piure = piure - "unt" 10 g 
+piure = piure + "lapte" 100 ml 
+puts piure 
+for i in piure:
+    puts piure 
+done
+
+```

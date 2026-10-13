@@ -1,0 +1,5 @@
+supa = List(["apa" 007 ml, "oase" 200 g])
+supa = supa + "sare2" 5 g
+2supa = supa - "unt" 10 g;
+puts supa @
+read "piure

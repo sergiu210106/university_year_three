@@ -1,0 +1,14 @@
+Statement: For the domain specific programming language from Lab 1, perform
+lexical analysis. Choose between using the tool lex / flex or Python
+(mandatory using regex)
+Input: list of tokens, source program (see lab 2)
+Output: Program Internal Form (PIF), Symbol Table (ST), lexical errors
+Requirement 1: produce output
+Requirement 2: ST management in C – BST or hash table (the data structure
+must be implemented)
+Delivery time: 1 week
+Deliverables:
+- Source code
+- 1 doc – documentation – explain use of tools, lexical tokens
+detection – identifiers, constants, data structures and operations
+for ST management

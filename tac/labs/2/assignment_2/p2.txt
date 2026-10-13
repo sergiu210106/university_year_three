@@ -1,0 +1,10 @@
+supa = List([apa 1000 ml,oase 200 g,taietei 200 g])
+puts supa 
+supa = supa + delicat 10 g 
+read piure 
+piure = piure - unt 10 g 
+piure = piure + lapte 100 ml 
+puts piure 
+for i in piure:
+    puts piure 
+done
