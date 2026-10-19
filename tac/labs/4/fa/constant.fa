@@ -1,0 +1,20 @@
+# constant = number | string
+# number   = 0 | nonzero digit*
+# string   = " letter* "
+letter  = a..z A..Z
+digit   = 0..9
+nonzero = 1..9
+
+states  S Z N A C
+initial S
+final   Z N C
+
+# numbers
+S 0       Z
+S nonzero N
+N digit   N
+
+# strings
+S "       A
+A letter  A
+A "       C

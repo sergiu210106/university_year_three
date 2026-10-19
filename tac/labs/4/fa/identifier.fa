@@ -1,0 +1,12 @@
+# identifier = letter (letter | digit | _)*
+letter = a..z A..Z
+digit  = 0..9
+
+states  S I
+initial S
+final   I
+
+S letter I
+I letter I
+I digit  I
+I _      I
