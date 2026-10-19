@@ -2,202 +2,202 @@
 
 Sentence: Apple is looking at buying a U.K. startup for $1 billion.
 Tokens: ['Apple', 'is', 'looking', 'at', 'buying', 'a', 'U.K.', 'startup', 'for', '$', '1', 'billion', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Apple          appl         Apple          PROPN  nsubj      looking
-is             is           be             AUX    aux        looking
-looking        look         look           VERB   ROOT       looking
-at             at           at             ADP    prep       looking
-buying         buy          buy            VERB   pcomp      at
-a              a            a              DET    det        U.K.
-U.K.           u.k.         U.K.           PROPN  dobj       buying
-startup        startup      startup        NOUN   advcl      looking
-for            for          for            ADP    prep       startup
-$              $            $              SYM    quantmod   billion
-1              1            1              NUM    compound   billion
-billion        billion      billion        NUM    pobj       for
-.              .            .              PUNCT  punct      looking
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Apple          appl           Apple          NNP    nsubj      looking
+is             is             be             VBZ    aux        looking
+looking        look           look           VBG    ROOT       ROOT
+at             at             at             IN     prep       looking
+buying         buy            buy            VBG    pcomp      at
+a              a              a              DT     det        U.K.
+U.K.           u.k.           U.K.           NNP    dobj       buying
+startup        startup        startup        NN     advcl      looking
+for            for            for            IN     prep       startup
+$              $              $              $      quantmod   billion
+1              1              1              CD     compound   billion
+billion        billion        billion        CD     pobj       for
+.              .              .              .      punct      looking
 Dependency tree: trees/en_1.svg
-Triplets: [('looking', 'nsubj', 'Apple'), ('looking', 'aux', 'is'), ('looking', 'ROOT', 'looking'), ('looking', 'prep', 'at'), ('at', 'pcomp', 'buying'), ('U.K.', 'det', 'a'), ('buying', 'dobj', 'U.K.'), ('looking', 'advcl', 'startup'), ('startup', 'prep', 'for'), ('billion', 'quantmod', '$'), ('billion', 'compound', '1'), ('for', 'pobj', 'billion'), ('looking', 'punct', '.')]
+Triplets: [('looking', 'nsubj', 'Apple'), ('looking', 'aux', 'is'), ('ROOT', 'ROOT', 'looking'), ('looking', 'prep', 'at'), ('at', 'pcomp', 'buying'), ('U.K.', 'det', 'a'), ('buying', 'dobj', 'U.K.'), ('looking', 'advcl', 'startup'), ('startup', 'prep', 'for'), ('billion', 'quantmod', '$'), ('billion', 'compound', '1'), ('for', 'pobj', 'billion'), ('looking', 'punct', '.')]
 Chunks: ['Apple', 'a U.K.']
 Entities: [('Apple', 'ORG'), ('U.K.', 'GPE'), ('$1 billion', 'MONEY')]
 
 Sentence: Barack Obama was born in Hawaii and served as the 44th President of the United States.
 Tokens: ['Barack', 'Obama', 'was', 'born', 'in', 'Hawaii', 'and', 'served', 'as', 'the', '44th', 'President', 'of', 'the', 'United', 'States', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Barack         barack       Barack         PROPN  compound   Obama
-Obama          obama        Obama          PROPN  nsubjpass  born
-was            was          be             AUX    auxpass    born
-born           born         bear           VERB   ROOT       born
-in             in           in             ADP    prep       born
-Hawaii         hawaii       Hawaii         PROPN  pobj       in
-and            and          and            CCONJ  cc         born
-served         serv         serve          VERB   conj       born
-as             as           as             ADP    prep       served
-the            the          the            DET    det        President
-44th           44th         44th           ADJ    amod       President
-President      presid       President      PROPN  pobj       as
-of             of           of             ADP    prep       President
-the            the          the            DET    det        States
-United         unit         United         PROPN  compound   States
-States         state        States         PROPN  pobj       of
-.              .            .              PUNCT  punct      born
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Barack         barack         Barack         NNP    compound   Obama
+Obama          obama          Obama          NNP    nsubjpass  born
+was            was            be             VBD    auxpass    born
+born           born           bear           VBN    ROOT       ROOT
+in             in             in             IN     prep       born
+Hawaii         hawaii         Hawaii         NNP    pobj       in
+and            and            and            CC     cc         born
+served         serv           serve          VBD    conj       born
+as             as             as             IN     prep       served
+the            the            the            DT     det        President
+44th           44th           44th           JJ     amod       President
+President      presid         President      NNP    pobj       as
+of             of             of             IN     prep       President
+the            the            the            DT     det        States
+United         unit           United         NNP    compound   States
+States         state          States         NNP    pobj       of
+.              .              .              .      punct      born
 Dependency tree: trees/en_2.svg
-Triplets: [('Obama', 'compound', 'Barack'), ('born', 'nsubjpass', 'Obama'), ('born', 'auxpass', 'was'), ('born', 'ROOT', 'born'), ('born', 'prep', 'in'), ('in', 'pobj', 'Hawaii'), ('born', 'cc', 'and'), ('born', 'conj', 'served'), ('served', 'prep', 'as'), ('President', 'det', 'the'), ('President', 'amod', '44th'), ('as', 'pobj', 'President'), ('President', 'prep', 'of'), ('States', 'det', 'the'), ('States', 'compound', 'United'), ('of', 'pobj', 'States'), ('born', 'punct', '.')]
+Triplets: [('Obama', 'compound', 'Barack'), ('born', 'nsubjpass', 'Obama'), ('born', 'auxpass', 'was'), ('ROOT', 'ROOT', 'born'), ('born', 'prep', 'in'), ('in', 'pobj', 'Hawaii'), ('born', 'cc', 'and'), ('born', 'conj', 'served'), ('served', 'prep', 'as'), ('President', 'det', 'the'), ('President', 'amod', '44th'), ('as', 'pobj', 'President'), ('President', 'prep', 'of'), ('States', 'det', 'the'), ('States', 'compound', 'United'), ('of', 'pobj', 'States'), ('born', 'punct', '.')]
 Chunks: ['Barack Obama', 'Hawaii', 'the 44th President', 'the United States']
 Entities: [('Barack Obama', 'PERSON'), ('Hawaii', 'GPE'), ('44th', 'ORDINAL'), ('the United States', 'GPE')]
 
 Sentence: The quick brown fox jumps over the lazy dog near the river.
 Tokens: ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog', 'near', 'the', 'river', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-The            the          the            DET    det        fox
-quick          quick        quick          ADJ    amod       fox
-brown          brown        brown          ADJ    amod       fox
-fox            fox          fox            NOUN   nsubj      jumps
-jumps          jump         jump           VERB   ROOT       jumps
-over           over         over           ADP    prep       jumps
-the            the          the            DET    det        dog
-lazy           lazi         lazy           ADJ    amod       dog
-dog            dog          dog            NOUN   pobj       over
-near           near         near           ADP    prep       dog
-the            the          the            DET    det        river
-river          river        river          NOUN   pobj       near
-.              .            .              PUNCT  punct      jumps
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+The            the            the            DT     det        fox
+quick          quick          quick          JJ     amod       fox
+brown          brown          brown          JJ     amod       fox
+fox            fox            fox            NN     nsubj      jumps
+jumps          jump           jump           VBZ    ROOT       ROOT
+over           over           over           IN     prep       jumps
+the            the            the            DT     det        dog
+lazy           lazi           lazy           JJ     amod       dog
+dog            dog            dog            NN     pobj       over
+near           near           near           IN     prep       dog
+the            the            the            DT     det        river
+river          river          river          NN     pobj       near
+.              .              .              .      punct      jumps
 Dependency tree: trees/en_3.svg
-Triplets: [('fox', 'det', 'The'), ('fox', 'amod', 'quick'), ('fox', 'amod', 'brown'), ('jumps', 'nsubj', 'fox'), ('jumps', 'ROOT', 'jumps'), ('jumps', 'prep', 'over'), ('dog', 'det', 'the'), ('dog', 'amod', 'lazy'), ('over', 'pobj', 'dog'), ('dog', 'prep', 'near'), ('river', 'det', 'the'), ('near', 'pobj', 'river'), ('jumps', 'punct', '.')]
+Triplets: [('fox', 'det', 'The'), ('fox', 'amod', 'quick'), ('fox', 'amod', 'brown'), ('jumps', 'nsubj', 'fox'), ('ROOT', 'ROOT', 'jumps'), ('jumps', 'prep', 'over'), ('dog', 'det', 'the'), ('dog', 'amod', 'lazy'), ('over', 'pobj', 'dog'), ('dog', 'prep', 'near'), ('river', 'det', 'the'), ('near', 'pobj', 'river'), ('jumps', 'punct', '.')]
 Chunks: ['The quick brown fox', 'the lazy dog', 'the river']
 Entities: []
 
 Sentence: Google opened a new office in Zurich in 2019.
 Tokens: ['Google', 'opened', 'a', 'new', 'office', 'in', 'Zurich', 'in', '2019', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Google         googl        Google         PROPN  nsubj      opened
-opened         open         open           VERB   ROOT       opened
-a              a            a              DET    det        office
-new            new          new            ADJ    amod       office
-office         offic        office         NOUN   dobj       opened
-in             in           in             ADP    prep       office
-Zurich         zurich       Zurich         PROPN  pobj       in
-in             in           in             ADP    prep       opened
-2019           2019         2019           NUM    pobj       in
-.              .            .              PUNCT  punct      opened
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Google         googl          Google         NNP    nsubj      opened
+opened         open           open           VBD    ROOT       ROOT
+a              a              a              DT     det        office
+new            new            new            JJ     amod       office
+office         offic          office         NN     dobj       opened
+in             in             in             IN     prep       office
+Zurich         zurich         Zurich         NNP    pobj       in
+in             in             in             IN     prep       opened
+2019           2019           2019           CD     pobj       in
+.              .              .              .      punct      opened
 Dependency tree: trees/en_4.svg
-Triplets: [('opened', 'nsubj', 'Google'), ('opened', 'ROOT', 'opened'), ('office', 'det', 'a'), ('office', 'amod', 'new'), ('opened', 'dobj', 'office'), ('office', 'prep', 'in'), ('in', 'pobj', 'Zurich'), ('opened', 'prep', 'in'), ('in', 'pobj', '2019'), ('opened', 'punct', '.')]
+Triplets: [('opened', 'nsubj', 'Google'), ('ROOT', 'ROOT', 'opened'), ('office', 'det', 'a'), ('office', 'amod', 'new'), ('opened', 'dobj', 'office'), ('office', 'prep', 'in'), ('in', 'pobj', 'Zurich'), ('opened', 'prep', 'in'), ('in', 'pobj', '2019'), ('opened', 'punct', '.')]
 Chunks: ['Google', 'a new office', 'Zurich']
 Entities: [('Google', 'ORG'), ('Zurich', 'GPE'), ('2019', 'DATE')]
 
 Sentence: Marie Curie won the Nobel Prize in Physics in 1903.
 Tokens: ['Marie', 'Curie', 'won', 'the', 'Nobel', 'Prize', 'in', 'Physics', 'in', '1903', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Marie          mari         Marie          PROPN  compound   Curie
-Curie          curi         Curie          PROPN  nsubj      won
-won            won          win            VERB   ROOT       won
-the            the          the            DET    det        Prize
-Nobel          nobel        Nobel          PROPN  compound   Prize
-Prize          prize        Prize          PROPN  dobj       won
-in             in           in             ADP    prep       Prize
-Physics        physic       Physics        PROPN  pobj       in
-in             in           in             ADP    prep       won
-1903           1903         1903           NUM    pobj       in
-.              .            .              PUNCT  punct      won
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Marie          mari           Marie          NNP    compound   Curie
+Curie          curi           Curie          NNP    nsubj      won
+won            won            win            VBD    ROOT       ROOT
+the            the            the            DT     det        Prize
+Nobel          nobel          Nobel          NNP    compound   Prize
+Prize          prize          Prize          NNP    dobj       won
+in             in             in             IN     prep       Prize
+Physics        physic         Physics        NNP    pobj       in
+in             in             in             IN     prep       won
+1903           1903           1903           CD     pobj       in
+.              .              .              .      punct      won
 Dependency tree: trees/en_5.svg
-Triplets: [('Curie', 'compound', 'Marie'), ('won', 'nsubj', 'Curie'), ('won', 'ROOT', 'won'), ('Prize', 'det', 'the'), ('Prize', 'compound', 'Nobel'), ('won', 'dobj', 'Prize'), ('Prize', 'prep', 'in'), ('in', 'pobj', 'Physics'), ('won', 'prep', 'in'), ('in', 'pobj', '1903'), ('won', 'punct', '.')]
+Triplets: [('Curie', 'compound', 'Marie'), ('won', 'nsubj', 'Curie'), ('ROOT', 'ROOT', 'won'), ('Prize', 'det', 'the'), ('Prize', 'compound', 'Nobel'), ('won', 'dobj', 'Prize'), ('Prize', 'prep', 'in'), ('in', 'pobj', 'Physics'), ('won', 'prep', 'in'), ('in', 'pobj', '1903'), ('won', 'punct', '.')]
 Chunks: ['Marie Curie', 'the Nobel Prize', 'Physics']
 Entities: [('Marie Curie', 'PERSON'), ('the Nobel Prize in Physics', 'WORK_OF_ART'), ('1903', 'DATE')]
 
 Sentence: The students are studying natural language processing at Babes-Bolyai University.
 Tokens: ['The', 'students', 'are', 'studying', 'natural', 'language', 'processing', 'at', 'Babes', '-', 'Bolyai', 'University', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-The            the          the            DET    det        students
-students       student      student        NOUN   nsubj      studying
-are            are          be             AUX    aux        studying
-studying       studi        study          VERB   ROOT       studying
-natural        natur        natural        ADJ    amod       language
-language       languag      language       NOUN   compound   processing
-processing     process      processing     NOUN   dobj       studying
-at             at           at             ADP    prep       processing
-Babes          babe         Babes          PROPN  compound   Bolyai
--              -            -              PUNCT  punct      Bolyai
-Bolyai         bolyai       Bolyai         PROPN  compound   University
-University     univers      University     PROPN  pobj       at
-.              .            .              PUNCT  punct      studying
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+The            the            the            DT     det        students
+students       student        student        NNS    nsubj      studying
+are            are            be             VBP    aux        studying
+studying       studi          study          VBG    ROOT       ROOT
+natural        natur          natural        JJ     amod       language
+language       languag        language       NN     compound   processing
+processing     process        processing     NN     dobj       studying
+at             at             at             IN     prep       processing
+Babes          babe           Babes          NNP    compound   Bolyai
+-              -              -              HYPH   punct      Bolyai
+Bolyai         bolyai         Bolyai         NNP    compound   University
+University     univers        University     NNP    pobj       at
+.              .              .              .      punct      studying
 Dependency tree: trees/en_6.svg
-Triplets: [('students', 'det', 'The'), ('studying', 'nsubj', 'students'), ('studying', 'aux', 'are'), ('studying', 'ROOT', 'studying'), ('language', 'amod', 'natural'), ('processing', 'compound', 'language'), ('studying', 'dobj', 'processing'), ('processing', 'prep', 'at'), ('Bolyai', 'compound', 'Babes'), ('Bolyai', 'punct', '-'), ('University', 'compound', 'Bolyai'), ('at', 'pobj', 'University'), ('studying', 'punct', '.')]
+Triplets: [('students', 'det', 'The'), ('studying', 'nsubj', 'students'), ('studying', 'aux', 'are'), ('ROOT', 'ROOT', 'studying'), ('language', 'amod', 'natural'), ('processing', 'compound', 'language'), ('studying', 'dobj', 'processing'), ('processing', 'prep', 'at'), ('Bolyai', 'compound', 'Babes'), ('Bolyai', 'punct', '-'), ('University', 'compound', 'Bolyai'), ('at', 'pobj', 'University'), ('studying', 'punct', '.')]
 Chunks: ['The students', 'natural language processing', 'Babes-Bolyai University']
 Entities: [('Babes-Bolyai University', 'ORG')]
 
 Sentence: Elon Musk announced that Tesla will build a factory in Berlin.
 Tokens: ['Elon', 'Musk', 'announced', 'that', 'Tesla', 'will', 'build', 'a', 'factory', 'in', 'Berlin', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Elon           elon         Elon           PROPN  compound   Musk
-Musk           musk         Musk           PROPN  nsubj      announced
-announced      announc      announce       VERB   ROOT       announced
-that           that         that           SCONJ  mark       build
-Tesla          tesla        Tesla          PROPN  nsubj      build
-will           will         will           AUX    aux        build
-build          build        build          VERB   ccomp      announced
-a              a            a              DET    det        factory
-factory        factori      factory        NOUN   dobj       build
-in             in           in             ADP    prep       build
-Berlin         berlin       Berlin         PROPN  pobj       in
-.              .            .              PUNCT  punct      announced
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Elon           elon           Elon           NNP    compound   Musk
+Musk           musk           Musk           NNP    nsubj      announced
+announced      announc        announce       VBD    ROOT       ROOT
+that           that           that           IN     mark       build
+Tesla          tesla          Tesla          NNP    nsubj      build
+will           will           will           MD     aux        build
+build          build          build          VB     ccomp      announced
+a              a              a              DT     det        factory
+factory        factori        factory        NN     dobj       build
+in             in             in             IN     prep       build
+Berlin         berlin         Berlin         NNP    pobj       in
+.              .              .              .      punct      announced
 Dependency tree: trees/en_7.svg
-Triplets: [('Musk', 'compound', 'Elon'), ('announced', 'nsubj', 'Musk'), ('announced', 'ROOT', 'announced'), ('build', 'mark', 'that'), ('build', 'nsubj', 'Tesla'), ('build', 'aux', 'will'), ('announced', 'ccomp', 'build'), ('factory', 'det', 'a'), ('build', 'dobj', 'factory'), ('build', 'prep', 'in'), ('in', 'pobj', 'Berlin'), ('announced', 'punct', '.')]
+Triplets: [('Musk', 'compound', 'Elon'), ('announced', 'nsubj', 'Musk'), ('ROOT', 'ROOT', 'announced'), ('build', 'mark', 'that'), ('build', 'nsubj', 'Tesla'), ('build', 'aux', 'will'), ('announced', 'ccomp', 'build'), ('factory', 'det', 'a'), ('build', 'dobj', 'factory'), ('build', 'prep', 'in'), ('in', 'pobj', 'Berlin'), ('announced', 'punct', '.')]
 Chunks: ['Elon Musk', 'Tesla', 'a factory', 'Berlin']
 Entities: [('Elon Musk', 'PERSON'), ('Tesla', 'ORG'), ('Berlin', 'GPE')]
 
 Sentence: She quickly finished her homework before the football match started.
 Tokens: ['She', 'quickly', 'finished', 'her', 'homework', 'before', 'the', 'football', 'match', 'started', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-She            she          she            PRON   nsubj      finished
-quickly        quick        quickly        ADV    advmod     finished
-finished       finish       finish         VERB   ROOT       finished
-her            her          her            PRON   poss       homework
-homework       homework     homework       NOUN   dobj       finished
-before         befor        before         SCONJ  mark       started
-the            the          the            DET    det        match
-football       footbal      football       NOUN   compound   match
-match          match        match          NOUN   nsubj      started
-started        start        start          VERB   advcl      finished
-.              .            .              PUNCT  punct      finished
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+She            she            she            PRP    nsubj      finished
+quickly        quick          quickly        RB     advmod     finished
+finished       finish         finish         VBD    ROOT       ROOT
+her            her            her            PRP$   poss       homework
+homework       homework       homework       NN     dobj       finished
+before         befor          before         IN     mark       started
+the            the            the            DT     det        match
+football       footbal        football       NN     compound   match
+match          match          match          NN     nsubj      started
+started        start          start          VBD    advcl      finished
+.              .              .              .      punct      finished
 Dependency tree: trees/en_8.svg
-Triplets: [('finished', 'nsubj', 'She'), ('finished', 'advmod', 'quickly'), ('finished', 'ROOT', 'finished'), ('homework', 'poss', 'her'), ('finished', 'dobj', 'homework'), ('started', 'mark', 'before'), ('match', 'det', 'the'), ('match', 'compound', 'football'), ('started', 'nsubj', 'match'), ('finished', 'advcl', 'started'), ('finished', 'punct', '.')]
+Triplets: [('finished', 'nsubj', 'She'), ('finished', 'advmod', 'quickly'), ('ROOT', 'ROOT', 'finished'), ('homework', 'poss', 'her'), ('finished', 'dobj', 'homework'), ('started', 'mark', 'before'), ('match', 'det', 'the'), ('match', 'compound', 'football'), ('started', 'nsubj', 'match'), ('finished', 'advcl', 'started'), ('finished', 'punct', '.')]
 Chunks: ['She', 'her homework', 'the football match']
 Entities: []
 
 Sentence: The European Union headquarters are located in Brussels.
 Tokens: ['The', 'European', 'Union', 'headquarters', 'are', 'located', 'in', 'Brussels', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-The            the          the            DET    det        headquarters
-European       european     European       PROPN  compound   Union
-Union          union        Union          PROPN  compound   headquarters
-headquarters   headquart    headquarter    NOUN   nsubjpass  located
-are            are          be             AUX    auxpass    located
-located        locat        locate         VERB   ROOT       located
-in             in           in             ADP    prep       located
-Brussels       brussel      Brussels       PROPN  pobj       in
-.              .            .              PUNCT  punct      located
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+The            the            the            DT     det        headquarters
+European       european       European       NNP    compound   Union
+Union          union          Union          NNP    compound   headquarters
+headquarters   headquart      headquarter    NNS    nsubjpass  located
+are            are            be             VBP    auxpass    located
+located        locat          locate         VBN    ROOT       ROOT
+in             in             in             IN     prep       located
+Brussels       brussel        Brussels       NNP    pobj       in
+.              .              .              .      punct      located
 Dependency tree: trees/en_9.svg
-Triplets: [('headquarters', 'det', 'The'), ('Union', 'compound', 'European'), ('headquarters', 'compound', 'Union'), ('located', 'nsubjpass', 'headquarters'), ('located', 'auxpass', 'are'), ('located', 'ROOT', 'located'), ('located', 'prep', 'in'), ('in', 'pobj', 'Brussels'), ('located', 'punct', '.')]
+Triplets: [('headquarters', 'det', 'The'), ('Union', 'compound', 'European'), ('headquarters', 'compound', 'Union'), ('located', 'nsubjpass', 'headquarters'), ('located', 'auxpass', 'are'), ('ROOT', 'ROOT', 'located'), ('located', 'prep', 'in'), ('in', 'pobj', 'Brussels'), ('located', 'punct', '.')]
 Chunks: ['The European Union headquarters', 'Brussels']
 Entities: [('The European Union', 'ORG'), ('Brussels', 'GPE')]
 
 Sentence: Researchers at MIT have developed a faster algorithm for image recognition.
 Tokens: ['Researchers', 'at', 'MIT', 'have', 'developed', 'a', 'faster', 'algorithm', 'for', 'image', 'recognition', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Researchers    research     researcher     NOUN   nsubj      developed
-at             at           at             ADP    prep       Researchers
-MIT            mit          MIT            PROPN  pobj       at
-have           have         have           AUX    aux        developed
-developed      develop      develop        VERB   ROOT       developed
-a              a            a              DET    det        algorithm
-faster         faster       fast           ADJ    amod       algorithm
-algorithm      algorithm    algorithm      NOUN   dobj       developed
-for            for          for            ADP    prep       developed
-image          imag         image          NOUN   compound   recognition
-recognition    recognit     recognition    NOUN   pobj       for
-.              .            .              PUNCT  punct      developed
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Researchers    research       researcher     NNS    nsubj      developed
+at             at             at             IN     prep       Researchers
+MIT            mit            MIT            NNP    pobj       at
+have           have           have           VBP    aux        developed
+developed      develop        develop        VBN    ROOT       ROOT
+a              a              a              DT     det        algorithm
+faster         faster         fast           JJR    amod       algorithm
+algorithm      algorithm      algorithm      NN     dobj       developed
+for            for            for            IN     prep       developed
+image          imag           image          NN     compound   recognition
+recognition    recognit       recognition    NN     pobj       for
+.              .              .              .      punct      developed
 Dependency tree: trees/en_10.svg
-Triplets: [('developed', 'nsubj', 'Researchers'), ('Researchers', 'prep', 'at'), ('at', 'pobj', 'MIT'), ('developed', 'aux', 'have'), ('developed', 'ROOT', 'developed'), ('algorithm', 'det', 'a'), ('algorithm', 'amod', 'faster'), ('developed', 'dobj', 'algorithm'), ('developed', 'prep', 'for'), ('recognition', 'compound', 'image'), ('for', 'pobj', 'recognition'), ('developed', 'punct', '.')]
+Triplets: [('developed', 'nsubj', 'Researchers'), ('Researchers', 'prep', 'at'), ('at', 'pobj', 'MIT'), ('developed', 'aux', 'have'), ('ROOT', 'ROOT', 'developed'), ('algorithm', 'det', 'a'), ('algorithm', 'amod', 'faster'), ('developed', 'dobj', 'algorithm'), ('developed', 'prep', 'for'), ('recognition', 'compound', 'image'), ('for', 'pobj', 'recognition'), ('developed', 'punct', '.')]
 Chunks: ['Researchers', 'MIT', 'a faster algorithm', 'image recognition']
 Entities: [('MIT', 'ORG')]
 
@@ -205,173 +205,173 @@ Entities: [('MIT', 'ORG')]
 
 Sentence: Universitatea Babeș-Bolyai este situată în Cluj-Napoca.
 Tokens: ['Universitatea', 'Babeș-Bolyai', 'este', 'situată', 'în', 'Cluj-Napoca', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Universitatea  univers      universitate   NOUN   nsubj      situată
-Babeș-Bolyai   babeș-boly   Babeș-Bolyai   PROPN  nmod       Universitatea
-este           este         fi             AUX    aux:pass   situată
-situată        situat       situa          VERB   ROOT       situată
-în             în           în             ADP    case       Cluj-Napoca
-Cluj-Napoca    cluj-napoc   Cluj-Napoca    PROPN  obl        situată
-.              .            .              PUNCT  punct      situată
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Universitatea  univers        universitate   Ncfsry nsubj      situată
+Babeș-Bolyai   babeș-boly     Babeș-Bolyai   Np     nmod       Universitatea
+este           este           fi             Vaip3s aux:pass   situată
+situată        situat         situa          Vmp--sfROOT       ROOT
+în             în             în             Spsa   case       Cluj-Napoca
+Cluj-Napoca    cluj-napoc     Cluj-Napoca    Np     obl        situată
+.              .              .              PERIOD punct      situată
 Dependency tree: trees/ro_1.svg
-Triplets: [('situată', 'nsubj', 'Universitatea'), ('Universitatea', 'nmod', 'Babeș-Bolyai'), ('situată', 'aux:pass', 'este'), ('situată', 'ROOT', 'situată'), ('Cluj-Napoca', 'case', 'în'), ('situată', 'obl', 'Cluj-Napoca'), ('situată', 'punct', '.')]
-Chunks: ['Universitatea', 'Babeș-Bolyai', 'Cluj-Napoca']
+Triplets: [('situată', 'nsubj', 'Universitatea'), ('Universitatea', 'nmod', 'Babeș-Bolyai'), ('situată', 'aux:pass', 'este'), ('ROOT', 'ROOT', 'situată'), ('Cluj-Napoca', 'case', 'în'), ('situată', 'obl', 'Cluj-Napoca'), ('situată', 'punct', '.')]
+Chunks: ['Universitatea Babeș-Bolyai', 'Cluj-Napoca']
 Entities: [('Universitatea Babeș-Bolyai', 'ORGANIZATION'), ('Cluj-Napoca', 'GPE')]
 
 Sentence: Mihai Eminescu a fost cel mai important poet român.
 Tokens: ['Mihai', 'Eminescu', 'a', 'fost', 'cel', 'mai', 'important', 'poet', 'român', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Mihai          miha         Mihai          PROPN  nsubj      poet
-Eminescu       eminescu     Eminescu       PROPN  flat       Mihai
-a              a            avea           AUX    aux        poet
-fost           fost         fi             AUX    cop        poet
-cel            cel          cel            DET    det        important
-mai            mai          mai            ADV    advmod     important
-important      import       important      ADJ    amod       poet
-poet           poet         poet           NOUN   ROOT       poet
-român          român        român          ADJ    amod       poet
-.              .            .              PUNCT  punct      poet
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Mihai          miha           Mihai          Np     nsubj      poet
+Eminescu       eminescu       Eminescu       Np     flat       Mihai
+a              a              avea           Va--3s aux        poet
+fost           fost           fi             Vap--smcop        poet
+cel            cel            cel            Tdmsr  det        important
+mai            mai            mai            Rp     advmod     important
+important      import         important      Afpms-namod       poet
+poet           poet           poet           Ncms-n ROOT       ROOT
+român          român          român          Afpms-namod       poet
+.              .              .              PERIOD punct      poet
 Dependency tree: trees/ro_2.svg
-Triplets: [('poet', 'nsubj', 'Mihai'), ('Mihai', 'flat', 'Eminescu'), ('poet', 'aux', 'a'), ('poet', 'cop', 'fost'), ('important', 'det', 'cel'), ('important', 'advmod', 'mai'), ('poet', 'amod', 'important'), ('poet', 'ROOT', 'poet'), ('poet', 'amod', 'român'), ('poet', 'punct', '.')]
-Chunks: ['Mihai Eminescu', 'important poet român']
+Triplets: [('poet', 'nsubj', 'Mihai'), ('Mihai', 'flat', 'Eminescu'), ('poet', 'aux', 'a'), ('poet', 'cop', 'fost'), ('important', 'det', 'cel'), ('important', 'advmod', 'mai'), ('poet', 'amod', 'important'), ('ROOT', 'ROOT', 'poet'), ('poet', 'amod', 'român'), ('poet', 'punct', '.')]
+Chunks: ['Mihai Eminescu', 'cel mai important poet român']
 Entities: [('Mihai Eminescu', 'PERSON'), ('poet', 'PERSON'), ('român', 'NAT_REL_POL')]
 
 Sentence: Studenții învață procesarea limbajului natural la laborator.
 Tokens: ['Studenții', 'învață', 'procesarea', 'limbajului', 'natural', 'la', 'laborator', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Studenții      studenț      Studenții      NOUN   nsubj      învață
-învață         învaț        învață         VERB   ROOT       învață
-procesarea     proces       procesare      NOUN   obj        învață
-limbajului     limbaj       limbaj         NOUN   nmod       procesarea
-natural        natural      natural        ADJ    amod       limbajului
-la             la           la             ADP    case       laborator
-laborator      labor        laborator      NOUN   nmod       limbajului
-.              .            .              PUNCT  punct      învață
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Studenții      studenț        Studenții      Ncmp-n nsubj      învață
+învață         învaț          învață         Vmip3  ROOT       ROOT
+procesarea     proces         procesare      Ncfsry obj        învață
+limbajului     limbaj         limbaj         Ncmsoy nmod       procesarea
+natural        natural        natural        Afpms-namod       limbajului
+la             la             la             Spsa   case       laborator
+laborator      labor          laborator      Ncms-n nmod       limbajului
+.              .              .              PERIOD punct      învață
 Dependency tree: trees/ro_3.svg
-Triplets: [('învață', 'nsubj', 'Studenții'), ('învață', 'ROOT', 'învață'), ('învață', 'obj', 'procesarea'), ('procesarea', 'nmod', 'limbajului'), ('limbajului', 'amod', 'natural'), ('laborator', 'case', 'la'), ('limbajului', 'nmod', 'laborator'), ('învață', 'punct', '.')]
-Chunks: ['Studenții', 'procesarea', 'limbajului natural', 'laborator']
+Triplets: [('învață', 'nsubj', 'Studenții'), ('ROOT', 'ROOT', 'învață'), ('învață', 'obj', 'procesarea'), ('procesarea', 'nmod', 'limbajului'), ('limbajului', 'amod', 'natural'), ('laborator', 'case', 'la'), ('limbajului', 'nmod', 'laborator'), ('învață', 'punct', '.')]
+Chunks: ['Studenții', 'procesarea limbajului natural', 'laborator']
 Entities: [('Studenții', 'PERSON'), ('laborator', 'FACILITY')]
 
 Sentence: Bucureștiul este capitala României și cel mai mare oraș din țară.
 Tokens: ['Bucureștiul', 'este', 'capitala', 'României', 'și', 'cel', 'mai', 'mare', 'oraș', 'din', 'țară', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Bucureștiul    bucureșt     Bucureștiul    PROPN  nsubj      capitala
-este           este         fi             AUX    cop        capitala
-capitala       capital      capitală       NOUN   ROOT       capitala
-României       român        România        PROPN  nmod       capitala
-și             și           și             CCONJ  cc         oraș
-cel            cel          cel            DET    det        mare
-mai            mai          mai            ADV    advmod     mare
-mare           mar          mare           ADJ    amod       oraș
-oraș           oraș         oraș           NOUN   conj       capitala
-din            din          din            ADP    case       țară
-țară           țar          țară           NOUN   nmod       oraș
-.              .            .              PUNCT  punct      capitala
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Bucureștiul    bucureșt       Bucureștiul    Npmsry nsubj      capitala
+este           este           fi             Vaip3s cop        capitala
+capitala       capital        capitală       Ncfsry ROOT       ROOT
+României       român          România        Npfsoy nmod       capitala
+și             și             și             Crssp  cc         oraș
+cel            cel            cel            Tdmsr  det        mare
+mai            mai            mai            Rp     advmod     mare
+mare           mar            mare           Afpms-namod       oraș
+oraș           oraș           oraș           Ncms-n conj       capitala
+din            din            din            Spsa   case       țară
+țară           țar            țară           Ncfsrn nmod       oraș
+.              .              .              PERIOD punct      capitala
 Dependency tree: trees/ro_4.svg
-Triplets: [('capitala', 'nsubj', 'Bucureștiul'), ('capitala', 'cop', 'este'), ('capitala', 'ROOT', 'capitala'), ('capitala', 'nmod', 'României'), ('oraș', 'cc', 'și'), ('mare', 'det', 'cel'), ('mare', 'advmod', 'mai'), ('oraș', 'amod', 'mare'), ('capitala', 'conj', 'oraș'), ('țară', 'case', 'din'), ('oraș', 'nmod', 'țară'), ('capitala', 'punct', '.')]
-Chunks: ['Bucureștiul', 'capitala', 'României', 'mare oraș', 'țară']
+Triplets: [('capitala', 'nsubj', 'Bucureștiul'), ('capitala', 'cop', 'este'), ('ROOT', 'ROOT', 'capitala'), ('capitala', 'nmod', 'României'), ('oraș', 'cc', 'și'), ('mare', 'det', 'cel'), ('mare', 'advmod', 'mai'), ('oraș', 'amod', 'mare'), ('capitala', 'conj', 'oraș'), ('țară', 'case', 'din'), ('oraș', 'nmod', 'țară'), ('capitala', 'punct', '.')]
+Chunks: ['Bucureștiul', 'capitala României', 'cel mai mare oraș', 'țară']
 Entities: [('Bucureștiul', 'PERSON'), ('României', 'GPE')]
 
 Sentence: Ion Creangă a scris povestea Amintiri din copilărie.
 Tokens: ['Ion', 'Creangă', 'a', 'scris', 'povestea', 'Amintiri', 'din', 'copilărie', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Ion            ion          Ion            PROPN  nsubj      scris
-Creangă        creang       Creangă        PROPN  flat       Ion
-a              a            avea           AUX    aux        scris
-scris          scris        scrie          VERB   ROOT       scris
-povestea       povest       poveste        NOUN   obj        scris
-Amintiri       amintir      Amintiri       NOUN   nmod       povestea
-din            din          din            ADP    case       copilărie
-copilărie      copilăr      copilărie      NOUN   nmod       Amintiri
-.              .            .              PUNCT  punct      scris
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Ion            ion            Ion            Np     nsubj      scris
+Creangă        creang         Creangă        Np     flat       Ion
+a              a              avea           Va--3s aux        scris
+scris          scris          scrie          Vmp--smROOT       ROOT
+povestea       povest         poveste        Ncfsry obj        scris
+Amintiri       amintir        Amintiri       Ncfp-n nmod       povestea
+din            din            din            Spsa   case       copilărie
+copilărie      copilăr        copilărie      Ncfsrn nmod       Amintiri
+.              .              .              PERIOD punct      scris
 Dependency tree: trees/ro_5.svg
-Triplets: [('scris', 'nsubj', 'Ion'), ('Ion', 'flat', 'Creangă'), ('scris', 'aux', 'a'), ('scris', 'ROOT', 'scris'), ('scris', 'obj', 'povestea'), ('povestea', 'nmod', 'Amintiri'), ('copilărie', 'case', 'din'), ('Amintiri', 'nmod', 'copilărie'), ('scris', 'punct', '.')]
-Chunks: ['Ion Creangă', 'povestea', 'Amintiri', 'copilărie']
+Triplets: [('scris', 'nsubj', 'Ion'), ('Ion', 'flat', 'Creangă'), ('scris', 'aux', 'a'), ('ROOT', 'ROOT', 'scris'), ('scris', 'obj', 'povestea'), ('povestea', 'nmod', 'Amintiri'), ('copilărie', 'case', 'din'), ('Amintiri', 'nmod', 'copilărie'), ('scris', 'punct', '.')]
+Chunks: ['Ion Creangă', 'povestea Amintiri', 'copilărie']
 Entities: [('Ion Creangă', 'PERSON')]
 
 Sentence: Pisica neagră doarme liniștită pe canapeaua veche.
 Tokens: ['Pisica', 'neagră', 'doarme', 'liniștită', 'pe', 'canapeaua', 'veche', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Pisica         pisic        pisică         NOUN   nsubj      doarme
-neagră         neagr        negru          ADJ    amod       Pisica
-doarme         doarm        doarmă         AUX    ROOT       doarme
-liniștită      linișt       liniști        VERB   xcomp      doarme
-pe             pe           pe             ADP    case       canapeaua
-canapeaua      canapeau     canapea        NOUN   obl        liniștită
-veche          vech         vechi          ADJ    amod       canapeaua
-.              .            .              PUNCT  punct      doarme
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Pisica         pisic          pisică         Ncfsry nsubj      doarme
+neagră         neagr          negru          Afpfsrnamod       Pisica
+doarme         doarm          doarmă         Vmip3s ROOT       ROOT
+liniștită      linișt         liniști        Vmp--sfxcomp      doarme
+pe             pe             pe             Spsa   case       canapeaua
+canapeaua      canapeau       canapea        Ncfsry obl        liniștită
+veche          vech           vechi          Afpfsrnamod       canapeaua
+.              .              .              PERIOD punct      doarme
 Dependency tree: trees/ro_6.svg
-Triplets: [('doarme', 'nsubj', 'Pisica'), ('Pisica', 'amod', 'neagră'), ('doarme', 'ROOT', 'doarme'), ('doarme', 'xcomp', 'liniștită'), ('canapeaua', 'case', 'pe'), ('liniștită', 'obl', 'canapeaua'), ('canapeaua', 'amod', 'veche'), ('doarme', 'punct', '.')]
+Triplets: [('doarme', 'nsubj', 'Pisica'), ('Pisica', 'amod', 'neagră'), ('ROOT', 'ROOT', 'doarme'), ('doarme', 'xcomp', 'liniștită'), ('canapeaua', 'case', 'pe'), ('liniștită', 'obl', 'canapeaua'), ('canapeaua', 'amod', 'veche'), ('doarme', 'punct', '.')]
 Chunks: ['Pisica neagră', 'canapeaua veche']
 Entities: [('Pisica', 'GPE')]
 
 Sentence: Compania Microsoft a deschis un birou nou la Timișoara în 2020.
 Tokens: ['Compania', 'Microsoft', 'a', 'deschis', 'un', 'birou', 'nou', 'la', 'Timișoara', 'în', '2020', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Compania       compan       companie       NOUN   nsubj      deschis
-Microsoft      microsoft    Microsoft      PROPN  flat       Compania
-a              a            avea           AUX    aux        deschis
-deschis        deschis      deschide       VERB   ROOT       deschis
-un             un           un             DET    det        birou
-birou          birou        birou          NOUN   obj        deschis
-nou            nou          nou            ADJ    amod       birou
-la             la           la             ADP    case       Timișoara
-Timișoara      timișoar     Timișoara      PROPN  nmod       birou
-în             în           în             ADP    case       2020
-2020           2020         2020                  nummod     deschis
-.              .            .              PUNCT  punct      deschis
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Compania       compan         companie       Ncfsry nsubj      deschis
+Microsoft      microsoft      Microsoft      Np     flat       Compania
+a              a              avea           Va--3s aux        deschis
+deschis        deschis        deschide       Vmp--smROOT       ROOT
+un             un             un             Timsr  det        birou
+birou          birou          birou          Ncms-n obj        deschis
+nou            nou            nou            Afpms-namod       birou
+la             la             la             Spsa   case       Timișoara
+Timișoara      timișoar       Timișoara      Np     nmod       birou
+în             în             în             Spsa   case       2020
+2020           2020           2020           Mc-s-d nummod     deschis
+.              .              .              PERIOD punct      deschis
 Dependency tree: trees/ro_7.svg
-Triplets: [('deschis', 'nsubj', 'Compania'), ('Compania', 'flat', 'Microsoft'), ('deschis', 'aux', 'a'), ('deschis', 'ROOT', 'deschis'), ('birou', 'det', 'un'), ('deschis', 'obj', 'birou'), ('birou', 'amod', 'nou'), ('Timișoara', 'case', 'la'), ('birou', 'nmod', 'Timișoara'), ('2020', 'case', 'în'), ('deschis', 'nummod', '2020'), ('deschis', 'punct', '.')]
+Triplets: [('deschis', 'nsubj', 'Compania'), ('Compania', 'flat', 'Microsoft'), ('deschis', 'aux', 'a'), ('ROOT', 'ROOT', 'deschis'), ('birou', 'det', 'un'), ('deschis', 'obj', 'birou'), ('birou', 'amod', 'nou'), ('Timișoara', 'case', 'la'), ('birou', 'nmod', 'Timișoara'), ('2020', 'case', 'în'), ('deschis', 'nummod', '2020'), ('deschis', 'punct', '.')]
 Chunks: ['Compania Microsoft', 'un birou nou', 'Timișoara']
 Entities: [('Compania Microsoft', 'ORGANIZATION'), ('Timișoara', 'GPE'), ('2020', 'DATETIME')]
 
 Sentence: Copiii se joacă în parc împreună cu prietenii lor.
 Tokens: ['Copiii', 'se', 'joacă', 'în', 'parc', 'împreună', 'cu', 'prietenii', 'lor', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Copiii         copii        copil          NOUN   nsubj      joacă
-se             se           sine           PRON   expl:pass  joacă
-joacă          joac         juca           VERB   ROOT       joacă
-în             în           în             ADP    case       parc
-parc           parc         parc           NOUN   obl        joacă
-împreună       împreun      împreună       ADV    case       prietenii
-cu             cu           cu             ADP    fixed      împreună
-prietenii      prieten      prieten        NOUN   obl        joacă
-lor            lor          lui            DET    det        prietenii
-.              .            .              PUNCT  punct      joacă
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Copiii         copii          copil          Ncmpry nsubj      joacă
+se             se             sine           Px3--a--------wexpl:pass  joacă
+joacă          joac           juca           Vmip3  ROOT       ROOT
+în             în             în             Spsa   case       parc
+parc           parc           parc           Ncms-n obl        joacă
+împreună       împreun        împreună       Rgp    case       prietenii
+cu             cu             cu             Spsa   fixed      împreună
+prietenii      prieten        prieten        Ncmpry obl        joacă
+lor            lor            lui            Ds3---pdet        prietenii
+.              .              .              PERIOD punct      joacă
 Dependency tree: trees/ro_8.svg
-Triplets: [('joacă', 'nsubj', 'Copiii'), ('joacă', 'expl:pass', 'se'), ('joacă', 'ROOT', 'joacă'), ('parc', 'case', 'în'), ('joacă', 'obl', 'parc'), ('prietenii', 'case', 'împreună'), ('împreună', 'fixed', 'cu'), ('joacă', 'obl', 'prietenii'), ('prietenii', 'det', 'lor'), ('joacă', 'punct', '.')]
+Triplets: [('joacă', 'nsubj', 'Copiii'), ('joacă', 'expl:pass', 'se'), ('ROOT', 'ROOT', 'joacă'), ('parc', 'case', 'în'), ('joacă', 'obl', 'parc'), ('prietenii', 'case', 'împreună'), ('împreună', 'fixed', 'cu'), ('joacă', 'obl', 'prietenii'), ('prietenii', 'det', 'lor'), ('joacă', 'punct', '.')]
 Chunks: ['Copiii', 'parc', 'prietenii lor']
 Entities: [('Copiii', 'PERSON')]
 
 Sentence: Președintele a vizitat Parisul în luna martie.
 Tokens: ['Președintele', 'a', 'vizitat', 'Parisul', 'în', 'luna', 'martie', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Președintele   președint    președinte     NOUN   nsubj      vizitat
-a              a            avea           AUX    aux        vizitat
-vizitat        vizit        vizita         VERB   ROOT       vizitat
-Parisul        paris        paris          NOUN   obj        vizitat
-în             în           în             ADP    case       luna
-luna           lun          lună           NOUN   nmod:tmod  vizitat
-martie         mart         martie         NOUN   nmod       luna
-.              .            .              PUNCT  punct      vizitat
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Președintele   președint      președinte     Ncmsry nsubj      vizitat
+a              a              avea           Va--3s aux        vizitat
+vizitat        vizit          vizita         Vmp--smROOT       ROOT
+Parisul        paris          paris          Ncmsry obj        vizitat
+în             în             în             Spsa   case       luna
+luna           lun            lună           Ncfsry nmod:tmod  vizitat
+martie         mart           martie         Ncm--n nmod       luna
+.              .              .              PERIOD punct      vizitat
 Dependency tree: trees/ro_9.svg
-Triplets: [('vizitat', 'nsubj', 'Președintele'), ('vizitat', 'aux', 'a'), ('vizitat', 'ROOT', 'vizitat'), ('vizitat', 'obj', 'Parisul'), ('luna', 'case', 'în'), ('vizitat', 'nmod:tmod', 'luna'), ('luna', 'nmod', 'martie'), ('vizitat', 'punct', '.')]
-Chunks: ['Președintele', 'Parisul', 'luna', 'martie']
+Triplets: [('vizitat', 'nsubj', 'Președintele'), ('vizitat', 'aux', 'a'), ('ROOT', 'ROOT', 'vizitat'), ('vizitat', 'obj', 'Parisul'), ('luna', 'case', 'în'), ('vizitat', 'nmod:tmod', 'luna'), ('luna', 'nmod', 'martie'), ('vizitat', 'punct', '.')]
+Chunks: ['Președintele', 'Parisul', 'luna martie']
 Entities: [('Președintele', 'PERSON'), ('luna martie', 'DATETIME')]
 
 Sentence: Am citit o carte interesantă despre istoria Transilvaniei.
 Tokens: ['Am', 'citit', 'o', 'carte', 'interesantă', 'despre', 'istoria', 'Transilvaniei', '.']
-TOKEN          STEM         LEMMA          POS    DEP        HEAD
-Am             am           avea           AUX    aux        citit
-citit          citit        citi           VERB   ROOT       citit
-o              o            un             DET    det        carte
-carte          cart         carte          NOUN   obj        citit
-interesantă    interes      interesant     ADJ    amod       carte
-despre         despr        despre         ADP    case       istoria
-istoria        istor        istorie        NOUN   nmod       carte
-Transilvaniei  transilvan   Transilvania   PROPN  nmod       istoria
-.              .            .              PUNCT  punct      citit
+TOKEN          STEM           LEMMA          POS    DEP        HEAD
+Am             am             avea           Va--1  aux        citit
+citit          citit          citi           Vmp--smROOT       ROOT
+o              o              un             Tifsr  det        carte
+carte          cart           carte          Ncfsrn obj        citit
+interesantă    interes        interesant     Afpfsrnamod       carte
+despre         despr          despre         Spsa   case       istoria
+istoria        istor          istorie        Ncfsry nmod       carte
+Transilvaniei  transilvan     Transilvania   Npfsoy nmod       istoria
+.              .              .              PERIOD punct      citit
 Dependency tree: trees/ro_10.svg
-Triplets: [('citit', 'aux', 'Am'), ('citit', 'ROOT', 'citit'), ('carte', 'det', 'o'), ('citit', 'obj', 'carte'), ('carte', 'amod', 'interesantă'), ('istoria', 'case', 'despre'), ('carte', 'nmod', 'istoria'), ('istoria', 'nmod', 'Transilvaniei'), ('citit', 'punct', '.')]
-Chunks: ['o carte interesantă', 'istoria', 'Transilvaniei']
+Triplets: [('citit', 'aux', 'Am'), ('ROOT', 'ROOT', 'citit'), ('carte', 'det', 'o'), ('citit', 'obj', 'carte'), ('carte', 'amod', 'interesantă'), ('istoria', 'case', 'despre'), ('carte', 'nmod', 'istoria'), ('istoria', 'nmod', 'Transilvaniei'), ('citit', 'punct', '.')]
+Chunks: ['o carte interesantă', 'istoria Transilvaniei']
 Entities: [('carte', 'PRODUCT'), ('Transilvaniei', 'GPE')]
