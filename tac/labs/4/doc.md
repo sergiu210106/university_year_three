@@ -17,7 +17,7 @@ python3 fa.py fa/constant.fa 200 007 '"oua"'
 python3 test.py
 ```
 
-`fa.py` prints the FA and the RG. It writes the full grammar (every terminal listed separately) to `RG_<name>.out`. For each word given after the file, it shows the run of the FA and the derivation in the RG.
+`fa.py` prints the FA and the RG. It writes the full grammar (every terminal listed separately) to `RG_<name>.out`, next to the `.fa` file. For each word given after the file, it shows the run of the FA and the derivation in the RG.
 
 ## 1. Definitions
 
@@ -154,7 +154,8 @@ I _      I
 - `name = items` defines a class of characters. `x..y` is a range and any other item is a single character.
 - A transition `p sym q` uses either a class name or a single character. A class gives one transition for each of its characters. This means `S letter I` stands for the 52 transitions δ(S, a) = I, …, δ(S, Z) = I.
 - Σ is the set of all characters used in transitions.
-- An unknown state, a symbol that is neither a class nor a single character, or a missing initial state is reported with the file and line number.
+- A line `p = q` where p is a state is a transition on `=`, not a class definition.
+- An unknown state, a symbol that is neither a class nor a single character, an empty range such as `9..0`, or a missing initial state is reported with the file and line number.
 
 Classes only make the file shorter. In memory, δ holds one entry per character, which is the formal definition.
 
@@ -216,7 +217,7 @@ P:
 
 `S -> digit` contains `S -> '0'` (from S → Z, Z final) and `S -> '1' | … | '9'` (from S → N, N final). The printer joins them into one class. Z and C were removed by step 5. N corresponds to `<number_tail>` and A to `<string_characters> '"'`.
 
-The full grammars, with every terminal listed separately, are in `RG_identifier.out` and `RG_constant.out`.
+The full grammars, with every terminal listed separately, are in `fa/RG_identifier.out` and `fa/RG_constant.out`.
 
 ## 7. Examples
 
@@ -274,19 +275,3 @@ $ python3 fa.py fa/constant.fa 200 '"oua"' 007 '"sare2"' '"piure'
 
 δ is a dictionary `(state, symbol) -> set of states`. The productions are a dictionary `non-terminal -> list of (terminal, non-terminal)`, where the non-terminal is `None` for A → a, and `("", None)` is A → ε.
 
-## 9. Testing
-
-`test.py` compares, for each automaton, three things that must accept exactly the same words:
-
-- the FA (`accepts`)
-- the RG produced by `fa_to_rg` (`derive`)
-- the regex the Lab 3 lexer uses for the same tokens
-
-It checks every string of length 0 to 4 over the characters `a Z 0 1 _ " -` (2801 strings). These cover the cases that matter: a letter, a non-zero digit, zero, underscore, a quote, and a character outside Σ. It also checks named words from the lab programs, for example `carbonara_non_italiana` and `"oua"` (accepted) and `007` and `"sare2"` (rejected).
-
-```
-$ python3 test.py
-identifier.fa: 2801 generated + 11 named words, FA = regex = RG
-constant.fa: 2801 generated + 13 named words, FA = regex = RG
-all tests passed
-```

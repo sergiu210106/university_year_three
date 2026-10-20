@@ -22,6 +22,8 @@ def expand(items, where):
     chars = []
     for item in items:
         if len(item) == 4 and item[1:3] == "..":
+            if item[0] > item[3]:
+                raise ValueError(f"{where}: empty range {item!r}")
             chars += [chr(c) for c in range(ord(item[0]), ord(item[3]) + 1)]
         elif len(item) == 1:
             chars.append(item)
@@ -48,7 +50,8 @@ class FA:
                 words = line.split("#", 1)[0].split()
                 if not words:
                     continue
-                if len(words) >= 3 and words[1] == "=":
+                # "S = I" with S a state is a transition on '=', not a class
+                if len(words) >= 3 and words[1] == "=" and words[0] not in states:
                     classes[words[0]] = expand(words[2:], where)
                 elif words[0] == "states":
                     states = words[1:]
@@ -96,7 +99,6 @@ class FA:
         return all(len(qs) == 1 for qs in self.delta.values())
 
     def __str__(self):
-        order = {s: i for i, s in enumerate(self.states)}
         moves = {}
         for (p, a), qs in self.delta.items():
             for q in qs:
@@ -107,8 +109,10 @@ class FA:
             f"q0 = {self.initial}",
             f"F  = {{{', '.join(s for s in self.states if s in self.finals)}}}",
         ]
-        for p, q in sorted(moves, key=lambda m: (order[m[0]], order[m[1]])):
-            lines.append(f"δ({p}, {' | '.join(describe(moves[p, q], self.classes))}) = {q}")
+        for p in self.states:
+            for q in self.states:
+                if (p, q) in moves:
+                    lines.append(f"δ({p}, {' | '.join(describe(moves[p, q], self.classes))}) = {q}")
         return "\n".join(lines)
 
 
@@ -124,23 +128,22 @@ class RG:
         """Returns the sentential forms of a derivation of word as (terminals, nonterminal) pairs, or None."""
         def search(a, i):
             for t, b in self.productions[a]:
-                if t == "" and i == len(word):
-                    return [(word, None)]
-                if t == "" or i == len(word) or t != word[i]:
+                j = i + len(t)  # t is one character, or "" for ε
+                if word[i:j] != t:
                     continue
                 if b is None:
-                    if i + 1 == len(word):
+                    if j == len(word):
                         return [(word, None)]
                 else:
-                    rest = search(b, i + 1)
+                    rest = search(b, j)
                     if rest is not None:
-                        return [(word[:i + 1], b)] + rest
+                        return [(word[:j], b)] + rest
             return None
 
         steps = search(self.start, 0)
         return None if steps is None else [("", self.start)] + steps
 
-    def format(self, classes={}):
+    def format(self, classes):
         lines = [
             f"N     = {{{', '.join(self.nonterminals)}}}",
             f"Σ     = {', '.join(describe(self.terminals, classes))}",
@@ -161,13 +164,12 @@ class RG:
 
 
 def fa_to_rg(fa):
-    order = {s: i for i, s in enumerate(fa.states)}
     nonterminals = list(fa.states)
     productions = {}
     for p in fa.states:
         to_state, to_end = [], []
         for a in fa.alphabet:
-            for q in sorted(fa.delta.get((p, a), ()), key=order.get):
+            for q in sorted(fa.delta.get((p, a), ()), key=fa.states.index):
                 to_state.append((a, q))
                 if q in fa.finals:
                     to_end.append((a, None))
@@ -217,7 +219,7 @@ def show(fa, rg, word):
     if derivation is None:
         print("  RG: no derivation")
     else:
-        forms = [" ".join(filter(None, [quote(w) if w else "", b or ""])) or "ε" for w, b in derivation]
+        forms = [" ".join(filter(None, [w and quote(w), b])) or "ε" for w, b in derivation]
         print(f"  RG: {' => '.join(forms)}")
 
 
@@ -238,9 +240,11 @@ def main():
     print("Regular grammar")
     print(rg.format(fa.classes))
 
-    out = f"RG_{os.path.splitext(os.path.basename(path))[0]}.out"
+    # written next to the .fa file, so the output does not depend on the current directory
+    folder, name = os.path.split(os.path.splitext(path)[0])
+    out = os.path.join(folder, f"RG_{name}.out")
     with open(out, "w") as f:
-        f.write(rg.format() + "\n")
+        f.write(rg.format({}) + "\n")
     print(f"\nfull grammar written to {out}")
 
     for word in sys.argv[2:]:

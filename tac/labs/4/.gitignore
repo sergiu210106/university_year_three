@@ -1,2 +1,3 @@
-*.out
 __pycache__/
+# the generated grammars are a deliverable (the repo root ignores *.out)
+!RG_*.out
