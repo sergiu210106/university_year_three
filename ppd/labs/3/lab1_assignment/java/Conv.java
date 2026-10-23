@@ -201,9 +201,8 @@ public class Conv {
     // state the distribution and are checked in the tests (Par with -Dconv.checkDelta=true).
     static int deltaLinear(int i, int j, int p) {
         long N = (long) n * m, idx = (long) i * m + j;
-        int t = (int) ((idx * p + p) / N);   // largest t with t * N / p <= idx
-        while ((long) t * N / p > idx) t--;
-        return t;
+        // largest t with t * N / p <= idx, i.e. with t * N < (idx + 1) * p
+        return (int) (((idx + 1) * p - 1) / N);
     }
 
     static int deltaCyclic(int i, int j, int p) {

@@ -253,9 +253,6 @@ executions per test case feasible.
   the row pointer `f[clamp(...)]` is computed once.
 * **Java worker as a class, not a lambda:** the first lambda in a JVM costs ~15 ms of
   `invokedynamic` setup inside the timed region (found in lab 0).
-* **Java `Enum.valueOf`:** the variant name is parsed with a loop over `Variant.values()`.
-  `Enum.valueOf` uses reflection, and the first call added ~10 ms to the program's total time.
-  That is outside the timed computation, but it distorted the total times.
 * Times are printed with `.` as the decimal separator (`Locale.ROOT` in Java, `LC_ALL=C` in the
   script), as in lab 0.
 
@@ -277,7 +274,8 @@ For every test case and every run, the script executes:
 * Java: seq + 5 variants × |p|
 
 That is 63 executions per run (18 for test case 1), times 10 runs. In total
-`10 · (18 + 4 · 63) = 2700` executions, and 2650 of them (all but the 50 reference runs) are compared against the reference.
+`10 · (18 + 4 · 63) = 2700` executions. All of them except the 50 reference runs, so 2650,
+are compared against the reference.
 
 ### 4.2 Correctness verification
 
@@ -340,17 +338,15 @@ Inspect results: `column -s, -t < averages.csv`.
 ### 5.1 Environment
 
 Intel Core i7-1065G7: 4 cores / 8 hardware threads, 1.3 GHz base, 2 MiB L2 in total, 8 MiB L3.
-15 GiB RAM, Linux 7.0, transparent huge pages in `madvise` mode (not used by these programs).
+15 GiB RAM, Linux 7.0.
 Compilers: g++ 15.2 `-O2`, OpenJDK 21.
 
 Every value below is the **average of 10 runs**. All 2650 compared outputs were identical to
 the reference. The full run took about 1 h 45 min of active time. Full data: `times.csv`
 (every execution) and `averages.csv` (averages and speedups).
 
-The laptop was suspended twice while test case 5 was running, and the run then continued.
-Both clocks used are monotonic and stop during suspend, so the time spent suspended is not
-counted. No execution of test case 5 is above 1.5x the median of its 10 runs. The only such
-outliers in the whole run are a few millisecond-scale ones in the small test cases.
+The laptop was suspended twice during test case 5. The clocks are monotonic and stop during
+suspend, and no execution of test case 5 is above 1.5x the median of its 10 runs.
 
 ### 5.2 Results
 
@@ -473,19 +469,32 @@ and the same allocation. A speedup above 1 means the parallel version is faster.
 | cyclic | 8 | 1965.6 | 3.46 | 1884.9 | 3.40 | 2176.0 | 3.54 |
 | cyclic | 16 | 1815.5 | 3.74 | 1779.9 | 3.60 | 2329.6 | 3.30 |
 
-Example of the task's table layout, filled in for test case 5 with the best variant (vertical):
+The same results in the task's table layout, for test case 5 with the vertical distribution:
+
+**C++:**
 
 | Matrix size | Allocation type | No threads | Execution time (ms) | Speedup (Tseq/Tpar) |
 |---|---|---:|---:|---:|
-| 10000 x 10000 (C++) | static | 1 | 6797.3 | 1 |
-| 10000 x 10000 (C++) | static | 2 | 3529.9 | 1.93 |
-| 10000 x 10000 (C++) | static | 4 | 1782.2 | 3.81 |
-| 10000 x 10000 (C++) | static | 8 | 1666.3 | 4.08 |
-| 10000 x 10000 (C++) | static | 16 | 1710.5 | 3.97 |
-| 10000 x 10000 (C++) | dynamic | 1 | 6401.6 | 1 |
-| 10000 x 10000 (C++) | dynamic | 8 | 1570.7 | 4.08 |
-| 10000 x 10000 (Java) | — | 1 | 7697.3 | 1 |
-| 10000 x 10000 (Java) | — | 4 | 2098.5 | 3.67 |
+| 10000 x 10000 | static | 1 | 6797.3 | 1 |
+| 10000 x 10000 | static | 2 | 3529.9 | 1.93 |
+| 10000 x 10000 | static | 4 | 1782.2 | 3.81 |
+| 10000 x 10000 | static | 8 | 1666.3 | 4.08 |
+| 10000 x 10000 | static | 16 | 1710.5 | 3.97 |
+| 10000 x 10000 | dynamic | 1 | 6401.6 | 1 |
+| 10000 x 10000 | dynamic | 2 | 3345.7 | 1.91 |
+| 10000 x 10000 | dynamic | 4 | 1677.7 | 3.82 |
+| 10000 x 10000 | dynamic | 8 | 1570.7 | 4.08 |
+| 10000 x 10000 | dynamic | 16 | 1616.2 | 3.96 |
+
+**Java:**
+
+| Matrix size | No threads | Execution time (ms) | Speedup (Tseq/Tpar) |
+|---|---:|---:|---:|
+| 10000 x 10000 | 1 | 7697.3 | 1 |
+| 10000 x 10000 | 2 | 4053.0 | 1.90 |
+| 10000 x 10000 | 4 | 2098.5 | 3.67 |
+| 10000 x 10000 | 8 | 2106.2 | 3.65 |
+| 10000 x 10000 | 16 | 2174.2 | 3.54 |
 
 ## 6. Analysis
 
@@ -541,9 +550,8 @@ threads are not the problem: the JIT compilation is, and it is not parallel. At 
   * horizontal, vertical and block: 1771–1782 ms
   * linear: 1861 ms (+4 %)
   * cyclic: 2055 ms (+15 %)
-* Linear is slower because of its index loop: it handles 1D indices with a row carry, while
-  the 2D loops of the others are simpler, and its chunks can start and end in the middle of
-  a row.
+* Linear is slightly slower, most likely because of its index loop: it walks 1D indices with
+  a row carry, while the others use plain 2D loops.
 * Cyclic is slower because neighbouring elements of V belong to different threads:
   * threads keep invalidating each other's cache lines of V (false sharing);
   * every thread reads all of F, using only every p-th window.
@@ -640,8 +648,8 @@ In general:
   1–3 %).
 * The robust choice is **`block`**: it adapts to the shape of the matrix and is never far
   from the best.
-* Choose the opposite of the matrix shape (vertical for short-wide matrices, horizontal for
-  tall-narrow ones), and avoid `cyclic` for a cache-friendly program.
+* Split along the long side of the matrix (vertical for short-wide matrices, horizontal for
+  tall-narrow ones), and avoid `cyclic`, which is the least cache-friendly.
 * For tiny inputs (10 x 10), and in Java up to at least 10⁶ elements when each execution
   is a new JVM, the sequential program is the fastest.
 

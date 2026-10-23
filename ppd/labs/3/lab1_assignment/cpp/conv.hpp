@@ -230,10 +230,8 @@ void block_grid(int p, int &pr, int &pc) {
 //   cyclic: thread t owns the indices t, t + p, t + 2p, ...
 int delta_linear(int i, int j, int p) {
     long long N = (long long) n * m, idx = (long long) i * m + j;
-    // largest t with t * N / p <= idx
-    int t = (int) ((idx * p + p) / N);
-    while ((long long) t * N / p > idx) t --;
-    return t;
+    // largest t with t * N / p <= idx, i.e. with t * N < (idx + 1) * p
+    return (int) (((idx + 1) * p - 1) / N);
 }
 
 int delta_cyclic(int i, int j, int p) {
