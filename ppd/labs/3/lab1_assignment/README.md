@@ -277,7 +277,7 @@ For every test case and every run, the script executes:
 * Java: seq + 5 variants × |p|
 
 That is 63 executions per run (18 for test case 1), times 10 runs. In total
-`10 · (18 + 4 · 63) = 2700` executions, and 2690 of them are compared against the reference.
+`10 · (18 + 4 · 63) = 2700` executions, and 2650 of them (all but the 50 reference runs) are compared against the reference.
 
 ### 4.2 Correctness verification
 
@@ -343,7 +343,7 @@ Intel Core i7-1065G7: 4 cores / 8 hardware threads, 1.3 GHz base, 2 MiB L2 in to
 15 GiB RAM, Linux 7.0, transparent huge pages in `madvise` mode (not used by these programs).
 Compilers: g++ 15.2 `-O2`, OpenJDK 21.
 
-Every value below is the **average of 10 runs**. All 2690 compared outputs were identical to
+Every value below is the **average of 10 runs**. All 2650 compared outputs were identical to
 the reference. The full run took about 1 h 45 min of active time. Full data: `times.csv`
 (every execution) and `averages.csv` (averages and speedups).
 
