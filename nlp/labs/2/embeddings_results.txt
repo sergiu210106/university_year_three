@@ -1,0 +1,294 @@
+===== word embeddings (250942 entries) =====
+
+casă:
+  grădină                   0.6187
+  odaie                     0.6122
+  casa                      0.6014
+  bucătărie                 0.5986
+  vilă                      0.5842
+  cămăruță                  0.5833
+  sufragerie                0.5777
+  nevastă                   0.5737
+  sufrageria                0.5705
+  caserie                   0.5705
+
+carte:
+  cartea                    0.7809
+  cărțile                   0.6761
+  cărți                     0.6596
+  cărțulie                  0.6471
+  cărticică                 0.6361
+  cărții                    0.6284
+  cărțulia                  0.5980
+  librărie                  0.5900
+  copertă                   0.5764
+  cărticica                 0.5763
+
+câine:
+  câinele                   0.8302
+  câini                     0.7432
+  câinos                    0.7269
+  câinelui                  0.7256
+  cățel                     0.7241
+  câinește                  0.7221
+  ciobănesc                 0.7203
+  cățeluș                   0.7193
+  câinii                    0.7178
+  câinele-lup               0.7162
+
+merge:
+  merg                      0.7708
+  meargă                    0.7613
+  pleca                     0.7487
+  mergi                     0.7376
+  întoarce                  0.7288
+  mergem                    0.7256
+  departe                   0.6927
+  ajunge                    0.6874
+  pleacă                    0.6814
+  mergea                    0.6687
+
+citi:
+  reciti                    0.7037
+  citit                     0.6284
+  citească                  0.6230
+  citind                    0.6051
+  citești                   0.6034
+  scrie                     0.6010
+  citesc                    0.5995
+  descifra                  0.5906
+  citite                    0.5876
+  recitite                  0.5824
+
+mânca:
+  mâncat                    0.7850
+  mînca                     0.7757
+  mâncai                    0.7723
+  mănânce                   0.7592
+  mâncă                     0.7552
+  mănâncă                   0.7518
+  mâncare                   0.7456
+  mănânci                   0.7416
+  mâncase                   0.7280
+  mânce                     0.7225
+
+frumos:
+  frumosă                   0.7846
+  minunat                   0.7483
+  plăcut                    0.7070
+  frumoasă                  0.7003
+  superb                    0.6988
+  splendid                  0.6936
+  adorabil                  0.6851
+  frumosul                  0.6836
+  drag                      0.6820
+  preafrumos                0.6728
+
+mare:
+  mică                      0.7064
+  mic                       0.6596
+  dar                       0.5873
+  scipomar                  0.5651
+  mai                       0.5469
+  cel                       0.5429
+  oarecare                  0.5365
+  considerabilă             0.5337
+  cea                       0.5228
+  apreciabilă               0.5188
+
+===== lemma embeddings (186202 entries) =====
+
+casă:
+  sănătate                  0.5196
+  casăla                    0.5125
+  asigurare                 0.4869
+  sănătat                   0.4804
+  municipiu-reședință       0.4310
+  asigutare                 0.4230
+  ogradă                    0.4205
+  casa-muzeu                0.4202
+  Gheorghe-Radu             0.4173
+  săn                       0.4166
+
+carte:
+  cărticea                  0.5486
+  copertă                   0.5415
+  cărticică                 0.5406
+  transcripțiuni-inscripțiune 0.5286
+  funciar                   0.5281
+  cărti                     0.5210
+  cărțulie                  0.5207
+  cartonat                  0.5169
+  cărț                      0.5089
+  lectura                   0.5021
+
+câine:
+  câinie                    0.7740
+  pisică                    0.7407
+  maidanez                  0.7116
+  câine-lup                 0.7064
+  lătra                     0.7040
+  cățel                     0.6910
+  cățeluș                   0.6777
+  dulău                     0.6774
+  lesă                      0.6632
+  lup                       0.6568
+
+merge:
+  îmerge                    0.7173
+  pleca                     0.6112
+  întoarce                  0.5838
+  de-a-ndărătelea           0.5768
+  plimba                    0.5752
+  umbla                     0.5608
+  de-a-ndăratelea           0.5600
+  departe                   0.5465
+  eliminare                 0.5454
+  așa~că                    0.5445
+
+citi:
+  reciti                    0.7651
+  citit                     0.7120
+  răsfoi                    0.6981
+  lectura                   0.6950
+  recitit                   0.6881
+  răsciti                   0.6873
+  răsfoit                   0.6599
+  recita                    0.6353
+  frunzări                  0.6209
+  povesti                   0.6155
+
+mânca:
+  mâncat                    0.8162
+  mânânca                   0.7960
+  manânca                   0.7792
+  mânânci                   0.7788
+  înfuleca                  0.7788
+  mâncare                   0.7652
+  mâncace                   0.7567
+  săturat                   0.7250
+  sătura                    0.7131
+  friptură                  0.7062
+
+frumos:
+  frumosă                   0.8340
+  minunat                   0.7926
+  încântător                0.7574
+  frumosu-ia                0.7526
+  frumoasé                  0.7478
+  superb                    0.7437
+  frumoasă                  0.7341
+  splendid                  0.7339
+  fermecător                0.7296
+  mândru                    0.7255
+
+mare:
+  mic                       0.6431
+  dar                       0.5821
+  imens                     0.5057
+  însemnat                  0.4908
+  uriaș                     0.4818
+  mică                      0.4755
+  considerabil              0.4741
+  mai                       0.4724
+  enorm                     0.4676
+  egal                      0.4634
+
+===== lemma+POS embeddings (190653 entries) =====
+
+Nc_casă:
+  Nc_asigurare              0.6375
+  Nc_sănătate               0.6323
+  Nc_sănăte                 0.5800
+  Nc_săn                    0.5721
+  Nc_casé                   0.5612
+  Nc_sănătă                 0.5556
+  Nc_cass                   0.5467
+  Nc_asigutare              0.5435
+  Nc_sănătație              0.5391
+  Vm_casăla                 0.5340
+
+Nc_carte:
+  Nc_tom                    0.6332
+  Nc_eseu                   0.6273
+  Nc_cărțulie               0.6209
+  Nc_copertă                0.6183
+  Nc_roman                  0.6162
+  Nc_volumaș                0.6086
+  Nc_cărțoi                 0.5903
+  Nc_însemnare              0.5888
+  Nc_carți                  0.5854
+  Nc_biblie                 0.5848
+
+Nc_câine:
+  Nc_câinie                 0.8322
+  Nc_câine-lup              0.7915
+  Nc_pisică                 0.7753
+  Nc_cățel                  0.7691
+  Nc_maidanez               0.7430
+  Nc_lup                    0.7352
+  Nc_dulău                  0.7326
+  Nc_patruped               0.7255
+  Nc_câini-lupe             0.7212
+  Nc_cățea                  0.7177
+
+Vm_merge:
+  Vm_îmerge                 0.6837
+  Vm_mere                   0.6666
+  Vm_pleca                  0.6628
+  Vm_întoarce               0.6438
+  Vm_plimba                 0.6383
+  Vm_umbla                  0.6244
+  Vm_alerga                 0.6209
+  Vm_păși                   0.6131
+  Vm_grăbi                  0.6117
+  Rg_încolo                 0.6050
+
+Vm_citi:
+  Vm_reciti                 0.7537
+  Af_citit                  0.7374
+  Vm_răsciti                0.7011
+  Vm_lectura                0.6733
+  Vm_răsfoi                 0.6724
+  Af_recitit                0.6567
+  Af_răsfoit                0.6359
+  Vm_recita                 0.6312
+  Vm_ceti                   0.6228
+  Vm_spune                  0.6163
+
+Vm_mânca:
+  Vm_mânânca                0.8401
+  Vm_mâncace                0.8319
+  Vm_mânânci                0.8218
+  Vm_manânca                0.8102
+  Af_mâncat                 0.7784
+  Vm_înfuleca               0.7724
+  Nc_mâncare                0.7544
+  Vm_ospăta                 0.7514
+  Nc_demâncare              0.7500
+  Vm_găti                   0.7492
+
+Af_frumos:
+  Rg_frumos                 0.8113
+  Af_minunat                0.7872
+  Af_superb                 0.7707
+  Af_fermecător             0.7604
+  Af_încântător             0.7602
+  Af_mândru                 0.7596
+  Af_drăguț                 0.7525
+  Af_splendid               0.7450
+  Rg_minunat                0.7404
+  Rg_încântător             0.7379
+
+Af_mare:
+  Af_mic                    0.7538
+  Rg_mare                   0.6625
+  Rg_mic                    0.5919
+  Af_imens                  0.5780
+  Af_enorm                  0.5743
+  Af_uriaș                  0.5687
+  Af_mar                    0.5681
+  Vm_mici                   0.5569
+  Af_considerabil           0.5344
+  Cc_dar                    0.5290
+

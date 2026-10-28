@@ -1,0 +1,1364 @@
+===== casă (NOUN) - 12 senses =====
+
+Sense 1: ENG30-08078020-n
+  Definition:     Totalitatea celor care locuiesc împreună, (formând o familie
+  Literals:       ['casă', 'familie']
+  Literal senses: ['1.10', 'x']
+  Relations:
+    hypernym             -> ENG30-08189659-n [unitate]
+    near_eng_derivat     -> ENG30-02459633-v []
+    near_eng_derivat     -> ENG30-10182499-n [proprietar]
+    hyponym              -> ENG30-07973653-n [familie_extinsă]
+    hyponym              -> ENG30-07973782-n [familie_adoptivă]
+    hyponym              -> ENG30-07973868-n [școală_de_corecție]
+    hyponym              -> ENG30-08078453-n [menage_a_trois]
+  Hypernym path to root:
+    ENG30-08078020-n [casă, familie]
+    -> ENG30-08189659-n [unitate]
+    -> ENG30-08008335-n [organizație]
+    -> ENG30-07950920-n [grup_social]
+    -> ENG30-00031264-n [grup, grupare]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+Sense 2: ENG30-07971449-n
+  Definition:     familie aristocrată
+  Literals:       ['casă', 'neam', 'familie']
+  Literal senses: ['1.10.2', '9.4', '2.3']
+  Relations:
+    hypernym             -> ENG30-07970721-n [casă, familie, neam, viță]
+    hyponym              -> ENG30-08153437-n [casă_regală]
+    hyponym              -> ENG30-08485281-n [Medici]
+  Hypernym path to root:
+    ENG30-07971449-n [casă, neam, familie]
+    -> ENG30-07970721-n [casă, familie, neam, viță]
+    -> ENG30-08101937-n [descendență, familie]
+    -> ENG30-08102402-n [arbore_genealogic, genealogie]
+    -> ENG30-07969695-n [clan]
+    -> ENG30-07950920-n [grup_social]
+    -> ENG30-00031264-n [grup, grupare]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+Sense 3: ENG30-08059870-n
+  Definition:     Personalul unei organizații comerciale sau de afaceri.
+  Literals:       ['casă', 'companie', 'firmă']
+  Literal senses: ['1.14', '1.4.x', '2']
+  Relations:
+    hypernym             -> ENG30-08061042-n [întreprindere, afacere, firmă]
+    hyponym              -> ENG30-08059412-n [breaslă, corporație]
+    hyponym              -> ENG30-08062326-n [firmă_de_contabilitate]
+    hyponym              -> ENG30-08062464-n [firmă_de_consultanță]
+    hyponym              -> ENG30-08062623-n [editură]
+    hyponym              -> ENG30-08063446-n [dealer]
+    hyponym              -> ENG30-08064039-n [firmă_de_avocatură]
+    hyponym              -> ENG30-08076946-n [casă_de_licitații]
+  Hypernym path to root:
+    ENG30-08059870-n [casă, companie, firmă]
+    -> ENG30-08061042-n [întreprindere, afacere, firmă]
+    -> ENG30-08056231-n [întreprindere]
+    -> ENG30-08008335-n [organizație]
+    -> ENG30-07950920-n [grup_social]
+    -> ENG30-00031264-n [grup, grupare]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+Sense 4: ENG30-07989373-n
+  Definition:     două persoane căsătorite
+  Literals:       ['casă', 'căsătorie', 'căsnicie', 'menaj', 'mariaj']
+  Literal senses: ['1.11', '2.2', '1.2', '3', 'x']
+  Relations:
+    hypernym             -> ENG30-07970406-n [familie]
+    hyponym              -> ENG30-07990158-n [mariaj_mixt, căsătorie_mixtă]
+    member_meronym       -> ENG30-10640620-n [soț, partener]
+  Hypernym path to root:
+    ENG30-07989373-n [casă, căsătorie, căsnicie, menaj, mariaj]
+    -> ENG30-07970406-n [familie]
+    -> ENG30-07969695-n [clan]
+    -> ENG30-07950920-n [grup_social]
+    -> ENG30-00031264-n [grup, grupare]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+Sense 5: ENG30-07970721-n
+  Definition:     Totalitatea persoanelor care se trag dintr-un strămoș comun (rude de sânge); neam, descendență.
+  Literals:       ['casă', 'familie', 'neam', 'viță']
+  Literal senses: ['1.12', '3', '4.2', '9']
+  Relations:
+    hypernym             -> ENG30-08101937-n [descendență, familie]
+    hyponym              -> ENG30-07971141-n [familie, neam, rudă, viță]
+    hyponym              -> ENG30-07971449-n [casă, neam, familie]
+    hyponym              -> ENG30-07971582-n [dinastie]
+    hyponym              -> ENG30-07972279-n [nume]
+  Hypernym path to root:
+    ENG30-07970721-n [casă, familie, neam, viță]
+    -> ENG30-08101937-n [descendență, familie]
+    -> ENG30-08102402-n [arbore_genealogic, genealogie]
+    -> ENG30-07969695-n [clan]
+    -> ENG30-07950920-n [grup_social]
+    -> ENG30-00031264-n [grup, grupare]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+Sense 6: ENG30-08381296-n
+  Definition:     Conducerea unui cazinou.
+  Literals:       ['casă']
+  Literal senses: ['x']
+  Relations:
+    hypernym             -> ENG30-08381165-n [administrație, conducere]
+  Hypernym path to root:
+    ENG30-08381296-n [casă]
+    -> ENG30-08381165-n [administrație, conducere]
+    -> ENG30-08164585-n [administrație]
+    -> ENG30-07965085-n [asociație, colectivitate, tabără]
+    -> ENG30-07950920-n [grup_social]
+    -> ENG30-00031264-n [grup, grupare]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+Sense 7: ENG30-03544360-n
+  Definition:     construcție destinată pentru a servi de locuință uneia sau mai multor familii
+  Literals:       ['casă']
+  Literal senses: ['1.1.1']
+  Relations:
+    hypernym             -> ENG30-03259505-n [domiciliu, locuință, sălaș]
+    hypernym             -> ENG30-02913152-n [clădire, construcție, zidire]
+    near_eng_derivat     -> ENG30-02459173-v [găzdui, oploși, aciua]
+    hyponym              -> ENG30-02857477-n [pensiune]
+    hyponym              -> ENG30-02919792-n [bungalou, casă_cu_verandă]
+    hyponym              -> ENG30-02932400-n [cabană]
+    hyponym              -> ENG30-03002816-n [chalet]
+    hyponym              -> ENG30-03007297-n []
+    hyponym              -> ENG30-03118969-n [casă_la_țară]
+    hyponym              -> ENG30-03180865-n [casă_simplă]
+    hyponym              -> ENG30-03322836-n [casă_țărănească]
+    hyponym              -> ENG30-03428090-n [gheretă]
+    hyponym              -> ENG30-03465605-n [casa_oaspeților, casa_pentru_musafiri]
+    hyponym              -> ENG30-03474352-n [hacienda]
+    part_meronym         -> ENG30-03660909-n [bibliotecă]
+    hyponym              -> ENG30-03685486-n [cabană_de_vânătoare]
+    hyponym              -> ENG30-03685820-n [pensiune]
+    part_meronym         -> ENG30-03686130-n [pod]
+    hyponym              -> ENG30-03713151-n [căscioară, căsuță]
+    hyponym              -> ENG30-03719053-n [conac, curte]
+    part_meronym         -> ENG30-03984381-n [pridvor]
+    hyponym              -> ENG30-04079244-n [reședință]
+    hyponym              -> ENG30-04115256-n [casă_tip]
+    hyponym              -> ENG30-04125541-n [casă_conspirativă, loc_sigur]
+    part_meronym         -> ENG30-04345028-n [cameră_de_lucru]
+  Hypernym path to root:
+    ENG30-03544360-n [casă]
+    -> ENG30-03259505-n [domiciliu, locuință, sălaș]
+    -> ENG30-03546340-n [imobil]
+    -> ENG30-04341686-n [construcție]
+    -> ENG30-00021939-n [artifact]
+    -> ENG30-00003553-n [ansamblu, tot, totalitate, întreg]
+    -> ENG30-00002684-n [lucru, obiect_fizic, obiect]
+
+Sense 8: ENG30-13358151-n
+  Definition:     Trezoreria unei instituții publice sau a unui ordin religios
+  Literals:       ['visterie', 'vistierie', 'casă']
+  Literal senses: ['1', 'x', 'x']
+  Relations:
+    hypernym             -> ENG30-13356985-n [tezaur]
+  Hypernym path to root:
+    ENG30-13358151-n [visterie, vistierie, casă]
+    -> ENG30-13356985-n [tezaur]
+    -> ENG30-13356112-n [bani, finanțe, fonduri]
+    -> ENG30-13329641-n [bun]
+    -> ENG30-00032613-n [posesiune, proprietate]
+    -> ENG30-00031921-n [legătură, raport, relație]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+Sense 9: ENG30-03545150-n
+  Definition:     Construcție în care adăpostit sau plasat ceva
+  Literals:       ['casă', 'clădire']
+  Literal senses: ['1.1.1.x', '2']
+  Relations:
+    hypernym             -> ENG30-02913152-n [clădire, construcție, zidire]
+    near_eng_derivat     -> ENG30-02459173-v [găzdui, oploși, aciua]
+    hyponym              -> ENG30-02806875-n [baie_publică]
+    hyponym              -> ENG30-03121298-n [tribunal]
+    hyponym              -> ENG30-04022708-n [casa_pompelor, sala_pompelor, camera_pompelor]
+    hyponym              -> ENG30-04246731-n [afumătoare]
+  Hypernym path to root:
+    ENG30-03545150-n [casă, clădire]
+    -> ENG30-02913152-n [clădire, construcție, zidire]
+    -> ENG30-04341686-n [construcție]
+    -> ENG30-00021939-n [artifact]
+    -> ENG30-00003553-n [ansamblu, tot, totalitate, întreg]
+    -> ENG30-00002684-n [lucru, obiect_fizic, obiect]
+
+Sense 10: ENG30-04572800-n
+  Definition:     Încăpere specială care străbate etajele unei clădiri, având o anumită destinație
+  Literals:       ['casă']
+  Literal senses: ['1.6.2']
+  Relations:
+    hypernym             -> ENG30-04182890-n [coloană, puț]
+  Hypernym path to root:
+    ENG30-04572800-n [casă]
+    -> ENG30-04182890-n [coloană, puț]
+    -> ENG30-03895585-n [coridor, culoar, gang, galerie]
+    -> ENG30-03895293-n [pasaj, trecere]
+    -> ENG30-04564698-n [cale, drum]
+    -> ENG30-00021939-n [artifact]
+    -> ENG30-00003553-n [ansamblu, tot, totalitate, întreg]
+    -> ENG30-00002684-n [lucru, obiect_fizic, obiect]
+
+Sense 11: ENG30-03011741-n
+  Definition:     Masă, pupitru sau birou într-un magazin, unde se achită costul cumpărăturilor
+  Literals:       ['casă']
+  Literal senses: ['2.3.1']
+  Relations:
+    hypernym             -> ENG30-03116530-n [tejghea, tarabă]
+  Hypernym path to root:
+    ENG30-03011741-n [casă]
+    -> ENG30-03116530-n [tejghea, tarabă]
+    -> ENG30-04379243-n [masă]
+    -> ENG30-03405725-n [mobilă, mobilier]
+    -> ENG30-03405265-n []
+    -> ENG30-03575240-n [instrument]
+    -> ENG30-00021939-n [artifact]
+    -> ENG30-00003553-n [ansamblu, tot, totalitate, întreg]
+    -> ENG30-00002684-n [lucru, obiect_fizic, obiect]
+
+Sense 12: ENG30-02976939-n
+  Definition:     Masă, pupitru sau birou într-un magazin, unde se achită costul cumpărăturilor.
+  Literals:       ['casetă_pentru_bani', 'casă']
+  Literal senses: ['x', '2.1']
+  Relations:
+    hypernym             -> ENG30-04340750-n [seif, casă_de_bani]
+    hyponym              -> ENG30-02977438-n [casă_de_bani]
+  Hypernym path to root:
+    ENG30-02976939-n [casetă_pentru_bani, casă]
+    -> ENG30-04340750-n [seif, casă_de_bani]
+    -> ENG30-02883344-n [cutie]
+    -> ENG30-03094503-n [container]
+    -> ENG30-03575240-n [instrument]
+    -> ENG30-00021939-n [artifact]
+    -> ENG30-00003553-n [ansamblu, tot, totalitate, întreg]
+    -> ENG30-00002684-n [lucru, obiect_fizic, obiect]
+
+===== carte (NOUN) - 7 senses =====
+
+Sense 1: ENG30-02962545-n
+  Definition:     Fiecare dintre cele 52 sau 32 de cartoane dreptunghiulare, diferențiate după culorile, semnele și figurile imprimate pe ele și întrebuințate la unele jocuri de noroc.
+  Literals:       ['carte', 'carte_de_joc']
+  Literal senses: ['12', '1']
+  Relations:
+    hypernym             -> ENG30-14974264-n [hârtie]
+    hyponym              -> ENG30-03963982-n [carte]
+    hyponym              -> ENG30-04023808-n [cartelă_perforată]
+    hyponym              -> ENG30-04394821-n [carte_de_tarot]
+    hyponym              -> ENG30-04465795-n [card_comercial]
+  Hypernym path to root:
+    ENG30-02962545-n [carte, carte_de_joc]
+    -> ENG30-14974264-n [hârtie]
+    -> ENG30-14580897-n [materie, material]
+    -> ENG30-00019613-n [compus, substanță]
+    -> ENG30-00020827-n [materie, substanță]
+
+Sense 2: ENG30-06627006-n
+  Definition:     Bilet, scrisoare, carte de vizită, ilustrată, special imprimate, prin care cineva este felicitat.;
+  Literals:       ['bilet', 'carte', 'carte_poștală']
+  Literal senses: ['2.1', '11', '2']
+  Relations:
+    hypernym             -> ENG30-06623614-n [corespondență]
+    hyponym              -> ENG30-06627450-n [felicitare]
+    hyponym              -> ENG30-06627938-n [carte_poștală]
+  Hypernym path to root:
+    ENG30-06627006-n [bilet, carte, carte_poștală]
+    -> ENG30-06623614-n [corespondență]
+    -> ENG30-06349220-n [comunicare_scrisă]
+    -> ENG30-00033020-n [comunicare]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+Sense 3: ENG30-06410904-n
+  Definition:     Scriere publicată, cu un anumit subiect, ce a fost tipărită și legată sau broșată în volum.
+  Literals:       ['carte', 'volum']
+  Literal senses: ['1', '7.1.x']
+  Relations:
+    hypernym             -> ENG30-06589574-n [publicație, tipăritură]
+    hyponym              -> ENG30-06413889-n [opuscul]
+    part_meronym         -> ENG30-06256041-n [coală]
+    hyponym              -> ENG30-06411592-n [autoritate]
+    hyponym              -> ENG30-06411883-n [manual_farmaceutic]
+    hyponym              -> ENG30-06412350-n [ediție_comercială]
+    hyponym              -> ENG30-06412610-n [bestiar]
+    hyponym              -> ENG30-06412771-n [catehism]
+    hyponym              -> ENG30-06413579-n []
+    hyponym              -> ENG30-06414372-n [manual]
+    hyponym              -> ENG30-06415791-n [caiet_de_exerciții]
+    hyponym              -> ENG30-06416049-n [carnet_de_programări]
+    hyponym              -> ENG30-06416206-n [catalog]
+    hyponym              -> ENG30-06416452-n [dicționar_de_expresii]
+    hyponym              -> ENG30-06416946-n [carte_de_rugăciuni]
+    hyponym              -> ENG30-06417598-n [carte_fundamentală, carte_de_referință]
+    hyponym              -> ENG30-06418006-n []
+    hyponym              -> ENG30-06418146-n [carte_de_cântece, culegere_de_cântece]
+    hyponym              -> ENG30-07282497-n []
+    instance_hyponym     -> ENG30-07283198-n [Utopia]
+  Hypernym path to root:
+    ENG30-06410904-n [carte, volum]
+    -> ENG30-06589574-n [publicație, tipăritură]
+    -> ENG30-04599396-n [lucrare, rezultat]
+    -> ENG30-04007894-n [bun, produs]
+    -> ENG30-03129123-n [creație]
+    -> ENG30-00021939-n [artifact]
+    -> ENG30-00003553-n [ansamblu, tot, totalitate, întreg]
+    -> ENG30-00002684-n [lucru, obiect_fizic, obiect]
+
+Sense 4: ENG30-03963982-n
+  Definition:     Fiecare dintre cele 52 sau 32 de cartoane dreptunghiulare, diferențiate după culorile, semnele și figurile imprimate pe ele și întrebuințate la unele jocuri de noroc.
+  Literals:       ['carte']
+  Literal senses: ['8.2']
+  Relations:
+    hypernym             -> ENG30-02962545-n [carte, carte_de_joc]
+    member_holonym       -> ENG30-07956721-n [pachet_de_cărți, set_de_cărți]
+    hyponym              -> ENG30-02673291-n [as, birlic]
+    hyponym              -> ENG30-03053788-n [ghindă, spatie, treflă]
+    hyponym              -> ENG30-03187972-n [caro, tobă, romb]
+    hyponym              -> ENG30-03233246-n []
+    part_meronym         -> ENG30-03313602-n [față]
+    hyponym              -> ENG30-03314028-n [figură]
+    hyponym              -> ENG30-03507048-n [cupă, inimă_roșie]
+    hyponym              -> ENG30-03527000-n [cărți_hole]
+    hyponym              -> ENG30-04286307-n []
+    hyponym              -> ENG30-04351233-n [culoare]
+    hyponym              -> ENG30-04480415-n [treiar, trei]
+    hyponym              -> ENG30-04491135-n [atu]
+    part_meronym         -> ENG30-07271942-n [punct]
+  Hypernym path to root:
+    ENG30-03963982-n [carte]
+    -> ENG30-02962545-n [carte, carte_de_joc]
+    -> ENG30-14974264-n [hârtie]
+    -> ENG30-14580897-n [materie, material]
+    -> ENG30-00019613-n [compus, substanță]
+    -> ENG30-00020827-n [materie, substanță]
+
+Sense 5: ENG30-06394865-n
+  Definition:     Diviziune mai mare decât un capitol a unei scrieri de proporții mari.
+  Literals:       ['carte']
+  Literal senses: ['3']
+  Relations:
+    hypernym             -> ENG30-06392001-n [secțiune]
+    part_holonym         -> ENG30-06387980-n [text]
+    instance_hyponym     -> ENG30-06432376-n [geneză, Geneza]
+    instance_hyponym     -> ENG30-06432715-n [Cartea_Exodul, Exodul]
+    instance_hyponym     -> ENG30-06433035-n [Leviticul, Cartea_Leviticului]
+    instance_hyponym     -> ENG30-06433249-n [Cartea_Numeri]
+    instance_hyponym     -> ENG30-06433475-n [Codul_Deuteronomic]
+    instance_hyponym     -> ENG30-06433923-n [Iosua]
+    instance_hyponym     -> ENG30-06434165-n [Cartea_Judecători, Cartea_Judecătorilor]
+    instance_hyponym     -> ENG30-06434368-n [Cartea_lui_Ruth]
+    instance_hyponym     -> ENG30-06434826-n [Cartea_a_doua_a_lui_Samuel]
+    instance_hyponym     -> ENG30-06435004-n [Cartea_Întâi_a_Regilor]
+    instance_hyponym     -> ENG30-06435651-n [Cronici]
+    instance_hyponym     -> ENG30-06435916-n [Cartea_a_doua_Paralipomena, Cartea_a_doua_a_Cronicilor]
+    instance_hyponym     -> ENG30-06436183-n [Cartea_Ezra]
+    instance_hyponym     -> ENG30-06436443-n [Neemia, Cartea_lui_Neemia]
+    instance_hyponym     -> ENG30-06436717-n [Estera, Cartea_Esterei]
+    instance_hyponym     -> ENG30-06436939-n [Cartea_lui_Iov]
+    instance_hyponym     -> ENG30-06437137-n [Cartea_Psalmilor]
+    instance_hyponym     -> ENG30-06437308-n [Cartea_Proverbelor, Cartea_Pildelor]
+    instance_hyponym     -> ENG30-06437531-n [Eclesiast]
+    instance_hyponym     -> ENG30-06437824-n [Cântarea_Cântărilor]
+    instance_hyponym     -> ENG30-06438126-n [Cartea_lui_Isaia]
+    instance_hyponym     -> ENG30-06438290-n [Cartea_lui_Ieremia]
+    instance_hyponym     -> ENG30-06438477-n [Cartea_Plângerile_lui_Ieremia]
+    instance_hyponym     -> ENG30-06438748-n [Ezechil]
+    instance_hyponym     -> ENG30-06438995-n [Cartea_lui_Daniel]
+    instance_hyponym     -> ENG30-06439253-n [Cartea_lui_Osea]
+    instance_hyponym     -> ENG30-06439408-n [Ioel, Cartea_lui_Ioel]
+    instance_hyponym     -> ENG30-06439560-n [Amos, Cartea_lui_Amos]
+    instance_hyponym     -> ENG30-06439924-n [Iona, Cartea_lui_Iona]
+    instance_hyponym     -> ENG30-06440102-n [Cartea_lui_Mica]
+    instance_hyponym     -> ENG30-06440313-n [Cartea_lui_Naum]
+    instance_hyponym     -> ENG30-06440489-n [Cartea_lui_Habacuc]
+    instance_hyponym     -> ENG30-06440663-n [Cartea_lui_țefania]
+    instance_hyponym     -> ENG30-06440937-n [Agheu]
+    instance_hyponym     -> ENG30-06441195-n [Cartea_lui_Zaharia]
+    instance_hyponym     -> ENG30-06441607-n [Evanghelia_după_Matei]
+    instance_hyponym     -> ENG30-06441973-n [Evanghelia_după_Luca]
+    instance_hyponym     -> ENG30-06442405-n [Actele_Apostolilor]
+    instance_hyponym     -> ENG30-06447897-n [Cartea_Revelației]
+    instance_hyponym     -> ENG30-06458685-n [Adăugiri_la_Ester]
+    instance_hyponym     -> ENG30-06459834-n [Cartea_lui_Judith]
+    instance_hyponym     -> ENG30-06460167-n [2_Esdras, II_Esdras]
+    instance_hyponym     -> ENG30-06460295-n [Ben_Sira, Sirach]
+    instance_hyponym     -> ENG30-06460524-n [Înțelepciunea_lui_Solomon]
+    instance_hyponym     -> ENG30-06460926-n [Cartea_a_doua_a_Macabeilor]
+  Hypernym path to root:
+    ENG30-06394865-n [carte]
+    -> ENG30-06392001-n [secțiune]
+    -> ENG30-06362953-n [scriere, scris]
+    -> ENG30-06349220-n [comunicare_scrisă]
+    -> ENG30-00033020-n [comunicare]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+Sense 6: ENG30-05638486-n
+  Definition:     (figurativ) Cunoștințe de scriere și de citire
+  Literals:       ['carte']
+  Literal senses: ['4.1']
+  Relations:
+    hypernym             -> ENG30-05637558-n [îndemânare, deprindere]
+    near_antonym         -> ENG30-05649256-n [analfabetism]
+    attribute            -> ENG30-01421679-a [analfabet]
+  Hypernym path to root:
+    ENG30-05638486-n [carte]
+    -> ENG30-05637558-n [îndemânare, deprindere]
+    -> ENG30-05616246-n [destoinicie, iscusință, potențial, pricepere]
+    -> ENG30-00023271-n [înțelegere, cunoaștere, cogniție]
+    -> ENG30-00023100-n [trăsătură_psihologică]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+Sense 7: ENG30-07219530-n
+  Definition:     Expresie : Carte albastră (sau albă, neagră etc.); publicație oficială a unui guvern care conține documentele justificative privitoare la o problemă politică
+  Literals:       ['carte']
+  Literal senses: ['1.2']
+  Relations:
+    hypernym             -> ENG30-07218470-n [lucrare, studiu]
+  Hypernym path to root:
+    ENG30-07219530-n [carte]
+    -> ENG30-07218470-n [lucrare, studiu]
+    -> ENG30-06470073-n [înscris, act, document, dovadă, hârtie]
+    -> ENG30-06362953-n [scriere, scris]
+    -> ENG30-06349220-n [comunicare_scrisă]
+    -> ENG30-00033020-n [comunicare]
+    -> ENG30-00002137-n [abstractizare]
+    -> ENG30-00001740-n [entitate]
+
+===== câine (NOUN) - 2 senses =====
+
+Sense 1: ENG30-02084071-n
+  Definition:     Animal mamifer carnivor domesticit, folosit pentru pază, vânătoare etc..
+  Literals:       ['câine']
+  Literal senses: ['1.1']
+  Relations:
+    hypernym             -> ENG30-02083346-n [canid]
+    hypernym             -> ENG30-01317541-n [animal_domestic]
+    member_holonym       -> ENG30-02083863-n [Canis]
+    member_holonym       -> ENG30-07994941-n [haită]
+    hyponym              -> ENG30-01322604-n [cățeluș]
+    hyponym              -> ENG30-02084732-n [cotarlă, javră, jigodie, potaie]
+    hyponym              -> ENG30-02084861-n [javră, jigodie, potaie, cotarlă]
+    hyponym              -> ENG30-02085374-n [câine_mic, câine_pitic, câine_de_buzunar, cățel, câine_de_jucărie]
+    hyponym              -> ENG30-02087122-n [câine_de_vânătoare]
+    hyponym              -> ENG30-02103406-n [câine_de_muncă]
+    hyponym              -> ENG30-02110341-n [dalmațian]
+    hyponym              -> ENG30-02110806-n [basenji]
+    hyponym              -> ENG30-02110958-n [mops, mops_pitic]
+    hyponym              -> ENG30-02111626-n [șpiț]
+    hyponym              -> ENG30-02113335-n [pudel]
+    part_meronym         -> ENG30-02158846-n []
+  Hypernym path to root:
+    ENG30-02084071-n [câine]
+    -> ENG30-02083346-n [canid]
+    -> ENG30-02075296-n [animal_carnivor, carnivor]
+    -> ENG30-01886756-n [placentar]
+    -> ENG30-01861778-n [mamifer]
+    -> ENG30-01471682-n [vertebrat, craniată]
+    -> ENG30-01466257-n [animal_cu_notocord]
+    -> ENG30-00015388-n [animal, creatură, jivină, lighioană, necuvântător]
+    -> ENG30-00004475-n [organism, ființă]
+    -> ENG30-00004258-n [creatură, făptură, ființă, vietate, viețuitoare]
+    -> ENG30-00003553-n [ansamblu, tot, totalitate, întreg]
+    -> ENG30-00002684-n [lucru, obiect_fizic, obiect]
+
+Sense 2: ENG30-10023039-n
+  Definition:     Epitet dat unui om rău, hain.   
+  Literals:       ['câine']
+  Literal senses: ['3']
+  Relations:
+    hypernym             -> ENG30-09908025-n [tip]
+  Hypernym path to root:
+    ENG30-10023039-n [câine]
+    -> ENG30-09908025-n [tip]
+    -> ENG30-09624168-n [bărbat]
+    -> ENG30-00007846-n [individ, om, persoană]
+    -> ENG30-00004475-n [organism, ființă]
+    -> ENG30-00004258-n [creatură, făptură, ființă, vietate, viețuitoare]
+    -> ENG30-00003553-n [ansamblu, tot, totalitate, întreg]
+    -> ENG30-00002684-n [lucru, obiect_fizic, obiect]
+
+===== merge (VERB) - 21 senses =====
+
+Sense 1: ENG30-02727039-v
+  Definition:     a se schimba sau a fi diferit între anumite limite
+  Literals:       ['|se| întinde', 'merge']
+  Literal senses: ['x', 'x']
+  Relations:
+    verb_group           -> ENG30-02686625-v [trece]
+    hypernym             -> ENG30-02604760-v [fi]
+    near_eng_derivat     -> ENG30-08399586-n [serie, șir]
+    near_eng_derivat     -> ENG30-08628921-n [rază, rază_de_acțiune]
+    near_eng_derivat     -> ENG30-05125377-n [arie, compartiment, domeniu, sector, sferă]
+    verb_group           -> ENG30-02685951-v [|se| întinde, |se| extinde]
+  Hypernym path to root:
+    ENG30-02727039-v [|se| întinde, merge]
+    -> ENG30-02604760-v [fi]
+
+Sense 2: ENG30-02561168-v
+  Definition:     A merge prea departe; a-și îngădui prea multe, a depăși limitele îngăduite.
+  Literals:       ['duce', 'merge']
+  Literal senses: ['1.18.x', '13']
+  Relations:
+    hypernym             -> ENG30-02560767-v [înfăptui, efectua]
+    near_eng_derivat     -> ENG30-00318735-n [cărat, ducere, dus]
+  Hypernym path to root:
+    ENG30-02561168-v [duce, merge]
+    -> ENG30-02560767-v [înfăptui, efectua]
+    -> ENG30-02367363-v [acționa]
+
+Sense 3: ENG30-02700104-v
+  Definition:     a pune în armonie sau a deveni armonios, a face să fie sau a fi în concordanță
+  Literals:       ['merge', '|se| armoniza', '|se| asorta', '|se| combina', '|se| potrivi']
+  Literal senses: ['35', '1.x', '3', '1.3', 'x']
+  Relations:
+    verb_group           -> ENG30-02657219-v [concorda, corespunde, [se] potrivi]
+    near_eng_derivat     -> ENG30-00577122-a [consonant]
+    near_eng_derivat     -> ENG30-13969243-n [armonie]
+    near_eng_derivat     -> ENG30-04713332-n [potrivire]
+    near_eng_derivat     -> ENG30-04713118-n [armonie]
+    hyponym              -> ENG30-02700455-v [[se] amesteca]
+
+Sense 4: ENG30-02525312-v
+  Definition:     A reuși, a funcționa fără greseală.
+  Literals:       ['merge']
+  Literal senses: ['27']
+  Relations:
+    hypernym             -> ENG30-02524171-v [reuși]
+    domain_TOPIC         -> ENG30-00523513-n [atletism]
+    near_eng_derivat     -> ENG30-00189565-n []
+    near_eng_derivat     -> ENG30-00558883-n []
+  Hypernym path to root:
+    ENG30-02525312-v [merge]
+    -> ENG30-02524171-v [reuși]
+
+Sense 5: ENG30-02659763-v
+  Definition:     A se potrivi, a corespunde (întocmai) cu ceva sau într-o anumită împrejurare
+  Literals:       ['merge', '[se] potrivi']
+  Literal senses: ['32.1.x', '10.1.x']
+  Relations:
+    verb_group           -> ENG30-02700455-v [[se] amesteca]
+    hypernym             -> ENG30-02735753-v [potrivi, veni]
+    near_eng_derivat     -> ENG30-04930307-n []
+    near_eng_derivat     -> ENG30-00795008-n [probare, probă]
+  Hypernym path to root:
+    ENG30-02659763-v [merge, [se] potrivi]
+    -> ENG30-02735753-v [potrivi, veni]
+    -> ENG30-02604760-v [fi]
+
+Sense 6: ENG30-01526290-v
+  Definition:     A fi în funcție, a se afla în stare de funcționare
+  Literals:       ['funcționa', 'merge']
+  Literal senses: ['2', '25.x']
+  Relations:
+    verb_group           -> ENG30-01525666-v [funcționa, merge]
+    near_eng_derivat     -> ENG30-14009481-n [alergătură, cursă]
+    near_antonym         -> ENG30-01526483-v [funcționa_în_gol, merge_în_gol]
+
+Sense 7: ENG30-01525666-v
+  Definition:     A se afla în stare de funcționare
+  Literals:       ['funcționa', 'merge']
+  Literal senses: ['2.x', '25.x']
+  Relations:
+    hyponym              -> ENG30-01526290-v [funcționa, merge]
+    near_eng_derivat     -> ENG30-01091728-a [funcțional]
+    near_eng_derivat     -> ENG30-00832609-a [operant]
+    near_eng_derivat     -> ENG30-13525549-n [funcționare, performanță]
+    near_eng_derivat     -> ENG30-00577068-n [operațiune, operație]
+    near_antonym         -> ENG30-01525295-v []
+    hyponym              -> ENG30-01525505-v []
+    hyponym              -> ENG30-01526139-v [porni]
+    hyponym              -> ENG30-01611123-v [tăia]
+    verb_group           -> ENG30-02444159-v [acționa, opera]
+    hyponym              -> ENG30-02541251-v [servi]
+
+Sense 8: ENG30-02653862-v
+  Definition:     a fi acordat, atribuit cuiva sau a fi repartizat, cheltuit pentru ceva
+  Literals:       ['acorda', 'da', 'atribui', 'merge', 'duce']
+  Literal senses: ['1.3.x', '2.17.x', '1.x', '6.2.x', '1.18.1.x']
+  Relations:
+
+Sense 9: ENG30-02617798-v
+  Definition:     (Despre acțiuni, evenimente, fenomene etc.) A se desfășura, a evolua a decurge.
+  Literals:       ['merge']
+  Literal senses: ['24']
+  Relations:
+    near_also_see        -> ENG30-02660819-v [coloca]
+
+Sense 10: ENG30-01906322-v
+  Definition:     A o lua, a merge, a o întinde pe jos / per pedes
+  Literals:       ['păși', 'merge']
+  Literal senses: ['1.x', '1.x']
+  Relations:
+    hypernym             -> ENG30-01904930-v [merge_pe_jos]
+    domain_USAGE         -> ENG30-07075172-n [colocvialism, colocvialitate]
+    near_eng_derivat     -> ENG30-00284665-n [merge_pe_jos]
+    near_eng_derivat     -> ENG30-05563266-n [membru_inferior, picior]
+    near_eng_derivat     -> ENG30-10412055-n [pedestru]
+  Hypernym path to root:
+    ENG30-01906322-v [păși, merge]
+    -> ENG30-01904930-v [merge_pe_jos]
+    -> ENG30-01835496-v [|se| deplasa, merge]
+
+Sense 11: ENG30-02676789-v
+  Definition:     A fi aplicabil la ceva.
+  Literals:       ['[se] aplica', 'merge']
+  Literal senses: ['6', '32.1']
+  Relations:
+    verb_group           -> ENG30-02707429-v [[se] aplica]
+    hypernym             -> ENG30-02676054-v [[se] referi, viza]
+  Hypernym path to root:
+    ENG30-02676789-v [[se] aplica, merge]
+    -> ENG30-02676054-v [[se] referi, viza]
+
+Sense 12: ENG30-02525447-v
+  Definition:     a avea un efect (o urmare), cel mai adesea dorit sau așteptat
+  Literals:       ['merge']
+  Literal senses: ['x']
+  Relations:
+    verb_group           -> ENG30-01629589-v [aduce, produce, face]
+    hypernym             -> ENG30-02524171-v [reuși]
+    near_eng_derivat     -> ENG30-01822563-a [viabil]
+    near_eng_derivat     -> ENG30-04599396-n [lucrare, rezultat]
+  Hypernym path to root:
+    ENG30-02525447-v [merge]
+    -> ENG30-02524171-v [reuși]
+
+Sense 13: ENG30-01912893-v
+  Definition:     A străbate un drum sau o distanță în mers
+  Literals:       ['face', 'merge', 'parcurge', 'străbate']
+  Literal senses: ['45.x', 'x', '1.1', '2.2.x']
+  Relations:
+    hypernym             -> ENG30-01912159-v [traversa, trece]
+    near_eng_derivat     -> ENG30-10412055-n [pedestru]
+    near_eng_derivat     -> ENG30-04545748-n []
+    near_eng_derivat     -> ENG30-04545471-n [cadru]
+    near_eng_derivat     -> ENG30-04545305-n [premergător]
+    near_eng_derivat     -> ENG30-05003090-n [călcătură, mers, pas]
+    near_eng_derivat     -> ENG30-04544979-n [pârtie]
+    near_eng_derivat     -> ENG30-00284798-n [plimbare_pe_jos, promenadă]
+    near_eng_derivat     -> ENG30-00283568-n [mers, plimbare_pe_jos]
+    verb_group           -> ENG30-01904930-v [merge_pe_jos]
+  Hypernym path to root:
+    ENG30-01912893-v [face, merge, parcurge, străbate]
+    -> ENG30-01912159-v [traversa, trece]
+    -> ENG30-02050132-v [trece]
+    -> ENG30-01835496-v [|se| deplasa, merge]
+
+Sense 14: ENG30-02700772-v
+  Definition:     A fi cuprins într-un spațiu, mărime etc.
+  Literals:       ['cuprinde', 'încăpea', 'merge']
+  Literal senses: ['10.1', '1.1.x', '31']
+  Relations:
+
+Sense 15: ENG30-02518839-v
+  Definition:     A-și petrece viața, zilele etc. într-un anumit fel
+  Literals:       ['merge', '[o] duce', 'fi']
+  Literal senses: ['26', '1.10.1', '4.1']
+  Relations:
+    hypernym             -> ENG30-02519666-v [[se] comporta_frumos, [se] purta_frumos]
+  Hypernym path to root:
+    ENG30-02518839-v [merge, [o] duce, fi]
+    -> ENG30-02519666-v [[se] comporta_frumos, [se] purta_frumos]
+    -> ENG30-02367363-v [acționa]
+
+Sense 16: ENG30-01847676-v
+  Definition:     a călători pe un anumit traseu
+  Literals:       ['călători', 'merge']
+  Literal senses: ['2', '1.2.x']
+  Relations:
+    hypernym             -> ENG30-01846916-v [cutreiera, străbate, traversa]
+    near_eng_derivat     -> ENG30-00307631-n [plimbare_cu_mașina]
+    verb_group           -> ENG30-01955984-v [merge_cu_mașina]
+  Hypernym path to root:
+    ENG30-01847676-v [călători, merge]
+    -> ENG30-01846916-v [cutreiera, străbate, traversa]
+    -> ENG30-01835496-v [|se| deplasa, merge]
+
+Sense 17: ENG30-02470518-v
+  Definition:     a fi sau a acționa în asociere cu
+  Literals:       ['merge']
+  Literal senses: ['7.x']
+  Relations:
+    hypernym             -> ENG30-02470175-v [[se] asocia]
+  Hypernym path to root:
+    ENG30-02470518-v [merge]
+    -> ENG30-02470175-v [[se] asocia]
+    -> ENG30-02469835-v [[se] însoți, [se] întovărăși, [se] asocia, [se] coaliza, [se] grupa, [se] uni]
+    -> ENG30-02434976-v [adera, intra]
+
+Sense 18: ENG30-02376833-v
+  Definition:     a cerceta
+  Literals:       ['urmări', 'merge']
+  Literal senses: ['8', '19.3.x']
+  Relations:
+    hypernym             -> ENG30-02376429-v [avansa, înainta]
+  Hypernym path to root:
+    ENG30-02376833-v [urmări, merge]
+    -> ENG30-02376429-v [avansa, înainta]
+    -> ENG30-02378623-v [reacționa]
+    -> ENG30-02367363-v [acționa]
+
+Sense 19: ENG30-02102002-v
+  Definition:     A se deplasa dintr-un loc în altul
+  Literals:       ['umbla', 'merge']
+  Literal senses: ['1.1', '1.1']
+  Relations:
+    hypernym             -> ENG30-01835496-v [|se| deplasa, merge]
+    near_eng_derivat     -> ENG30-00295701-n [călătorie, drum, plecare]
+    near_eng_derivat     -> ENG30-09629752-n [călător]
+  Hypernym path to root:
+    ENG30-02102002-v [umbla, merge]
+    -> ENG30-01835496-v [|se| deplasa, merge]
+
+Sense 20: ENG30-02102398-v
+  Definition:     A se deplasa cu un vehicul.
+  Literals:       ['merge']
+  Literal senses: ['1.x']
+  Relations:
+    verb_group           -> ENG30-01955984-v [merge_cu_mașina]
+    verb_group           -> ENG30-01957529-v [călări]
+    hypernym             -> ENG30-01835496-v [|se| deplasa, merge]
+    near_eng_derivat     -> ENG30-00307631-n [plimbare_cu_mașina]
+    near_eng_derivat     -> ENG30-10530150-n []
+  Hypernym path to root:
+    ENG30-02102398-v [merge]
+    -> ENG30-01835496-v [|se| deplasa, merge]
+
+Sense 21: ENG30-01835496-v
+  Definition:     A se mișca din poziția inițială;
+  Literals:       ['|se| deplasa', 'merge']
+  Literal senses: ['2', '1']
+  Relations:
+    verb_group           -> ENG30-01850315-v []
+    near_eng_derivat     -> ENG30-04773596-n [locomoție]
+    near_eng_derivat     -> ENG30-00283127-n [deplasare, locomoție]
+    near_eng_derivat     -> ENG30-00279835-n [deplasare, mișcare, mutare]
+    near_eng_derivat     -> ENG30-07309781-n [deplasare, mișcare]
+    near_eng_derivat     -> ENG30-10335931-n []
+    hyponym              -> ENG30-01992503-v [înainta, merge_înainte, avansa, progresa]
+    near_also_see        -> ENG30-01856211-v [[se] muta]
+    hyponym              -> ENG30-01994442-v [retrage]
+    near_also_see        -> ENG30-01921964-v [[se] urca, [se] cățăra]
+    near_also_see        -> ENG30-02072849-v [[se] scurge, trece]
+    near_also_see        -> ENG30-02073714-v [spăla_putina, [o] șterge, [-și] lua_tălpășița, fugi]
+    near_also_see        -> ENG30-02667558-v [[se] demoda]
+    hyponym              -> ENG30-02051694-v [trece]
+    hyponym              -> ENG30-01968569-v [[se] înălța, [se] ridica]
+    near_also_see        -> ENG30-01989873-v [|se| îneca, |se| scufunda]
+    near_also_see        -> ENG30-01970646-v [apune, asfinți, coborî, dispărea, pleca]
+    hyponym              -> ENG30-01970826-v [coborî, scoborî]
+    near_also_see        -> ENG30-00781000-v [continua, urma]
+    hyponym              -> ENG30-00969873-v [circula, |se| împrăștia, |se| întinde, |se| difuza, |se| duce, |se| lăți, |se| propaga, |se| răspândi, |se| transmite]
+    near_eng_derivat     -> ENG30-07311115-n [mutare, deplasare]
+    near_eng_derivat     -> ENG30-09629752-n [călător]
+    near_antonym         -> ENG30-01848355-v [sta_pe_loc]
+    hyponym              -> ENG30-01834360-v [șuiera]
+    hyponym              -> ENG30-01838651-v [plana, pluti, zbura]
+    hyponym              -> ENG30-01839030-v [muta]
+    hyponym              -> ENG30-01839170-v [[se] duce]
+    hyponym              -> ENG30-01839404-v [[se] împrăștia, [se] răspândi]
+    hyponym              -> ENG30-01840092-v [zbura_pe_deasupra]
+    hyponym              -> ENG30-01841079-v [fi_transportat]
+    hyponym              -> ENG30-01841347-v [îndrepta, îndruma]
+    hyponym              -> ENG30-01841772-v [face]
+    hyponym              -> ENG30-01842508-v [plutări]
+    hyponym              -> ENG30-01842888-v [[se] mișca]
+    hyponym              -> ENG30-01844859-v [merge_la_croazieră, merge_la_viteză_de_croazieră]
+    hyponym              -> ENG30-01846916-v [cutreiera, străbate, traversa]
+    hyponym              -> ENG30-01849221-v [apropia, veni]
+    hyponym              -> ENG30-01868139-v [târî]
+    hyponym              -> ENG30-01872877-v [[se] urni]
+    hyponym              -> ENG30-01881180-v [hoinări, umbla]
+    hyponym              -> ENG30-01882170-v [[se] plimba, lua_aer]
+    hyponym              -> ENG30-01882814-v [șerpui, face_meandre]
+    hyponym              -> ENG30-01884126-v [|se| grăbi, iuți]
+    hyponym              -> ENG30-01885845-v [târâi, târî]
+    hyponym              -> ENG30-01886334-v [cățăra]
+    hyponym              -> ENG30-01886488-v [luneca, [se] strecura, [se] furișa]
+    hyponym              -> ENG30-01887020-v [merge_pe_roți]
+    hyponym              -> ENG30-01887576-v [aluneca, luneca]
+    hyponym              -> ENG30-01892608-v [sălta, sări]
+    hyponym              -> ENG30-01894520-v [șterge_putina]
+    hyponym              -> ENG30-01902783-v [fi_dus, fi_purtat]
+    hyponym              -> ENG30-01904293-v [pluti]
+    hyponym              -> ENG30-01904930-v [merge_pe_jos]
+    hyponym              -> ENG30-01909812-v [coti, da_colțul]
+    hyponym              -> ENG30-01911339-v [înconjura, ocoli]
+    hyponym              -> ENG30-01916033-v [spinteca]
+    hyponym              -> ENG30-01925694-v [rătăci, [se] abate, [se] depărta, [se] îndepărta]
+    hyponym              -> ENG30-01926984-v [fugi, da_fuga, trage_o_fugă]
+    hyponym              -> ENG30-01928838-v [păși]
+    hyponym              -> ENG30-01930117-v [călători_cu_mașina, merge_cu_mașina]
+    hyponym              -> ENG30-01930738-v [merge_cu_mașina]
+    hyponym              -> ENG30-01938426-v [face_schi, schia]
+    hyponym              -> ENG30-01940403-v [plana, pluti, zbura]
+    hyponym              -> ENG30-01948872-v [rula]
+    hyponym              -> ENG30-01949218-v [merge_cu_feribotul]
+    hyponym              -> ENG30-01957529-v [călări]
+    hyponym              -> ENG30-01960911-v [înota]
+    hyponym              -> ENG30-01969216-v [sui, urca]
+    hyponym              -> ENG30-01972298-v [cădea, pica]
+    hyponym              -> ENG30-01991744-v [merge_în_zigzag]
+    hyponym              -> ENG30-01991931-v [urma, ține]
+    hyponym              -> ENG30-01995549-v [înainta, avansa]
+    hyponym              -> ENG30-01997119-v [merge_înapoi, da]
+    hyponym              -> ENG30-01998302-v [panorama]
+    hyponym              -> ENG30-01998432-v [urma, veni]
+    hyponym              -> ENG30-01999218-v [preceda, premerge]
+    hyponym              -> ENG30-02000868-v [urmări]
+    hyponym              -> ENG30-02004874-v [reveni, [se] înapoia, [se] întoarce, [se] reîntoarce, [se] reînturna]
+    hyponym              -> ENG30-02011865-v [deraia]
+    hyponym              -> ENG30-02025353-v [[se] înghesui]
+    hyponym              -> ENG30-02025550-v [acompania, conduce, însoți, întovărăși, petrece]
+    hyponym              -> ENG30-02042237-v [circula, umbla]
+    hyponym              -> ENG30-02044278-v [|se| învârti]
+    hyponym              -> ENG30-02050132-v [trece]
+    hyponym              -> ENG30-02055649-v [accelera, iuți, zori, |se| grăbi]
+    hyponym              -> ENG30-02055975-v [depăși_viteza]
+    hyponym              -> ENG30-02057656-v []
+    hyponym              -> ENG30-02058994-v [goni, alerga]
+    hyponym              -> ENG30-02059916-v [[se] târșâi]
+    hyponym              -> ENG30-02062081-v [face_cursă]
+    hyponym              -> ENG30-02069014-v [fâșâi]
+    hyponym              -> ENG30-02082181-v [goni]
+    hyponym              -> ENG30-02082527-v [face_tur]
+    hyponym              -> ENG30-02085446-v [învălui]
+    hyponym              -> ENG30-02085573-v [|se| propaga]
+    hyponym              -> ENG30-02088107-v [|se| apropia]
+    hyponym              -> ENG30-02088241-v [schimba]
+    hyponym              -> ENG30-02091165-v [merge_la_pas]
+    hyponym              -> ENG30-02091410-v [călca, păși]
+    hyponym              -> ENG30-02091885-v [bate_step, dansa_step]
+    hyponym              -> ENG30-02092476-v [[se] refugia, [se] retrage]
+    hyponym              -> ENG30-02093088-v [șuiera]
+    hyponym              -> ENG30-02096853-v [despica]
+    hyponym              -> ENG30-02097544-v [[se] clătina]
+    hyponym              -> ENG30-02098827-v [|se| strecura]
+    hyponym              -> ENG30-02099829-v [alerga]
+    hyponym              -> ENG30-02100176-v [hodorogi, hurui]
+    hyponym              -> ENG30-02102002-v [umbla, merge]
+    hyponym              -> ENG30-02102398-v [merge]
+
+===== citi (VERB) - 6 senses =====
+
+Sense 1: ENG30-00626428-v
+  Definition:     A rosti, a urmări un text cu glas tare pentru a comunica cuiva conținutul lui.;
+  Literals:       ['citi']
+  Literal senses: ['2']
+  Relations:
+    hypernym             -> ENG30-00941990-v [spune, vorbi, zice]
+    near_eng_derivat     -> ENG30-10508862-n [alfabetizat]
+    near_eng_derivat     -> ENG30-10508710-n [cititor]
+    near_eng_derivat     -> ENG30-07234881-n [declamare, recitare, poezie]
+    verb_group           -> ENG30-00625119-v [citi]
+    hyponym              -> ENG30-00626890-v [dicta]
+    hyponym              -> ENG30-01067995-v [striga, face_prezența, face_apelul]
+  Hypernym path to root:
+    ENG30-00626428-v [citi]
+    -> ENG30-00941990-v [spune, vorbi, zice]
+    -> ENG30-00740577-v [mărturisi, spune, comunica]
+    -> ENG30-02376958-v [interacționa]
+    -> ENG30-02367363-v [acționa]
+
+Sense 2: ENG30-00625119-v
+  Definition:     A parcurge un text (pronunțând cuvintele sau nu) pentru a lua cunoștință de cele scrise.
+  Literals:       ['citi']
+  Literal senses: ['1']
+  Relations:
+    verb_group           -> ENG30-00626428-v [citi]
+    verb_group           -> ENG30-02730813-v [[se] citi]
+    hypernym             -> ENG30-00623151-v [interpreta, înțelege, tălmăci, tâlcui]
+    near_eng_derivat     -> ENG30-06590065-n [lectură]
+    near_eng_derivat     -> ENG30-10508862-n [alfabetizat]
+    near_eng_derivat     -> ENG30-10508710-n [cititor]
+    near_eng_derivat     -> ENG30-05808794-n [citit]
+    hyponym              -> ENG30-00625518-v [anagrama, anagramatiza]
+    hyponym              -> ENG30-00625723-v [reciti]
+    hyponym              -> ENG30-00625841-v [citi_pe_diagonală]
+    hyponym              -> ENG30-00626130-v [descifra]
+    hyponym              -> ENG30-00627824-v [frunzări, răsfoi]
+  Hypernym path to root:
+    ENG30-00625119-v [citi]
+    -> ENG30-00623151-v [interpreta, înțelege, tălmăci, tâlcui]
+    -> ENG30-00588888-v [înțelege, pricepe]
+
+Sense 3: ENG30-00627091-v
+  Definition:     Expresie : A citi (cuiva) în palmă
+  Literals:       ['citi']
+  Literal senses: ['5.2']
+  Relations:
+    verb_group           -> ENG30-00624476-v [lua]
+    hypernym             -> ENG30-00917772-v [anticipa, prognostica, pronostica, profetiza, profeți, proroci]
+  Hypernym path to root:
+    ENG30-00627091-v [citi]
+    -> ENG30-00917772-v [anticipa, prognostica, pronostica, profetiza, profeți, proroci]
+    -> ENG30-00916909-v [speculație]
+    -> ENG30-00927049-v [specula]
+    -> ENG30-00632627-v [raționa]
+    -> ENG30-00628491-v [chibzui, cugeta, [se] gândi]
+
+Sense 4: ENG30-00607114-v
+  Definition:     A învăța, a studia (parcurgând scrieri, izvoare etc.).
+  Literals:       ['citi', 'învăța', 'studia', '[se] pune_cu_burta_pe_carte']
+  Literal senses: ['3', '3.2.x', '1.2', 'x']
+  Relations:
+    entailment           -> ENG30-00625119-v [citi]
+    hypernym             -> ENG30-00597915-v [deprinde, învăța]
+    near_eng_derivat     -> ENG30-05755883-n [învățare, studiere, studiu, învățătură, pregătire]
+    near_eng_derivat     -> ENG30-06598445-n [lectură_atentă]
+    hyponym              -> ENG30-00604576-v [memora, memoriza, învăța_pe_de_rost]
+    hyponym              -> ENG30-00605783-v [toci, îngrășa_porcul_în_ajun]
+  Hypernym path to root:
+    ENG30-00607114-v [citi, învăța, studia, [se] pune_cu_burta_pe_carte]
+    -> ENG30-00597915-v [deprinde, învăța]
+
+Sense 5: ENG30-01718755-v
+  Definition:     a participa la o audiție pentru un rol pe scenă prin citirea unei părți din rol
+  Literals:       ['citi']
+  Literal senses: ['x']
+  Relations:
+    hypernym             -> ENG30-01718535-v [audiție]
+    domain_TOPIC         -> ENG30-06157326-n [artele_spectacolului]
+  Hypernym path to root:
+    ENG30-01718755-v [citi]
+    -> ENG30-01718535-v [audiție]
+    -> ENG30-01714208-v [interpreta, juca]
+    -> ENG30-01619354-v [recrea]
+    -> ENG30-01617192-v [crea, face]
+
+Sense 6: ENG30-00627520-v
+  Definition:     a obține date folosind suporturi magnetice
+  Literals:       ['citi', 'scana']
+  Literal senses: ['10', '1']
+  Relations:
+    hypernym             -> ENG30-00623151-v [interpreta, înțelege, tălmăci, tâlcui]
+  Hypernym path to root:
+    ENG30-00627520-v [citi, scana]
+    -> ENG30-00623151-v [interpreta, înțelege, tălmăci, tâlcui]
+    -> ENG30-00588888-v [înțelege, pricepe]
+
+===== mânca (VERB) - 10 senses =====
+
+Sense 1: ENG30-01254324-v
+  Definition:     a produce sau a suferi o eroziune; a (se) roade
+  Literals:       ['eroda', 'mânca']
+  Literal senses: ['1', '15.3']
+  Relations:
+    hypernym             -> ENG30-00173338-v [îndepărta, înlătura]
+    hyponym              -> ENG30-01254013-v [toci]
+  Hypernym path to root:
+    ENG30-01254324-v [eroda, mânca]
+    -> ENG30-00173338-v [îndepărta, înlătura]
+
+Sense 2: ENG30-01250908-v
+  Definition:     A produce o senzație de mâncărime.
+  Literals:       ['mânca']
+  Literal senses: ['12.x']
+  Relations:
+    hypernym             -> ENG30-01205696-v [întâlni, atinge, lua_contact]
+    near_eng_derivat     -> ENG30-14286549-n [zgârietură]
+    near_eng_derivat     -> ENG30-14333136-n [rosătură]
+    near_eng_derivat     -> ENG30-11459538-n [frecare]
+  Hypernym path to root:
+    ENG30-01250908-v [mânca]
+    -> ENG30-01205696-v [întâlni, atinge, lua_contact]
+
+Sense 3: ENG30-01195804-v
+  Definition:     (peior.) a risipi, a irosi bani pe ceva, cu cineva etc.
+  Literals:       ['risipi', 'mânca']
+  Literal senses: ['2.2.x', '6']
+  Relations:
+    hypernym             -> ENG30-01158181-v [arunca_banii_pe_fereastră, cheltui, risipi, zvârli]
+    entailment           -> ENG30-01157517-v [consuma, mânca, dovedi]
+    near_eng_derivat     -> ENG30-00742645-n [irosire, risipă]
+  Hypernym path to root:
+    ENG30-01195804-v [risipi, mânca]
+    -> ENG30-01158181-v [arunca_banii_pe_fereastră, cheltui, risipi, zvârli]
+    -> ENG30-02267060-v [cheltui]
+    -> ENG30-02251743-v [plăti]
+    -> ENG30-02199590-v [da]
+    -> ENG30-02220461-v [transfera, transmite]
+
+Sense 4: ENG30-00274283-v
+  Definition:     A se distruge printr-o acțiune lentă și îndelungată de măcinare, de frecare, datorată acțiunii apei, a aerului sau a unui acid.
+  Literals:       ['ataca', 'mânca', '|se| roade']
+  Literal senses: ['6.2', '10.3', '4.1']
+  Relations:
+    hypernym             -> ENG30-00258857-v [strica]
+    near_eng_derivat     -> ENG30-14889479-n [rugină]
+    near_eng_derivat     -> ENG30-13552270-n [ruginire]
+    near_eng_derivat     -> ENG30-00587376-a [caustic, coroziv]
+    near_eng_derivat     -> ENG30-13453428-n [coroziune]
+    verb_group           -> ENG30-00273963-v [|se| rugini, |se| coroda]
+  Hypernym path to root:
+    ENG30-00274283-v [ataca, mânca, |se| roade]
+    -> ENG30-00258857-v [strica]
+    -> ENG30-00126264-v [modifica, preface, schimba, transforma]
+
+Sense 5: ENG30-01179865-v
+  Definition:     a hrăni animalele cu furaje
+  Literals:       ['mânca']
+  Literal senses: ['1.1.c']
+  Relations:
+    hypernym             -> ENG30-01156834-v [consuma, obișnui, sevi]
+    near_eng_derivat     -> ENG30-00838367-n [mâncare, mâncat, hrănire]
+    near_eng_derivat     -> ENG30-07800091-n [furaj, nutreț]
+    near_eng_derivat     -> ENG30-10042300-n [mâncător]
+    verb_group           -> ENG30-01168468-v [mânca]
+    hyponym              -> ENG30-01177699-v [[se] hrăni]
+    hyponym              -> ENG30-01576165-v [paște, pășuna]
+  Hypernym path to root:
+    ENG30-01179865-v [mânca]
+    -> ENG30-01156834-v [consuma, obișnui, sevi]
+
+Sense 6: ENG30-01168468-v
+  Definition:     A mesteca un aliment în gură și a-l înghiți
+  Literals:       ['mânca']
+  Literal senses: ['1.1.c']
+  Relations:
+    hypernym             -> ENG30-01166351-v [lua_masa]
+    verb_group           -> ENG30-01179865-v [mânca]
+    entailment           -> ENG30-01201089-v [mesteca]
+    entailment           -> ENG30-01201856-v [înghiți, ingera]
+    hypernym             -> ENG30-01156834-v [consuma, obișnui, sevi]
+    near_eng_derivat     -> ENG30-10042300-n [mâncător]
+    near_eng_derivat     -> ENG30-00838367-n [mâncare, mâncat, hrănire]
+    hyponym              -> ENG30-01167290-v [uda]
+    hyponym              -> ENG30-01169067-v [[se] ghiftui, [se] îndopa, [se] îmbuiba]
+    hyponym              -> ENG30-01169205-v [devora]
+    hyponym              -> ENG30-01169328-v []
+    hyponym              -> ENG30-01172969-v []
+    hyponym              -> ENG30-01173057-v []
+    hyponym              -> ENG30-01173656-v [ciuguli, ciupi]
+    hyponym              -> ENG30-01173933-v [înfuleca]
+    hyponym              -> ENG30-01174099-v [|se| îndopa]
+    hyponym              -> ENG30-01174294-v [ciuguli, ciupi, piguli]
+    hyponym              -> ENG30-01174555-v [rumega]
+    hyponym              -> ENG30-01192312-v [înmuia, muia, întinge]
+    hyponym              -> ENG30-01196653-v [hăpăi, devora, [se] lăcomi]
+    hyponym              -> ENG30-01196802-v [mânca_tot]
+    hyponym              -> ENG30-01197014-v [devora]
+    hyponym              -> ENG30-01203893-v [[se] sătura]
+  Hypernym path to root:
+    ENG30-01168468-v [mânca]
+    -> ENG30-01166351-v [lua_masa]
+    -> ENG30-01156834-v [consuma, obișnui, sevi]
+
+Sense 7: ENG30-02730682-v
+  Definition:     (Precedat de un pron. pers. la acuz.; despre corp sau despre părți ale corpului) A produce o senzație de mâncărime.
+  Literals:       ['mânca']
+  Literal senses: ['12']
+  Relations:
+    hypernym             -> ENG30-02730471-v [|se| simți]
+  Hypernym path to root:
+    ENG30-02730682-v [mânca]
+    -> ENG30-02730471-v [|se| simți]
+    -> ENG30-02133435-v [arăta, părea, semăna]
+    -> ENG30-02604760-v [fi]
+
+Sense 8: ENG30-02702674-v
+  Definition:     A costa o anumită sună de bani
+  Literals:       ['mânca', 'păpa']
+  Literal senses: ['x', 'x']
+  Relations:
+    hypernym             -> ENG30-02702508-v [costa, fi, face]
+  Hypernym path to root:
+    ENG30-02702674-v [mânca, păpa]
+    -> ENG30-02702508-v [costa, fi, face]
+    -> ENG30-02604760-v [fi]
+
+Sense 9: ENG30-01157517-v
+  Definition:     A întrebuința, a folosi ceva pentru satisfacerea unor trebuințe proprii sau pentru a obține alte produse
+  Literals:       ['consuma', 'mânca', 'dovedi']
+  Literal senses: ['2.2', '15.2.x', '5.x']
+  Relations:
+    hypernym             -> ENG30-02267060-v [cheltui]
+    near_eng_derivat     -> ENG30-00356621-n [epuizare, isprăvire, terminare]
+    near_eng_derivat     -> ENG30-14017332-n [secătuire, epuizare]
+    near_eng_derivat     -> ENG30-00356199-n [epuizare, secătuire, sleire]
+    hyponym              -> ENG30-00561714-v [epuiza, isprăvi, termina, sfârși]
+    hyponym              -> ENG30-01158022-v [seca, stoarce, slei, secătui]
+    hyponym              -> ENG30-01191645-v [huzuri, lăfăi]
+    hyponym              -> ENG30-01205000-v [arde]
+    hyponym              -> ENG30-02267529-v [cheltui]
+    verb_group           -> ENG30-02267989-v [dura, lua]
+    hyponym              -> ENG30-02280869-v [epuiza, isprăvi, consuma]
+  Hypernym path to root:
+    ENG30-01157517-v [consuma, mânca, dovedi]
+    -> ENG30-02267060-v [cheltui]
+    -> ENG30-02251743-v [plăti]
+    -> ENG30-02199590-v [da]
+    -> ENG30-02220461-v [transfera, transmite]
+
+Sense 10: ENG30-01766273-v
+  Definition:     (figurativ (Despre nenorociri, stări sufletești etc.)) A face pe cineva să sufere
+  Literals:       ['frământa', 'mânca', 'roade']
+  Literal senses: ['2.2', '16.1', '2']
+  Relations:
+    hypernym             -> ENG30-01765908-v [neliniști, îngrijora]
+  Hypernym path to root:
+    ENG30-01766273-v [frământa, mânca, roade]
+    -> ENG30-01765908-v [neliniști, îngrijora]
+    -> ENG30-01764171-v [tulbura, neliniști, zăpăci, alarma, îngrijora]
+    -> ENG30-01770501-v [deranja, incomoda, jena, stingheri]
+    -> ENG30-01767949-v [atinge, emoționa, impresiona, mișca, pătrunde, tulbura]
+
+===== frumos (ADJECTIVE) - 6 senses =====
+
+Sense 1: ENG30-00220082-a
+  Definition:     plăcut, armonios, estetic.
+  Literals:       ['frumos']
+  Literal senses: ['8']
+  Relations:
+    similar_to           -> ENG30-00217728-a [frumos]
+    near_eng_derivat     -> ENG30-04685649-n [drăgălășenie]
+
+Sense 2: ENG30-01130932-a
+  Definition:     Expresie: A fi frumos (din partea cuiva) = a se cuveni, a fi cuviincios; a fi lăudabil
+  Literals:       ['frumos']
+  Literal senses: ['10.3']
+  Relations:
+    similar_to           -> ENG30-01129977-a [bun]
+
+Sense 3: ENG30-01484342-a
+  Definition:     feminin și atrăgător
+  Literals:       ['frumos']
+  Literal senses: ['x']
+  Relations:
+    near_eng_derivat     -> ENG30-04685396-n [drăgălășenie, farmec]
+
+Sense 4: ENG30-00069531-a
+  Definition:     care privește frumosul, care corespunde cerințelor esteticii
+  Literals:       ['frumos']
+  Literal senses: ['3.2']
+  Relations:
+    near_eng_derivat     -> ENG30-06161223-n [estetică]
+    near_eng_derivat     -> ENG30-05968971-n [estetic]
+
+Sense 5: ENG30-01800764-a
+  Definition:     (Despre timp) Senin, calm ( din punctul de vedere al stării atmosferice).
+  Literals:       ['frumos']
+  Literal senses: ['6']
+  Relations:
+    similar_to           -> ENG30-01800349-a [plăcut, agreabil]
+
+Sense 6: ENG30-00217728-a
+  Definition:     Care place pentru armonia liniilor, mișcărilor, culorilor etc.
+  Literals:       ['frumos']
+  Literal senses: ['1.1']
+  Relations:
+    also_see             -> ENG30-00166146-a [atractiv, atrăgător]
+    also_see             -> ENG30-01139352-a [delicat, grațios, suav]
+    also_see             -> ENG30-01807219-a [plăcut]
+    attribute            -> ENG30-04683814-n [frumusețe]
+    near_antonym         -> ENG30-00220956-a [urât]
+    similar_to           -> ENG30-00218440-a [atrăgător]
+    similar_to           -> ENG30-00218950-a [arătos, chipeș]
+    similar_to           -> ENG30-00219389-a [splendid]
+    similar_to           -> ENG30-00219705-a [minunat]
+    similar_to           -> ENG30-00219809-a [încântător, minunat, drăguț]
+    similar_to           -> ENG30-00220082-a [frumos]
+    similar_to           -> ENG30-00220600-a [pitoresc]
+
+===== mare (ADJECTIVE) - 17 senses =====
+
+Sense 1: ENG30-00579622-a
+  Definition:     Care iese din comun prin valoare, calități;
+  Literals:       ['însemnat', 'important', 'mare', 'proeminent']
+  Literal senses: ['3', '1', '1.42', '2']
+  Relations:
+    similar_to           -> ENG30-00579084-a [frapant, izbitor]
+    near_eng_derivat     -> ENG30-14433587-n [renume, notorietate, popularitate]
+    near_eng_derivat     -> ENG30-05169507-n [evidențiere]
+
+Sense 2: ENG30-01382086-a
+  Definition:     Care depășește dimensiunile obișnuite
+  Literals:       ['mare']
+  Literal senses: ['1.1.1']
+  Relations:
+    attribute            -> ENG30-05098942-n [dimensiune, mărime, proporție]
+    near_eng_derivat     -> ENG30-05103946-n [mărime]
+    near_antonym         -> ENG30-01391351-a [mic]
+    near_eng_derivat     -> ENG30-05096191-n [haină_largă]
+    similar_to           -> ENG30-01383394-a [amplu]
+    similar_to           -> ENG30-01383582-a [astronomic]
+    similar_to           -> ENG30-01383857-a [măricel, mărișor]
+    similar_to           -> ENG30-01383935-a [mărit]
+    similar_to           -> ENG30-01384081-a [bufant, înfoiat, umflat]
+    similar_to           -> ENG30-01384212-a [întins, larg, mare, vast]
+    similar_to           -> ENG30-01384438-a [voluminos]
+    similar_to           -> ENG30-01384572-a [cuprinzător, încăpător, larg, mare, spațios]
+    similar_to           -> ENG30-01384730-a [colosal, prodigios]
+    similar_to           -> ENG30-01385046-a [adânc]
+    similar_to           -> ENG30-01385149-a [dublu]
+    similar_to           -> ENG30-01385255-a [enorm]
+    similar_to           -> ENG30-01385663-a [de_proporții_cosmice]
+    similar_to           -> ENG30-01385773-a [colosal, gigantic, elefantin]
+    similar_to           -> ENG30-01386010-a [grandios, monumental, epic]
+    similar_to           -> ENG30-01386538-a [gigantic, gigantesc]
+    similar_to           -> ENG30-01387319-a [uriaș]
+    similar_to           -> ENG30-01387902-a [mătăhălos]
+    similar_to           -> ENG30-01388062-a [colosal, enorm, gigantic, imens, uriaș]
+    similar_to           -> ENG30-01388228-a [regal, regesc]
+    similar_to           -> ENG30-01388542-a [la_scară_mare]
+    similar_to           -> ENG30-01388655-a [în_mărime_naturală]
+    similar_to           -> ENG30-01388809-a [macroscopic]
+    similar_to           -> ENG30-01388928-a [macro]
+    similar_to           -> ENG30-01389022-a [de_mărimea_unui_om]
+    similar_to           -> ENG30-01389170-a [masiv, monumental]
+    similar_to           -> ENG30-01389451-a [masiv]
+    similar_to           -> ENG30-01389738-a [monstruos]
+    similar_to           -> ENG30-01389993-a [supradimensionat]
+    similar_to           -> ENG30-01390588-a [super]
+    similar_to           -> ENG30-01390683-a [titanic]
+    similar_to           -> ENG30-01390900-a [voluminos]
+    similar_to           -> ENG30-01391237-a [impresionant]
+
+Sense 3: ENG30-01467919-a
+  Definition:     De dimensiuni mai mari decât litera obișnuită și cu o formă, de obicei, diferită
+  Literals:       ['capital', 'mare', 'verzal']
+  Literal senses: ['2.4.1', '1.2.2', '1']
+  Relations:
+    similar_to           -> ENG30-01467700-a [majuscul]
+    near_eng_derivat     -> ENG30-06824227-n [majuscul, verzal, capital, literă_mare]
+
+Sense 4: ENG30-02402439-a
+  Definition:     Ieșit din comun
+  Literals:       ['mare']
+  Literal senses: ['1.45.1']
+  Relations:
+    similar_to           -> ENG30-02402268-a [netemperat]
+
+Sense 5: ENG30-00013887-a
+  Definition:     Care este în cantitate mare, care abundă
+  Literals:       ['abundent', 'mare', 'îndestulător']
+  Literal senses: ['1.1', '1.14.1', '1.1']
+  Relations:
+    also_see             -> ENG30-00105746-a [amplu]
+    also_see             -> ENG30-02021905-a [bogat]
+    attribute            -> ENG30-05108740-n [cantitate, necesar]
+    near_eng_derivat     -> ENG30-02715279-v [abunda]
+    near_eng_derivat     -> ENG30-05115040-n [îmbelșugare, abundență, belșug, bogăție]
+    similar_to           -> ENG30-00014490-a [bogat, îmbelșugat, îndestulat, mare, mănos, copios]
+    similar_to           -> ENG30-00014858-a [cuprinzător]
+    similar_to           -> ENG30-00015097-a [accesibil]
+    similar_to           -> ENG30-00015247-a [exuberant, luxuriant, bogat]
+    similar_to           -> ENG30-00015720-a [supraabundent, pletoric]
+    similar_to           -> ENG30-00015854-a [numeros]
+
+Sense 6: ENG30-02560548-a
+  Definition:     Care are o lățime (relativ) mare.
+  Literals:       ['larg', 'lat', 'mare']
+  Literal senses: ['x', '1.1', '1.13.1']
+  Relations:
+    also_see             -> ENG30-00525453-a [cuprinzător]
+    also_see             -> ENG30-02410393-a [gros]
+    attribute            -> ENG30-05136150-n [lărgime]
+    near_eng_derivat     -> ENG30-05136343-n [lărgime, lățime]
+    near_antonym         -> ENG30-02561888-a [îngust, mic, strâmt]
+    similar_to           -> ENG30-02561391-a [adânc, afund, adâncit]
+    similar_to           -> ENG30-02561560-a [amplu, cuprinzător]
+
+Sense 7: ENG30-01654900-a
+  Definition:     (Despre ochi) larg deschis
+  Literals:       ['căscat', 'holbat', 'mare', 'zgâit']
+  Literal senses: ['2.3', '1.1', '1.3', '1.1']
+  Relations:
+    similar_to           -> ENG30-01654377-a [deschis, căscat]
+
+Sense 8: ENG30-01473680-a
+  Definition:     de gravitate sau periculozitate mare
+  Literals:       ['mare']
+  Literal senses: ['1.29']
+  Relations:
+    near_antonym         -> ENG30-01473826-a [minor]
+
+Sense 9: ENG30-01375831-a
+  Definition:     Care a devenit extrem de cunoscut (prin însușirile sau defectele sale, prin faptele sale etc.)
+  Literals:       ['celebru', 'faimos', 'ilustru', 'mare', 'renumit', 'reputat', 'vestit']
+  Literal senses: ['1', '1.1', '1', '1.44.1.x', '1.2', '2', '1.2']
+  Relations:
+    near_eng_derivat     -> ENG30-10276238-n [far, magistru, persoană_luminată, spiritus_rector]
+    near_eng_derivat     -> ENG30-05169601-n [măreție, grandoare, grandiozitate]
+    near_eng_derivat     -> ENG30-14438898-n [celebritate, faimă, glorie, prestigiu, renume, reputație]
+    near_eng_derivat     -> ENG30-14437386-n [celebritate]
+
+Sense 10: ENG30-01384212-a
+  Definition:     foarte mare ca întindere
+  Literals:       ['întins', 'larg', 'mare', 'vast']
+  Literal senses: ['2.8', '1.1', '1.5', '1.1']
+  Relations:
+    similar_to           -> ENG30-01382086-a [mare]
+    near_eng_derivat     -> ENG30-05104548-n [monumentalitate, enormitate, imensitate, vastitate, măreție]
+    near_eng_derivat     -> ENG30-05105265-n []
+    near_eng_derivat     -> ENG30-05136343-n [lărgime, lățime]
+
+Sense 11: ENG30-00014490-a
+  Definition:     Care are din abundență cele trebuincioase
+  Literals:       ['bogat', 'îmbelșugat', 'îndestulat', 'mare', 'mănos', 'copios']
+  Literal senses: ['3.1.x', '1', 'x', '1.14.2', '2', '2']
+  Relations:
+    similar_to           -> ENG30-00013887-a [abundent, mare, îndestulător]
+    near_eng_derivat     -> ENG30-05115804-n []
+    near_eng_derivat     -> ENG30-05115568-n [duium, grămadă, mulțime, potop, puhoi, puzderie, sumedenie]
+    near_eng_derivat     -> ENG30-13774404-n [duium, grămadă, mulțime, potop, sumedenie]
+    near_eng_derivat     -> ENG30-05115040-n [îmbelșugare, abundență, belșug, bogăție]
+
+Sense 12: ENG30-01114658-a
+  Definition:     Care este plin de mărinimie, de înțelegere, de bunătate
+  Literals:       ['generos', 'mărinimos', 'mare']
+  Literal senses: ['1.2', '1.1', '1.56']
+  Relations:
+    similar_to           -> ENG30-01114434-a [generos, mărinimos, nobil]
+    near_eng_derivat     -> ENG30-04870340-n [nobilitate, noblețe]
+    near_eng_derivat     -> ENG30-04832716-n [munificență, larghețe, mărinimie, magnanimitate]
+
+Sense 13: ENG30-01276872-a
+  Definition:     important, însemnat
+  Literals:       ['mare']
+  Literal senses: ['1.37.2']
+  Relations:
+    similar_to           -> ENG30-01275562-a [important]
+    domain_USAGE         -> ENG30-07075172-n [colocvialism, colocvialitate]
+
+Sense 14: ENG30-01278818-a
+  Definition:     de semnificație majoră
+  Literals:       ['mare', 'deosebit', 'remarcabil', 'măreț']
+  Literal senses: ['1.37.1', '5.x', '1.x', '1.x']
+  Relations:
+    similar_to           -> ENG30-01275562-a [important]
+    near_eng_derivat     -> ENG30-05169601-n [măreție, grandoare, grandiozitate]
+
+Sense 15: ENG30-01510444-a
+  Definition:     care acționează cu putere și cu efect, care dezvoltă o energie mare.
+  Literals:       ['mare']
+  Literal senses: ['1.26.x']
+  Relations:
+    similar_to           -> ENG30-01509527-a [intens]
+    near_eng_derivat     -> ENG30-05036715-n [severitate]
+
+Sense 16: ENG30-01185775-a
+  Definition:     De dimensiuni apreciabile
+  Literals:       ['mare', 'voluminos']
+  Literal senses: ['1.11.2', '3.1']
+  Relations:
+    similar_to           -> ENG30-01184932-a [greu]
+    near_eng_derivat     -> ENG30-05027837-n [masivitate, mărime, greutate]
+
+Sense 17: ENG30-01384572-a
+  Definition:     Care are volum utilizabil mare
+  Literals:       ['cuprinzător', 'încăpător', 'larg', 'mare', 'spațios']
+  Literal senses: ['1.1.x', '1.1', '1.3.2', '1.11.1', '2']
+  Relations:
+    similar_to           -> ENG30-01382086-a [mare]
+    near_eng_derivat     -> ENG30-13755053-n [capacitate]
+    near_eng_derivat     -> ENG30-05105265-n []
+

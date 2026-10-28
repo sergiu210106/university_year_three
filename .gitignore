@@ -22,6 +22,9 @@ target/
 *.exe
 a.out
 
+# --- Large downloaded data ---
+nlp/labs/2/data/
+
 # --- Build outputs (compiled binaries, generated inputs/outputs, logs) ---
 build/
 *.log

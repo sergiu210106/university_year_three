@@ -4,3 +4,11 @@ nltk>=3.8
 
 #   python -m spacy download en_core_web_sm
 #   python -m spacy download ro_core_news_sm
+rowordnet>=1.1
+setuptools<81  # rowordnet imports pkg_resources
+numpy
+
+# lab 2 embeddings (not committed), into 2/data/:
+#   http://89.38.230.23/word_embeddings/we/corola.300.20.vec.zip           -> word.vec.zip
+#   http://89.38.230.23/word_embeddings_lemma/we/corola.300.20.vec.zip     -> lemma.vec.zip
+#   http://89.38.230.23/word_embeddings_lemma_msd/we/corola.300.20.vec.zip -> lemma_pos.vec.zip
