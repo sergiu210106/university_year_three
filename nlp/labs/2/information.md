@@ -19,6 +19,32 @@ Inputs, the same in both parts: nouns **casă, carte, câine**, verbs **merge, c
 
 ---
 
+## Theory in brief
+
+**Word vs. sense.** A word can have several meanings (**polysemy**): *casă* = building / family / company / cash desk. Lexical resources model **senses**, while corpus statistics see only **strings**.
+
+**WordNet** is a lexical database organised by meaning, not alphabetically:
+- **Synset**: a set of synonyms that express one concept, plus a **gloss** (definition). A word with *n* senses belongs to *n* synsets.
+- **Semantic relations** link synsets: hypernymy/hyponymy (is-a, e.g. *câine is-a canid*), meronymy/holonymy (part-of / member-of), entailment (verbs), similarity (adjectives).
+- **Lexical relations** link individual words: antonymy (*mare – mic*) and derivation (*citi – cititor*).
+- Hypernymy turns nouns and verbs into a **hierarchy** (a tree from specific up to general, e.g. *entitate*). Adjectives form **clusters** around antonym pairs instead.
+- RoWordNet is the Romanian WordNet, aligned synset-by-synset to Princeton WordNet 3.0, so it can be used across languages.
+
+**Distributional hypothesis** ("you shall know a word by the company it keeps", Firth): words that occur in similar contexts have similar meanings.
+
+**Word embeddings** are dense vectors (here 300 numbers per word), learned from a corpus so that words with similar contexts get similar vectors:
+- **word2vec** (skip-gram / CBOW) trains a tiny neural network to predict context words from a word, or the reverse. The learned weights are the vectors.
+- **fastText**, used for CoRoLa, does the same but also models character n-grams. That helps a morphologically rich language like Romanian.
+
+**Cosine similarity**: cos(a, b) = a·b / (‖a‖·‖b‖), the cosine of the angle between the two vectors. It is 1 for the same direction and 0 for unrelated vectors. The **nearest neighbours** of a word are the words with the highest cosine to it.
+
+**Word vs. lemma vs. lemma+POS.** Romanian has many inflected forms (*carte, cartea, cărți, cărțile, cărții…*):
+- **word form** gives one vector per form, so counts are split and neighbours are often just other forms.
+- **lemma** groups all forms under the dictionary form (lemmatisation), which gives more data per vector and neighbours that are more semantic.
+- **lemma+POS** also attaches the part of speech, so homographs are separated (*Af_mare* "big" vs. *Nc_mare* "sea").
+
+---
+
 ## Part 1: RoWordNet
 
 **What RoWordNet is:** the Romanian WordNet built at RACAI. It is a graph of **synsets** (sets of synonyms that share one meaning) linked by semantic relations. It is aligned to Princeton WordNet 3.0, which is why the synset ids look like `ENG30-02084071-n` (PWN offset + POS). It is used via the `rowordnet` Python package, which ships the data.
@@ -58,6 +84,27 @@ Inputs, the same in both parts: nouns **casă, carte, câine**, verbs **merge, c
 - Some target synsets print as `no Romanian literal`: they exist in the graph (aligned from PWN) but have not been translated yet.
 - Some paths stop before `entitate` (e.g. at `obiect`) because the Romanian graph is missing the link above that point.
 
+### `rowordnet_lab.py` line by line
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1–3 | `warnings.filterwarnings("ignore")` | rowordnet imports the deprecated `pkg_resources`, which prints a warning. This silences it so the results file stays clean. Placed before the import on purpose. |
+| 5 | `import rowordnet as rwn` | the RoWordNet library (its data comes bundled) |
+| 6 | `from rowordnet import Synset` | needed for the `Synset.Pos` enum (NOUN / VERB / ADJECTIVE) |
+| 8–17 | `words = [...]` | the 8 inputs as (literal, part of speech) pairs: 3 nouns, 3 verbs, 2 adjectives |
+| 19 | `wn = rwn.RoWordNet()` | loads the whole wordnet graph into memory, about 60k synsets |
+| 22–24 | `def lits(synset_id)` | helper: `wn(id)` returns the Synset object for an id, and its literals are joined into one string. Prints `no Romanian literal` when the synset has none. |
+| 27 | `for word, pos in words:` | loop over the 8 inputs |
+| 29 | `wn.synsets(literal=word, pos=pos, strict=True)` | ids of all synsets that contain this exact literal with this POS, i.e. **all senses of the word**. `strict=True` means exact match rather than substring. `dict.fromkeys` drops duplicate ids and keeps their order. |
+| 30 | `print(f"===== ...")` | header line: word, POS and number of senses |
+| 31 | `for i, sid in enumerate(ids, 1):` | loop over the senses, numbered from 1 |
+| 32 | `s = wn(sid)` | gets the Synset object |
+| 33–36 | `s.definition`, `s.literals`, `s.literals_senses` | the 3 required fields: gloss, synonyms and the DEX sense number of each synonym |
+| 37–39 | `wn.outbound_relations(sid)` | list of (target id, relation name) for every relation that starts at this synset. Each is printed with the target's literals. |
+| 40 | `wn.synset_to_hypernym_root(sid)` | list of ids from this synset up to the root, following hypernym links |
+| 41–43 | `if len(path) > 1: ...` | prints the chain, one level per line. It is skipped when there is no hypernym, as for adjectives and top-level verbs. |
+| 44 | `print()` | blank line between senses |
+
 ---
 
 ## Part 2: CoRoLa word embeddings
@@ -84,6 +131,34 @@ POS tags are MSD prefixes: `Nc` = common noun, `Vm` = main verb, `Af` = qualific
 **Implementation notes:**
 - gensim does not build on Python 3.14, so `embeddings.py` reads the `.vec` text format itself with numpy, straight from the zip (about 15 lines in `load` and `nearest`).
 - `rowordnet` imports `pkg_resources`, which was removed in setuptools 81, hence `setuptools<81` in `requirements.txt`.
+
+### `embeddings.py` line by line
+
+| Line | Code | Explanation |
+|---|---|---|
+| 1–2 | `import os`, `import zipfile` | file paths, and reading the `.vec` file directly from the zip without unpacking it |
+| 4 | `import numpy as np` | matrix operations |
+| 7–11 | `words = [...]` | the 8 inputs as (lemma, MSD prefix). The prefix is used only for the lemma+POS model. |
+| 14 | `BASE = os.path.dirname(...)` | folder of the script, so the script works from any working directory |
+| 15–19 | `MODELS = {...}` | the 3 models: display name → zip path |
+| 22 | `def load(path):` | reads one model and returns (word→row index, word list, matrix) |
+| 24 | `zipfile.ZipFile(...)`, `z.open(z.namelist()[0])` | opens the zip and the single `.vec` file inside it as a byte stream |
+| 25 | `n, dim = map(int, f.readline().split())` | the first line of the `.vec` format is the header: `<number of words> <dimensions>`, e.g. `250942 300` |
+| 26 | `vocab, vecs = [], np.zeros((n, dim), ...)` | empty word list, plus a preallocated n × 300 `float32` matrix (about 300 MB for the word model) |
+| 27 | `for i, line in enumerate(f):` | every following line is `<word> <300 numbers>` |
+| 28 | `line.decode("utf-8", errors="replace").rstrip().split(" ")` | bytes → text, then split on spaces. `errors="replace"` stops the script from crashing on rare broken bytes in the corpus. |
+| 29 | `vocab.append(" ".join(parts[:-dim]))` | everything before the last 300 fields is the word. This handles entries that contain spaces. |
+| 30 | `vecs[i] = parts[-dim:]` | the last 300 fields are the vector. numpy converts the strings to floats. |
+| 31 | `vecs /= np.linalg.norm(vecs, axis=1, keepdims=True) + 1e-9` | divides every row by its length (**L2 normalisation**), so a dot product equals the cosine. `1e-9` avoids dividing by zero. |
+| 32 | `return {w: i ...}, vocab, vecs` | the dict gives O(1) lookup from word to row |
+| 35 | `def nearest(index, vocab, vecs, query, k=10):` | top k neighbours of `query` |
+| 36 | `sims = vecs @ vecs[index[query]]` | matrix × vector gives the cosine of the query with **every** word at once (n scores) |
+| 37 | `best = np.argsort(-sims)[: k + 1]` | indices sorted by descending similarity. It takes k+1 because the query itself is first, with cosine 1. |
+| 38 | `[(vocab[i], sims[i]) for i in best if vocab[i] != query][:k]` | drops the query and returns (neighbour, score) pairs |
+| 41–43 | `for name, path in MODELS.items(): ...` | loads each model in turn and prints a header with the vocabulary size |
+| 44–45 | `query = f"{msd}_{word}" if name == "lemma+POS" else word` | for lemma+POS the key is `Nc_casă`, `Vm_merge`, `Af_frumos`, otherwise the plain word |
+| 47–49 | `if query not in index: ...` | safety check for words that are missing from a model |
+| 50–51 | `for neighbour, score in nearest(...)` | prints the 10 neighbours with the score to 4 decimal places |
 
 ---
 
