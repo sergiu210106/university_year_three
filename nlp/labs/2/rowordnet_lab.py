@@ -20,7 +20,8 @@ wn = rwn.RoWordNet()
 
 
 def lits(synset_id):
-    return ", ".join(wn(synset_id).literals)
+    # some synsets imported from PWN have no Romanian literal yet
+    return ", ".join(wn(synset_id).literals) or "no Romanian literal"
 
 
 for word, pos in words:
