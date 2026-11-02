@@ -39,3 +39,16 @@ build/
 # --- OS ---
 .DS_Store
 Thumbs.db
+
+# --- Windows leftovers (WSL / downloaded files) ---
+*:Zone.Identifier
+*Zone.Identifier
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# --- Misc ---
+*.bak
+*.tmp
+.cache/
+node_modules/
