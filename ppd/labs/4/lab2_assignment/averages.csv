@@ -1,0 +1,5 @@
+language,variant,rows,cols,threads,runs,avg_compute_ms,avg_total_ms,speedup
+cpp,seq,10,10,1,1,0.000917,0.707708,1
+cpp,par,10,10,2,1,0.066375,1.177334,0.0138154425612
+java,seq,10,10,1,1,0.170417,1.89575,1
+java,par,10,10,2,1,0.335625,1.3235,0.507760148976
