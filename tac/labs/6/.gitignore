@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+libst.so
+parser.out
+PIF.out
+ST.out
+productions.out
