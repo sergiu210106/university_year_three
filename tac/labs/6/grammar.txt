@@ -1,0 +1,57 @@
+Grammar of the recipe language, for parsing (Lab 6)
+
+G = (N, T, P, program)
+
+N = { program, statement_list, statement, assignment, for_loop, input, print,
+      expression, creation, ingredient_list, ingredient, term }
+
+T = { ID, CONST, List, for, in, done, read, puts, =, +, -, (, ), [, ], ",", : }
+
+    ID     identifier   [A-Za-z][A-Za-z0-9_]*
+    CONST  constant     0 | [1-9][0-9]*   or   "[A-Za-z]*"
+
+Productions (the numbers are the ones written in the output)
+
+ 1  program         ::= statement_list
+ 2  statement_list  ::= statement
+ 3  statement_list  ::= statement statement_list
+ 4  statement       ::= assignment
+ 5  statement       ::= for_loop
+ 6  statement       ::= input
+ 7  statement       ::= print
+ 8  assignment      ::= ID "=" expression
+ 9  for_loop        ::= "for" ID "in" expression ":" statement_list "done"
+10  input           ::= "read" ID
+11  print           ::= "puts" expression
+12  expression      ::= creation
+13  expression      ::= ID
+14  expression      ::= expression "+" term
+15  expression      ::= expression "-" term
+16  creation        ::= "List" "(" "[" ingredient_list "]" ")"
+17  ingredient_list ::= ingredient
+18  ingredient_list ::= ingredient "," ingredient_list
+19  ingredient      ::= CONST CONST ID
+20  term            ::= ingredient
+21  term            ::= ID
+
+Start symbol: program
+
+Changes from labs/2/bnf.txt
+
+- Characters are no longer grammar symbols. <string>, <number>, <identifier>,
+  <letter>, <digit>, <string_characters>, <number_tail>, <identifier_tail>, ...
+  are recognized by the scanner (Lab 3 regular expressions) and reach the parser
+  as the tokens ID and CONST.
+- <measuring_unit> is an ID: "g", "ml", "buc" look like any identifier, so the
+  position after two constants is what makes it a unit (ingredient ::= CONST CONST ID).
+- Ingredients inside List([ ... ]) are separated by "," (programs from Lab 2 and 3
+  use it; the old <recipe_content> ::= <term> <tail_list> had no separator).
+- A variable can be an expression (expression ::= ID): "puts omleta",
+  "carbonara_non_italiana = carbonara".
+- "+" and "-" take a term, which is an ingredient or a variable
+  ("omleta = omleta - ingredient", where ingredient is the loop variable).
+- epsilon is removed: <statements> ::= <statement> <statements> | epsilon becomes
+  statement_list ::= statement | statement statement_list. A program and a loop body
+  need at least one statement.
+- <recipe_expression> ::= <recipe_expression> <recipe_add> is kept as the
+  left-recursive expression ::= expression "+" term, so a + b - c is read from the left.

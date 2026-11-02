@@ -1,0 +1,5 @@
+supa = List(["apa" 1000 ml, "oase" 200 g])
+for x in supa:
+    puts x
+    supa = supa + "sare" 5 g
+puts supa

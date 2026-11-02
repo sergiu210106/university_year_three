@@ -1,0 +1,2 @@
+supa = List(["apa" 007 ml])
+puts supa @
