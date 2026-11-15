@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "macOS MPI",
+            "compilerPath": "/opt/homebrew/bin/mpic++",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/opt/open-mpi/include"
+            ],
+            "compileCommands": "${workspaceFolder}/6/lab3_assignment/build/compile_commands.json",
+            "cppStandard": "c++20",
+            "cStandard": "c17",
+            "intelliSenseMode": "macos-clang-arm64"
+        }
+    ],
+    "version": 4
+}
