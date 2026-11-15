@@ -1,6 +1,6 @@
-import os
 import sys
 
+from ply.lex import LexToken
 import ply.yacc as yacc
 
 import lexer
@@ -152,19 +152,37 @@ def p_error(t):
     raise ParseError(f"line {t.lineno}, col {lexer.column(t)}: unexpected '{t.value}' ({t.type})")
 
 
-def parse(source):
-    lexer.reset()
+def parse_pif(pif, grammar, locations):
     applied.clear()
-    lx = lexer.current = lexer.make_lexer()
-    parser = yacc.yacc(debug=True, debugfile="parser.out", write_tables=False,
+    parser = yacc.yacc(module=grammar, debug=True, debugfile="parser.out", write_tables=False,
                          errorlog=yacc.NullLogger())
+
+    def pif_tokens():
+        for (name, pos), (line, col) in zip(pif, locations):
+            token = LexToken()
+            token.type = {"id": "ID", "const": "CONST"}.get(name)
+            if token.type is None:
+                token.type = lexer.reserved.get(name) or lexer.operators[name]
+            token.value = lexer.lib.st_get(lexer.st, pos).decode() if pos >= 0 else name
+            token.lineno, token.column, token.lexpos = line, col, col - 1
+            yield token
+
+    stream = pif_tokens()
     try:
-        parser.parse(source, lexer=lx)
+        parser.parse(lexer=lexer.current, tokenfunc=lambda: next(stream, None))
         error = None
     except ParseError as e:
         error = str(e)
     # reductions come bottom-up, so reverse them to get the derivation
     return applied[::-1], error
+
+
+def parse(source, tokens_path=None):
+    pif, locations = lexer.scan(source, tokens_path)
+    if lexer.errors:
+        applied.clear()
+        return [], None
+    return parse_pif(pif, sys.modules[__name__], locations)
 
 
 def write_outputs(derivation):
@@ -183,12 +201,15 @@ def write_outputs(derivation):
 
 
 def main():
-    if len(sys.argv) < 2:
-        sys.exit("usage: python3 parser.py <program>")
-    with open(sys.argv[1]) as f:
-        source = f.read()
-
-    derivation, syntax_error = parse(source)
+    if len(sys.argv) not in (2, 3):
+        sys.exit("usage: python3 parser.py <program> [tokens_file]")
+    try:
+        with open(sys.argv[1]) as f:
+            source = f.read()
+        tokens_path = sys.argv[2] if len(sys.argv) == 3 else None
+        derivation, syntax_error = parse(source, tokens_path)
+    except (OSError, ValueError) as e:
+        sys.exit(str(e))
 
     for line, col, lexeme, message in lexer.errors:
         print(f"lexical error, line {line}, col {col}: {lexeme} - {message}")

@@ -20,7 +20,7 @@ This file has the minimal theory needed to present Lab 6: what a parser does, ho
 
 **Order of the string.** Reducing finds the rules from the leaves up, which is a rightmost derivation backwards. `parser.py` reverses the list, so the string starts with rule 1 (`program -> statement_list`) and shows the rightmost derivation.
 
-**yacc and lex.** `lex` turns regular expressions into a scanner, `yacc` turns grammar rules into an LALR parser. We use PLY, their Python version. The parser calls the scanner whenever it needs a token, so there is no separate pass, and that is the "integration" from requirement 3.
+**yacc and lex.** `lex` turns regular expressions into a scanner, `yacc` turns grammar rules into an LALR parser. We use PLY, their Python version. One program scans the source using the token list from `../3/tokens.txt`, then passes the complete PIF and the existing grammar module to yacc. That pipeline is the integration from requirement 3.
 
 **What I changed in the grammar, and why.** The Lab 2 grammar was written for people, not for a parser:
 - characters (`<letter>`, `<digit>`, ...) became the tokens `ID` and `CONST`, because the scanner already handles them;
@@ -34,7 +34,7 @@ make
 .venv/bin/python parser.py programs/p_small.txt     # string of productions
 .venv/bin/python parser.py programs/p1.txt          # the 20-statement program
 .venv/bin/python parser.py programs/p_err2.txt      # syntax error with line and column
-.venv/bin/python parser.py programs/p_lex.txt       # lexical error, then syntax error
+.venv/bin/python parser.py programs/p_lex.txt       # both lexical errors; parsing skipped
 .venv/bin/python test.py                            # 2 accepted, 3 rejected, derivations replayed
 ```
 
@@ -47,9 +47,9 @@ make
 | Why is `expression` left-recursive but `statement_list` right-recursive? | Left recursion makes `a + b - c` group from the left, and it uses little stack in LR parsing. `statement_list` is right-recursive because it is simpler; the stack grows with the number of statements, which is fine here. |
 | How does the parser tell `ml` (a unit) from a variable? | It doesn't need to at scan time. Both are `ID`. After two constants, the grammar expects an `ID`, and that position makes it the unit. |
 | Why does `x = a` followed by `y = b` not confuse the parser? | After `x = a` the next token is `ID`, which cannot continue an expression, so the parser reduces `a` to an expression and starts a new statement. The lookahead decides. |
-| What happens on an error? | The scanner reports lexical errors (bad number, bad string, illegal character) and skips the token. The parser stops at the first syntax error and reports the line, the column and the unexpected token. No string of productions is written. |
+| What happens on an error? | The scanner reports all lexical errors (bad number, bad string, illegal character). Parsing is skipped if there are lexical errors; otherwise the parser stops at the first syntax error and reports the line, column and unexpected token. No new string of productions is written. |
 | Is the string the same as the parse tree? | It carries the same information. With the grammar, the rightmost derivation determines the tree. |
-| Why a PIF as input in the statement? | The parser works on tokens, and the PIF is the token list. Here the scanner produces the same PIF while the parser runs, and `PIF.out` shows it. |
+| Why a PIF as input in the statement? | The scanner first produces the complete PIF. The internal parser receives that PIF and the Python grammar module, then consumes the PIF entries as tokens. `PIF.out` shows the entries on a successful run. |
 
 The sections below go deeper, if you need them.
 
@@ -161,13 +161,13 @@ The parser detects an error when ACTION[state, token] is empty. Because LR parse
 
 ## 7. Integrating the scanner with the parser
 
-In the classical design a **lex** scanner and a **yacc** parser work together:
+Here a **lex** scanner and a **yacc** parser work together in two stages:
 
-- the parser calls `yylex()` (here `lexer.token()`) when it needs a token
-- the scanner returns the token type for the parser (`ID`, `CONST`, `PLUS`, ...), and keeps the lexeme as its value
-- the scanner does the work from Lab 3 on the side: it adds identifiers and constants to the Symbol Table and records the PIF entries
+- the scanner reads the source using the configured token list, adding identifiers and constants to the Symbol Table and recording the PIF entries
+- when scanning finishes without lexical errors, the program passes the PIF, grammar module and source locations to `parse_pif`
+- yacc requests tokens from a PIF iterator, which maps entries to token types (`ID`, `CONST`, `PLUS`, ...) and resolves identifier/constant values through the Symbol Table
 
-So the PIF is built while parsing. The parser sees only token types. It never looks inside an identifier; that is why `ml` is just an `ID` for the parser, and the grammar decides it is a unit by position.
+So the PIF is complete before parsing begins. The grammar uses only token types. It never looks inside an identifier; that is why `ml` is just an `ID` for the parser, and the grammar decides it is a unit by position. Source locations are stored separately to preserve line and column diagnostics without changing the PIF format.
 
 The reserved words are recognised by the scanner (it checks an identifier-shaped lexeme against the list), which keeps the grammar free of character-level rules.
 

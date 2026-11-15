@@ -1,6 +1,6 @@
 # Lab 6: Syntactic analysis
 
-The parser reads a program written in the recipe language from Lab 1 and checks it against the grammar in `grammar.txt`. The scanner from Lab 3 is part of the parser: the parser asks it for the next token. If the program is correct, the output is the string of productions used to derive it.
+The program reads a recipe source file and a token list, runs the PLY scanner to build the PIF and symbol table, then passes the completed PIF and the existing Python grammar module to the PLY yacc parser. The grammar is documented in `grammar.txt`. If the program is correct, the output is the string of productions used to derive it.
 
 Files:
 
@@ -23,12 +23,15 @@ python3 -m venv .venv
 .venv/bin/pip install ply
 make
 .venv/bin/python parser.py programs/p1.txt
+.venv/bin/python parser.py programs/p1.txt ../3/tokens.txt
 .venv/bin/python test.py
 ```
 
 `make` builds `libst.so`, the Symbol Table from Lab 3, which `lexer.py` loads with `ctypes`.
 
-The parser calls `lexer.token()` whenever it needs a token, so scanning and parsing run together. While the scanner runs it fills the PIF and the ST (the same as in Lab 3), and writes `PIF.out` and `ST.out`. PLY also writes `parser.out`, which has the LALR states and any conflicts; this grammar has none.
+Usage is `parser.py <program> [tokens_file]`. The default token file is `../3/tokens.txt`, resolved relative to `lexer.py`, so it also works from another directory. The file lists one keyword, operator or separator per line; blank lines are ignored. It controls which of the existing DSL tokens are recognized. Unsupported token definitions and an empty list are rejected; identifier and constant patterns remain unchanged.
+
+`lexer.scan` scans the whole source, filling the PIF and ST as in Lab 3 and retaining token locations separately. If scanning succeeds, `parse_pif(pif, grammar, locations)` builds the yacc parser from the existing grammar module and supplies tokens from the PIF. Identifier and constant lexemes are retrieved from the ST. The source is not scanned again. On success, the program writes `PIF.out`, `ST.out` and `productions.out` in the current directory. PLY also writes `parser.out`, which has the LALR states and any conflicts; this grammar has none.
 
 ## 2. Grammar
 
@@ -72,7 +75,7 @@ def p_assignment(p):
 
 An LR parser reduces bottom-up, so `rule(n)` is called in the order of the reductions, which is a rightmost derivation read backwards. The list is reversed at the end, so the output is the rightmost derivation: the production applied first is first in the string.
 
-The parser stops at the first syntax error and reports its line and column. Lexical errors do not stop the scanner; they are collected and printed with the same messages as in Lab 3. If there is any error, no string of productions is written.
+The parser stops at the first syntax error and reports its line and column. Lexical errors do not stop the scanner; all are collected and printed with the same messages as in Lab 3. If there are lexical errors, parsing is skipped. If there is any error, no new string of productions is written.
 
 ## 4. Example: `programs/p_small.txt`
 
@@ -135,7 +138,7 @@ syntax error, line 1, col 28: unexpected '"oase"' (CONST)
 
 $ python3 parser.py programs/p_lex.txt
 lexical error, line 1, col 20: 007 - invalid number or identifier
-syntax error, line 1, col 24: unexpected 'ml' (ID)
+lexical error, line 2, col 11: @ - illegal character
 ```
 
-A lexical error removes the token, so a syntax error can follow it, as in the last example. The parser stops at the first syntax error, so lexical errors after it (the `@` on line 2 of `p_lex.txt`) are not reached.
+The scanner reaches the end of the source even after a lexical error, so both errors in `p_lex.txt` are reported. Parsing only starts when the complete scan succeeds.

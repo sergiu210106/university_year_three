@@ -5,6 +5,7 @@ import sys
 import ply.lex as lex
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+DEFAULT_TOKENS = os.path.join(HERE, "..", "3", "tokens.txt")
 
 reserved = {
     "List": "LIST",
@@ -55,7 +56,7 @@ def reset():
 
 
 def column(t):
-    return t.lexpos - last_newline
+    return getattr(t, "column", t.lexpos - last_newline)
 
 
 def error(t, lexeme, message):
@@ -104,7 +105,7 @@ def t_NUMBER(t):
 
 def t_IDENTIFIER(t):
     r"[A-Za-z][A-Za-z0-9_]*"
-    t.type = reserved.get(t.value, "ID")
+    t.type = reserved.get(t.value, "ID") if t.value in t.lexer.allowed else "ID"
     if t.type == "ID":
         pif.append(("id", lib.st_insert(st, t.value.encode())))
     else:
@@ -114,6 +115,9 @@ def t_IDENTIFIER(t):
 
 def t_OPERATOR(t):
     r"[-=+()\[\],:]"
+    if t.value not in t.lexer.allowed:
+        error(t, t.value, "illegal character")
+        return
     t.type = operators[t.value]
     pif.append((t.value, -1))
     return t
@@ -124,5 +128,30 @@ def t_error(t):
     t.lexer.skip(1)
 
 
-def make_lexer():
-    return lex.lex()
+def load_tokens(path):
+    with open(path) as f:
+        allowed = {line.strip() for line in f if line.strip()}
+    unsupported = allowed - reserved.keys() - operators.keys()
+    if unsupported:
+        raise ValueError("unsupported token definitions: " + ", ".join(sorted(unsupported)))
+    if not allowed:
+        raise ValueError("token list is empty")
+    return allowed
+
+
+def make_lexer(tokens_path=None):
+    allowed = load_tokens(tokens_path or DEFAULT_TOKENS)
+    lx = lex.lex()
+    lx.allowed = allowed
+    return lx
+
+
+def scan(source, tokens_path=None):
+    global current
+    reset()
+    current = make_lexer(tokens_path)
+    current.input(source)
+    locations = []
+    for token in current:
+        locations.append((token.lineno, column(token)))
+    return pif, locations
