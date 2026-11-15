@@ -1,6 +1,6 @@
 # Laboratory 2: In-place Convolution
 
-Consider the problem from [Laboratory 1](../../3/lab1_assignment/task.md) with the following modification.
+Consider the problem from [Laboratory 1](../01-assignment/task.md) with the following modification.
 
 ## Objective and Constraints
 

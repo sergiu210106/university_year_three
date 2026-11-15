@@ -208,7 +208,7 @@ reference.
 ### 3.1 Project structure
 
 ```
-lab1_assignment/
+01-assignment/
 ├── task.md                           the assignment
 ├── cpp/conv.hpp                      shared: matrices, fast I/O, kernel, distributions
 ├── cpp/seq.cpp, cpp/par.cpp          C++ sequential / parallel (std::thread)
@@ -300,7 +300,7 @@ are compared against the reference.
 
 ### 4.3 How to run
 
-All commands are run from the `lab1_assignment/` directory.
+All commands are run from the `01-assignment/` directory.
 
 ```bash
 scripts/run_tests.sh                       # full test: all 5 cases, 10 runs (≈ 1 h 45 min)

@@ -2,7 +2,7 @@
 
 ## Requirements and approach
 
-This is a separate copy of [the original Lab 2 implementation](../lab2_assignment/README.md), changed to implement **Variant 1b** from the [L2 Utils notes](utils.md). Each parallel worker copies its original neighbours into private vectors, waits at a shared barrier, then updates its assigned image rows in place. The sequential algorithm, file formats, explicit-thread approach, and output comparisons are retained. The original assignment directory is unchanged.
+This is a separate copy of [the original Lab 2 implementation](../02-assignment/README.md), changed to implement **Variant 1b** from the [L2 Utils notes](utils.md). Each parallel worker copies its original neighbours into private vectors, waits at a shared barrier, then updates its assigned image rows in place. The sequential algorithm, file formats, explicit-thread approach, and output comparisons are retained. The original assignment directory is unchanged.
 
 | Requirement | Implementation |
 |---|---|
@@ -55,7 +55,7 @@ CASES="10 10 2; 7 13 2 3 16" bash scripts/run_tests.sh 2
 python3 scripts/verify.py
 ```
 
-The largest input has 100 million integers. Allow approximately 2 GB of free disk space for the input, sequential reference, and current output, plus at least 1 GB of available memory. The benchmark runs one process at a time and gives Java a 1 GiB maximum heap (`-Xmx1g`). Build products and generated matrices stay in ignored `build/`; the original Lab 1 and `lab2_assignment` directories are unchanged.
+The largest input has 100 million integers. Allow approximately 2 GB of free disk space for the input, sequential reference, and current output, plus at least 1 GB of available memory. The benchmark runs one process at a time and gives Java a 1 GiB maximum heap (`-Xmx1g`). Build products and generated matrices stay in ignored `build/`; the original Lab 1 and `02-assignment` directories are unchanged.
 
 ## File format and mathematical behavior
 

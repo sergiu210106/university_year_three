@@ -9,8 +9,8 @@ For learning and presentation preparation, start with the [complete study guide]
 From the labs workspace:
 
 ```bash
-./6/lab3_assignment/scripts/build.sh
-./6/lab3_assignment/scripts/run_tests.sh
+./03-assignment/scripts/build.sh
+./03-assignment/scripts/run_tests.sh
 ```
 
 Dependencies: Open MPI (`mpic++`, `mpirun`), Bash, Python 3, `timeout`, `awk`, and `cmp`. The build uses `mpic++ -std=c++11 -O2 -Wall -Wextra -pedantic`. Generated inputs, outputs, executables, and compilation commands stay in ignored `build/`.
@@ -18,7 +18,7 @@ Dependencies: Open MPI (`mpic++`, `mpirun`), Bash, Python 3, `timeout`, `awk`, a
 After the test script creates the supplied inputs:
 
 ```bash
-cd 6/lab3_assignment
+cd 03-assignment
 ./scripts/run.sh seq build/inputs/supplied_1.txt build/inputs/supplied_2.txt build/reference.txt
 ./scripts/run.sh mpi1 5 build/inputs/supplied_1.txt build/inputs/supplied_2.txt build/result.txt
 ./scripts/run.sh mpi11 5 build/inputs/supplied_1.txt build/inputs/supplied_2.txt build/result.txt
